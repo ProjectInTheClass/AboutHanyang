@@ -44,7 +44,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="category_name" destination="9Fh-aH-gv9" id="NHn-9Q-YvH"/>
-                                    <segue destination="rgw-rX-2zB" kind="show" id="hDX-h0-zAe"/>
+                                    <segue destination="rgw-rX-2zB" kind="show" identifier="Detail" id="dWe-F8-WCG"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -85,8 +85,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Cd4-tT-qq9" kind="relationship" relationship="viewControllers" id="sTA-Ua-2VK"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="rgw-rX-2zB" kind="relationship" relationship="viewControllers" id="fM8-eX-Vn2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -116,18 +116,28 @@
                                     <segue destination="zda-bh-HoS" kind="show" id="Acf-19-nFP"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ksh-9j-RPe">
+                                <rect key="frame" x="67" y="428" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nBO-mr-MOj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Brg-Qu-zXx"/>
+                    <navigationItem key="navigationItem" id="Ozx-V3-s7X"/>
                     <connections>
                         <outlet property="MenuButton" destination="uvw-Jb-9wp" id="UCo-h5-Cy1"/>
+                        <outlet property="placeText" destination="Fvt-3e-eO5" id="U7V-JG-aV5"/>
+                        <outlet property="review" destination="Ksh-9j-RPe" id="7Ej-dc-dVb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eod-vb-cqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544.8" y="-322.48875562218893"/>
+            <point key="canvasLocation" x="1885.5999999999999" y="-779.46026986506752"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="RJF-R3-BPY">
@@ -185,13 +195,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IuW-qt-6tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2362.4000000000001" y="-322.48875562218893"/>
+            <point key="canvasLocation" x="3714" y="-779"/>
         </scene>
     </scenes>
     <resources>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="hDX-h0-zAe"/>
-    </inferredMetricsTieBreakers>
 </document>
