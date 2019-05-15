@@ -7,14 +7,11 @@
 //
 
 import UIKit
-import Firebase
 
 class FirstTabbarController: UITabBarController {
-    var ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
 

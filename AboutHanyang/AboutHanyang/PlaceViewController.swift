@@ -41,12 +41,14 @@ class PlaceViewController: UIViewController {
             self.comment = dict?["comment"] as? String ?? "null"
             self.tendency = dict?["tendency"] as? String ?? ""
             self.score = dict?["score"] as? String ?? ""
-            print(dict)
+
         }) { (error) in
             print(error.localizedDescription)
         }
         
-        review.text = self.comment + "\n" + self.tendency + "\n" + self.score
+        DispatchQueue.main.async {
+            self.review.text = self.comment + "\n" + self.tendency + "\n" + self.score
+        }
         
       /*  do {
             let url = Bundle.main.url(forResource:"db_Place", withExtension:"json")
@@ -65,8 +67,7 @@ class PlaceViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    
+ 
     
     /*
     // MARK: - Navigation
@@ -78,4 +79,5 @@ class PlaceViewController: UIViewController {
     }
     */
 
+    
 }

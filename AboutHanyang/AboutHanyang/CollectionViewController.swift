@@ -60,6 +60,7 @@ class CollectionViewController: UICollectionViewController {
             
             destination.placeName = category_list[selectedIndex.row].place_list[0]
             
+            
         }
         
     }
