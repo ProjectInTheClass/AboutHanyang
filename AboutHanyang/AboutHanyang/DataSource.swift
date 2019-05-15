@@ -30,24 +30,23 @@ class Place : Decodable
     let p_name : String
     let p_pos : String
     let p_phone : String
-    let p_email : String?
+    let p_email : String
     let p_description : String
-    let p_review : Array<review>
+ //   let p_review : Array<review>
     
-    init(_ name : String, _ pos : String, _ phone : String, _ description : String)
-    {
-        self.p_name = name
-        self.p_pos = pos
-        self.p_phone = phone
-        self.p_description = description
-        self.p_email = nil
-        self.p_review = []
-    }
-    
-    
+  //  init(_ name : String, _ pos : String, _ phone : String, _ description : String)
+ //   {
+ //       self.p_name = name
+ //       self.p_pos = pos
+  //      self.p_phone = phone
+  //      self.p_description = description
+  //      self.p_email = ""
+//        self.p_review = []
+  //  }
 }
 
-class Place_cafe : Place{
+
+/*class Place_cafe : Place{
     
     let non_coffee : Array<menu>
     let coffee : Array<menu>
@@ -59,7 +58,7 @@ class Place_cafe : Place{
         self.non_coffee = non_coffee
         self.coffee = coffee
         self.other_menu = other_menu
-        super.init(name,pos,phone,description)
+ //       super.init(name,pos,phone,description)
     }
     
     required init(from decoder: Decoder) throws {
@@ -74,13 +73,15 @@ class Place_withMenu : Place{
     init(_ name : String, _ pos : String, _ phone : String, _ description : String, _ menu : Array<menu>)
     {
         self.p_menu = menu
-        super.init(name, pos, phone, description)
+ //       super.init(name, pos, phone, description)
     }
     
     required init(from decoder: Decoder) throws {
         fatalError("init(from:) has not been implemented")
     }
 }
+ */
+
 /*
 class Category : Decodable{
     

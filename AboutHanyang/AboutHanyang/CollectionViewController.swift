@@ -10,25 +10,17 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class Category_list : Decodable{
-    var c_list : Array<Category>
-}
 
 class Category : Decodable{
     
     let c_name : String
-    let place_list : Array<Place>
-    
-    init(_ name : String, _ place_list : Array<Place>){
-        self.c_name = name
-        self.place_list = place_list
-    }
+    let place_list : Array<String>
     
 }
 
 class CollectionViewController: UICollectionViewController {
 
-    
+    var category_list : Array<Category> = []
 
     
     override func viewDidLoad() {
@@ -39,13 +31,11 @@ class CollectionViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
         
         do {
-            let url = Bundle.main.url(forResource:"db_data", withExtension:"json")
+            let url = Bundle.main.url(forResource:"db_Category", withExtension:"json")
             let jsonData = try Data(contentsOf: url!)
-            let categoryList = try JSONDecoder().decode(Category_list.self, from: jsonData)
-            print(categoryList)
+            category_list = try JSONDecoder().decode([Category].self, from: jsonData)
         }
         
         catch _{
@@ -55,15 +45,25 @@ class CollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "Detail"{
+            guard let destination = segue.destination as? PlaceViewController , let selectedIndex = self.collectionView.indexPathsForSelectedItems?.first else {
+                return
+            }
+            
+            destination.placeName = category_list[selectedIndex.row].place_list[0]
+            
+        }
+        
     }
-    */
+ 
 
     // MARK: UICollectionViewDataSource
 
@@ -75,13 +75,14 @@ class CollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 2
+        return category_list.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Category_cell", for: indexPath) as! CollectionViewCell
         
- 
+        cell.category_name.text = category_list[indexPath.item].c_name
+        cell.placeList = category_list[indexPath.item].place_list
         return cell
     }
 
