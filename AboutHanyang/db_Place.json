@@ -1,0 +1,24 @@
+{
+
+		{"Caffe Queue" : {
+
+		"p_name" : "Caffe Queue",
+    		"p_pos" : "IT/BT관 1층",
+    		"p_phone" : "123-4567-8910",
+		"p_email" : "",
+    		"p_description" : "맛있는 커피를 팝니다",
+    		"p_review" : [""]
+		}
+	},
+	{	"3 열람실" : {
+
+		    "p_name" : "3 열람실",
+		    "p_pos" : "백남학술정보관 3층",
+		    "p_phone" : "333-333-3333",
+		    "p_email" : "123@gmail.com",
+		    "p_description" : "더워요",
+		    "p_review" : [""]
+		}}
+	
+
+}

@@ -1,0 +1,13 @@
+{
+		{
+			"c_name" : "Caffe",
+			"place_list" : ["Caffe Queue"]
+		},
+		
+		{
+			"c_name" : "열람실",
+			"place_list" : ["3 열람실"]
+		}
+
+	
+}

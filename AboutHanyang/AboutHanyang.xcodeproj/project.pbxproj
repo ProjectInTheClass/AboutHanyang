@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BF4F68B5256DB7638CF295B /* Pods_AboutHanyang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A9D77F66AA62D7347ED04A /* Pods_AboutHanyang.framework */; };
+		4883AB64228409C80082C0A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB63228409C80082C0A7 /* AppDelegate.swift */; };
+		4883AB68228409C80082C0A7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB67228409C80082C0A7 /* SecondViewController.swift */; };
+		4883AB6B228409C80082C0A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB69228409C80082C0A7 /* Main.storyboard */; };
+		4883AB6D228409CA0082C0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB6C228409CA0082C0A7 /* Assets.xcassets */; };
+		4883AB70228409CA0082C0A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB6E228409CA0082C0A7 /* LaunchScreen.storyboard */; };
+		4883AB7822840A8D0082C0A7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB7722840A8D0082C0A7 /* DataSource.swift */; };
+		4883AB7A228410520082C0A7 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB79228410520082C0A7 /* CollectionViewController.swift */; };
+		4883AB7C228410850082C0A7 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB7B228410850082C0A7 /* PlaceViewController.swift */; };
+		4883AB7E228410F40082C0A7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB7D228410F40082C0A7 /* MenuViewController.swift */; };
+		4883AB80228BDB550082C0A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB7F228BDB540082C0A7 /* GoogleService-Info.plist */; };
+		4883AB82228BEB760082C0A7 /* FirstTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB81228BEB760082C0A7 /* FirstTabbarController.swift */; };
+		4883AB84228BFFBD0082C0A7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB83228BFFBD0082C0A7 /* CollectionViewCell.swift */; };
+		4883AB89228C06A80082C0A7 /* db_Place.json in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB87228C06A70082C0A7 /* db_Place.json */; };
+		4883AB8A228C06A80082C0A7 /* db_Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB88228C06A70082C0A7 /* db_Category.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29E84ED4C6B593B1EC09C0A9 /* Pods-AboutHanyang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutHanyang.release.xcconfig"; path = "Target Support Files/Pods-AboutHanyang/Pods-AboutHanyang.release.xcconfig"; sourceTree = "<group>"; };
+		30A9D77F66AA62D7347ED04A /* Pods_AboutHanyang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutHanyang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4883AB60228409C80082C0A7 /* AboutHanyang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutHanyang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4883AB63228409C80082C0A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4883AB67228409C80082C0A7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4883AB6A228409C80082C0A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4883AB6C228409CA0082C0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4883AB6F228409CA0082C0A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4883AB71228409CA0082C0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4883AB7722840A8D0082C0A7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		4883AB79228410520082C0A7 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		4883AB7B228410850082C0A7 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		4883AB7D228410F40082C0A7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4883AB7F228BDB540082C0A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4883AB81228BEB760082C0A7 /* FirstTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabbarController.swift; sourceTree = "<group>"; };
+		4883AB83228BFFBD0082C0A7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4883AB87228C06A70082C0A7 /* db_Place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Place.json; sourceTree = SOURCE_ROOT; };
+		4883AB88228C06A70082C0A7 /* db_Category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Category.json; sourceTree = SOURCE_ROOT; };
+		B8884C6DF9C662D4570201E9 /* Pods-AboutHanyang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutHanyang.debug.xcconfig"; path = "Target Support Files/Pods-AboutHanyang/Pods-AboutHanyang.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4883AB5D228409C80082C0A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF4F68B5256DB7638CF295B /* Pods_AboutHanyang.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A315E89A2CAED57D519C3CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30A9D77F66AA62D7347ED04A /* Pods_AboutHanyang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4883AB57228409C80082C0A7 = {
+			isa = PBXGroup;
+			children = (
+				4883AB62228409C80082C0A7 /* AboutHanyang */,
+				4883AB61228409C80082C0A7 /* Products */,
+				9D4A1FAFC5DA2E04C1258B34 /* Pods */,
+				3A315E89A2CAED57D519C3CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4883AB61228409C80082C0A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4883AB60228409C80082C0A7 /* AboutHanyang.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4883AB62228409C80082C0A7 /* AboutHanyang */ = {
+			isa = PBXGroup;
+			children = (
+				4883AB88228C06A70082C0A7 /* db_Category.json */,
+				4883AB87228C06A70082C0A7 /* db_Place.json */,
+				4883AB7722840A8D0082C0A7 /* DataSource.swift */,
+				4883AB79228410520082C0A7 /* CollectionViewController.swift */,
+				4883AB7F228BDB540082C0A7 /* GoogleService-Info.plist */,
+				4883AB63228409C80082C0A7 /* AppDelegate.swift */,
+				4883AB67228409C80082C0A7 /* SecondViewController.swift */,
+				4883AB69228409C80082C0A7 /* Main.storyboard */,
+				4883AB83228BFFBD0082C0A7 /* CollectionViewCell.swift */,
+				4883AB81228BEB760082C0A7 /* FirstTabbarController.swift */,
+				4883AB7D228410F40082C0A7 /* MenuViewController.swift */,
+				4883AB7B228410850082C0A7 /* PlaceViewController.swift */,
+				4883AB6C228409CA0082C0A7 /* Assets.xcassets */,
+				4883AB6E228409CA0082C0A7 /* LaunchScreen.storyboard */,
+				4883AB71228409CA0082C0A7 /* Info.plist */,
+			);
+			path = AboutHanyang;
+			sourceTree = "<group>";
+		};
+		9D4A1FAFC5DA2E04C1258B34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8884C6DF9C662D4570201E9 /* Pods-AboutHanyang.debug.xcconfig */,
+				29E84ED4C6B593B1EC09C0A9 /* Pods-AboutHanyang.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4883AB5F228409C80082C0A7 /* AboutHanyang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4883AB74228409CA0082C0A7 /* Build configuration list for PBXNativeTarget "AboutHanyang" */;
+			buildPhases = (
+				4372D05C506A17E3AD263A32 /* [CP] Check Pods Manifest.lock */,
+				4883AB5C228409C80082C0A7 /* Sources */,
+				4883AB5D228409C80082C0A7 /* Frameworks */,
+				4883AB5E228409C80082C0A7 /* Resources */,
+				625CFF7169A78F967EA34E50 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AboutHanyang;
+			productName = AboutHanyang;
+			productReference = 4883AB60228409C80082C0A7 /* AboutHanyang.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4883AB58228409C80082C0A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = AboutHanyang;
+				TargetAttributes = {
+					4883AB5F228409C80082C0A7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 4883AB5B228409C80082C0A7 /* Build configuration list for PBXProject "AboutHanyang" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4883AB57228409C80082C0A7;
+			productRefGroup = 4883AB61228409C80082C0A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4883AB5F228409C80082C0A7 /* AboutHanyang */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4883AB5E228409C80082C0A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4883AB70228409CA0082C0A7 /* LaunchScreen.storyboard in Resources */,
+				4883AB80228BDB550082C0A7 /* GoogleService-Info.plist in Resources */,
+				4883AB6D228409CA0082C0A7 /* Assets.xcassets in Resources */,
+				4883AB8A228C06A80082C0A7 /* db_Category.json in Resources */,
+				4883AB6B228409C80082C0A7 /* Main.storyboard in Resources */,
+				4883AB89228C06A80082C0A7 /* db_Place.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4372D05C506A17E3AD263A32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AboutHanyang-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		625CFF7169A78F967EA34E50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AboutHanyang/Pods-AboutHanyang-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AboutHanyang/Pods-AboutHanyang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4883AB5C228409C80082C0A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4883AB82228BEB760082C0A7 /* FirstTabbarController.swift in Sources */,
+				4883AB7A228410520082C0A7 /* CollectionViewController.swift in Sources */,
+				4883AB84228BFFBD0082C0A7 /* CollectionViewCell.swift in Sources */,
+				4883AB7E228410F40082C0A7 /* MenuViewController.swift in Sources */,
+				4883AB68228409C80082C0A7 /* SecondViewController.swift in Sources */,
+				4883AB64228409C80082C0A7 /* AppDelegate.swift in Sources */,
+				4883AB7C228410850082C0A7 /* PlaceViewController.swift in Sources */,
+				4883AB7822840A8D0082C0A7 /* DataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4883AB69228409C80082C0A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4883AB6A228409C80082C0A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4883AB6E228409CA0082C0A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4883AB6F228409CA0082C0A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4883AB72228409CA0082C0A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4883AB73228409CA0082C0A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4883AB75228409CA0082C0A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8884C6DF9C662D4570201E9 /* Pods-AboutHanyang.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AboutHanyang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SoftwareStudio.AboutHanyang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4883AB76228409CA0082C0A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29E84ED4C6B593B1EC09C0A9 /* Pods-AboutHanyang.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AboutHanyang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SoftwareStudio.AboutHanyang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4883AB5B228409C80082C0A7 /* Build configuration list for PBXProject "AboutHanyang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4883AB72228409CA0082C0A7 /* Debug */,
+				4883AB73228409CA0082C0A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4883AB74228409CA0082C0A7 /* Build configuration list for PBXNativeTarget "AboutHanyang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4883AB75228409CA0082C0A7 /* Debug */,
+				4883AB76228409CA0082C0A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4883AB58228409C80082C0A7 /* Project object */;
+}
