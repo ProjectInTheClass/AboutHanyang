@@ -22,6 +22,9 @@
 		4883AB84228BFFBD0082C0A7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB83228BFFBD0082C0A7 /* CollectionViewCell.swift */; };
 		4883AB89228C06A80082C0A7 /* db_Place.json in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB87228C06A70082C0A7 /* db_Place.json */; };
 		4883AB8A228C06A80082C0A7 /* db_Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB88228C06A70082C0A7 /* db_Category.json */; };
+		F3087002228E5AF200D5483D /* CategoryCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3087001228E5AF200D5483D /* CategoryCollection.swift */; };
+		F3C392D9228E989600D301BE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C392D8228E989600D301BE /* SearchViewController.swift */; };
+		F3C392DB2290321900D301BE /* SelectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C392DA2290321900D301BE /* SelectedTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		4883AB87228C06A70082C0A7 /* db_Place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Place.json; sourceTree = SOURCE_ROOT; };
 		4883AB88228C06A70082C0A7 /* db_Category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Category.json; sourceTree = SOURCE_ROOT; };
 		B8884C6DF9C662D4570201E9 /* Pods-AboutHanyang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutHanyang.debug.xcconfig"; path = "Target Support Files/Pods-AboutHanyang/Pods-AboutHanyang.debug.xcconfig"; sourceTree = "<group>"; };
+		F3087001228E5AF200D5483D /* CategoryCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollection.swift; sourceTree = "<group>"; };
+		F3C392D8228E989600D301BE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F3C392DA2290321900D301BE /* SelectedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +96,15 @@
 				4883AB88228C06A70082C0A7 /* db_Category.json */,
 				4883AB87228C06A70082C0A7 /* db_Place.json */,
 				4883AB7722840A8D0082C0A7 /* DataSource.swift */,
+				F3C392D8228E989600D301BE /* SearchViewController.swift */,
+				F3087001228E5AF200D5483D /* CategoryCollection.swift */,
 				4883AB79228410520082C0A7 /* CollectionViewController.swift */,
+				4883AB83228BFFBD0082C0A7 /* CollectionViewCell.swift */,
+				F3C392DA2290321900D301BE /* SelectedTableViewController.swift */,
 				4883AB7F228BDB540082C0A7 /* GoogleService-Info.plist */,
 				4883AB63228409C80082C0A7 /* AppDelegate.swift */,
 				4883AB67228409C80082C0A7 /* SecondViewController.swift */,
 				4883AB69228409C80082C0A7 /* Main.storyboard */,
-				4883AB83228BFFBD0082C0A7 /* CollectionViewCell.swift */,
 				4883AB81228BEB760082C0A7 /* FirstTabbarController.swift */,
 				4883AB7D228410F40082C0A7 /* MenuViewController.swift */,
 				4883AB7B228410850082C0A7 /* PlaceViewController.swift */,
@@ -242,7 +251,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C392D9228E989600D301BE /* SearchViewController.swift in Sources */,
 				4883AB82228BEB760082C0A7 /* FirstTabbarController.swift in Sources */,
+				F3C392DB2290321900D301BE /* SelectedTableViewController.swift in Sources */,
+				F3087002228E5AF200D5483D /* CategoryCollection.swift in Sources */,
 				4883AB7A228410520082C0A7 /* CollectionViewController.swift in Sources */,
 				4883AB84228BFFBD0082C0A7 /* CollectionViewCell.swift in Sources */,
 				4883AB7E228410F40082C0A7 /* MenuViewController.swift in Sources */,

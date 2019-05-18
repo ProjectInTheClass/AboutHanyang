@@ -10,18 +10,19 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-
+/*
 class Category : Decodable{
     
     let c_name : String
     let place_list : Array<String>
     
 }
+ */
 
 class CollectionViewController: UICollectionViewController {
 
     var category_list : Array<Category> = []
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,12 +77,12 @@ class CollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
+        print(category_list.count)
         return category_list.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Category_cell", for: indexPath) as! CollectionViewCell
-        
         cell.category_name.text = category_list[indexPath.item].c_name
         cell.placeList = category_list[indexPath.item].place_list
         return cell

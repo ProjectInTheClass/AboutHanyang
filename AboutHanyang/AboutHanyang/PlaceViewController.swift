@@ -32,6 +32,8 @@ class PlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        placeText.text = placeName
+        
         ref = Database.database().reference()
 
         ref.child("review").observeSingleEvent(of: .value, with: { (snapshot) in

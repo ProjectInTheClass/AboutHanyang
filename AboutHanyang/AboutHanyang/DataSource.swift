@@ -8,6 +8,27 @@
 
 import Foundation
 
+//카테고리 타이틀, 아이콘 이미지
+let category_titles : Array<String> = ["카페", "식당", "도서관", "인쇄실", "PC실", "샤워실", "자판기"]
+let category_images : Array<String> = ["cafe.png", "restaurant.png", "library.png", "printer.png", "laptop.png", "shower.png", "beverage.png"]
+
+//search bar 테스트용 배열
+let array_test : Array<String> = ["IT/BT", "올림픽 체육관", "경제금융대", "경영대", "행원파크"]
+
+class Category : Decodable{
+    
+    let c_name : String
+    let place_list : Array<String>
+    let category_icon : String
+    /*
+    init(_ name : String, _ place_list : Array<String>, _ category_icon : String){
+        self.c_name = name
+        self.place_list = place_list
+        self.category_icon = category_icon
+    }
+ */
+}
+
 typealias menu = [String:Int]
 
 class review : Decodable {
@@ -82,16 +103,3 @@ class Place_withMenu : Place{
 }
  */
 
-/*
-class Category : Decodable{
-    
-    let c_name : String
-    let place_list : Array<Place>
-    
-    init(_ name : String, _ place_list : Array<Place>){
-        self.c_name = name
-        self.place_list = place_list
-    }
-    
-}
-*/

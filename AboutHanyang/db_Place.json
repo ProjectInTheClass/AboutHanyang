@@ -1,22 +1,66 @@
 [
-    { "Caffe Queue" : {
-
-		"p_name" : "Caffe Queue",
+    {
+		"p_name" : "Cafe Queue",
         "p_pos" : "IT/BT관 1층",
         "p_phone" : "123-4567-8910",
 		"p_email" : "",
         "p_description" : "맛있는 커피를 팝니다"
-}
     },
     
-    { "3 열람실" :
-	{
-		    "p_name" : "3 열람실",
-		    "p_pos" : "백남학술정보관 3층",
-		    "p_phone" : "333-333-3333",
-		    "p_email" : "123@gmail.com",
-		    "p_description" : "더워요"
-}
+    {
+        "p_name" : "3 열람실",
+        "p_pos" : "백남학술정보관 3층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "더워요"
+    },
+    
+    {
+        "p_name" : "김밥나라",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "저렴해요"
+    },
+    
+    {
+        "p_name" : "청년 떡볶이",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "모르겠어요"
+    },
+    
+    {
+        "p_name" : "신의주 찹쌀 순대국",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "유일한 국밥집"
+    },
+    
+    {
+        "p_name" : "플라잉 보울",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "햄버거가 맛있어요"
+    },
+    
+    {
+        "p_name" : "이순규 라운지",
+        "p_pos" : "백남학술정보관 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "깔끔해요"
+    },
+    
+    {
+        "p_name" : "하브루타 존",
+        "p_pos" : "백남학술정보관 지하 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "좁아요"
     }
-
+    
 ]
