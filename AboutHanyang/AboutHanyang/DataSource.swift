@@ -45,6 +45,16 @@ class review : Decodable {
     
 }
 
+class Building : Decodable{
+    let b_name : String
+    let b_number : Int
+    let b_description : String
+    let place_list : Array<Place>
+    let b_outsidePicture : String
+    let b_majorInBuilding : Array<String>
+    
+}
+
 class Place : Decodable
 {
     

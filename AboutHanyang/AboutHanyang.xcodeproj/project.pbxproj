@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3BF4F68B5256DB7638CF295B /* Pods_AboutHanyang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A9D77F66AA62D7347ED04A /* Pods_AboutHanyang.framework */; };
 		4883AB64228409C80082C0A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB63228409C80082C0A7 /* AppDelegate.swift */; };
-		4883AB68228409C80082C0A7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB67228409C80082C0A7 /* SecondViewController.swift */; };
+		4883AB68228409C80082C0A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883AB67228409C80082C0A7 /* MapViewController.swift */; };
 		4883AB6B228409C80082C0A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB69228409C80082C0A7 /* Main.storyboard */; };
 		4883AB6D228409CA0082C0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB6C228409CA0082C0A7 /* Assets.xcassets */; };
 		4883AB70228409CA0082C0A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4883AB6E228409CA0082C0A7 /* LaunchScreen.storyboard */; };
@@ -25,6 +25,8 @@
 		F3087002228E5AF200D5483D /* CategoryCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3087001228E5AF200D5483D /* CategoryCollection.swift */; };
 		F3C392D9228E989600D301BE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C392D8228E989600D301BE /* SearchViewController.swift */; };
 		F3C392DB2290321900D301BE /* SelectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C392DA2290321900D301BE /* SelectedTableViewController.swift */; };
+		F3C392DE2291786D00D301BE /* db_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = F3C392DD2291786D00D301BE /* db_Building.json */; };
+		F3C392E022917F3D00D301BE /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C392DF22917F3D00D301BE /* CommentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +34,7 @@
 		30A9D77F66AA62D7347ED04A /* Pods_AboutHanyang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutHanyang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4883AB60228409C80082C0A7 /* AboutHanyang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutHanyang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4883AB63228409C80082C0A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4883AB67228409C80082C0A7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4883AB67228409C80082C0A7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4883AB6A228409C80082C0A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4883AB6C228409CA0082C0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4883AB6F228409CA0082C0A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		F3087001228E5AF200D5483D /* CategoryCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollection.swift; sourceTree = "<group>"; };
 		F3C392D8228E989600D301BE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F3C392DA2290321900D301BE /* SelectedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTableViewController.swift; sourceTree = "<group>"; };
+		F3C392DD2291786D00D301BE /* db_Building.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = db_Building.json; sourceTree = "<group>"; };
+		F3C392DF22917F3D00D301BE /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,18 +97,19 @@
 		4883AB62228409C80082C0A7 /* AboutHanyang */ = {
 			isa = PBXGroup;
 			children = (
+				F3C392DC229175FC00D301BE /* notused */,
 				4883AB88228C06A70082C0A7 /* db_Category.json */,
+				F3C392DD2291786D00D301BE /* db_Building.json */,
 				4883AB87228C06A70082C0A7 /* db_Place.json */,
 				4883AB7722840A8D0082C0A7 /* DataSource.swift */,
 				F3C392D8228E989600D301BE /* SearchViewController.swift */,
 				F3087001228E5AF200D5483D /* CategoryCollection.swift */,
-				4883AB79228410520082C0A7 /* CollectionViewController.swift */,
-				4883AB83228BFFBD0082C0A7 /* CollectionViewCell.swift */,
 				F3C392DA2290321900D301BE /* SelectedTableViewController.swift */,
 				4883AB7F228BDB540082C0A7 /* GoogleService-Info.plist */,
 				4883AB63228409C80082C0A7 /* AppDelegate.swift */,
-				4883AB67228409C80082C0A7 /* SecondViewController.swift */,
+				4883AB67228409C80082C0A7 /* MapViewController.swift */,
 				4883AB69228409C80082C0A7 /* Main.storyboard */,
+				F3C392DF22917F3D00D301BE /* CommentViewController.swift */,
 				4883AB81228BEB760082C0A7 /* FirstTabbarController.swift */,
 				4883AB7D228410F40082C0A7 /* MenuViewController.swift */,
 				4883AB7B228410850082C0A7 /* PlaceViewController.swift */,
@@ -122,6 +127,15 @@
 				29E84ED4C6B593B1EC09C0A9 /* Pods-AboutHanyang.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3C392DC229175FC00D301BE /* notused */ = {
+			isa = PBXGroup;
+			children = (
+				4883AB79228410520082C0A7 /* CollectionViewController.swift */,
+				4883AB83228BFFBD0082C0A7 /* CollectionViewCell.swift */,
+			);
+			path = notused;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +204,7 @@
 				4883AB8A228C06A80082C0A7 /* db_Category.json in Resources */,
 				4883AB6B228409C80082C0A7 /* Main.storyboard in Resources */,
 				4883AB89228C06A80082C0A7 /* db_Place.json in Resources */,
+				F3C392DE2291786D00D301BE /* db_Building.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +273,8 @@
 				4883AB7A228410520082C0A7 /* CollectionViewController.swift in Sources */,
 				4883AB84228BFFBD0082C0A7 /* CollectionViewCell.swift in Sources */,
 				4883AB7E228410F40082C0A7 /* MenuViewController.swift in Sources */,
-				4883AB68228409C80082C0A7 /* SecondViewController.swift in Sources */,
+				4883AB68228409C80082C0A7 /* MapViewController.swift in Sources */,
+				F3C392E022917F3D00D301BE /* CommentViewController.swift in Sources */,
 				4883AB64228409C80082C0A7 /* AppDelegate.swift in Sources */,
 				4883AB7C228410850082C0A7 /* PlaceViewController.swift in Sources */,
 				4883AB7822840A8D0082C0A7 /* DataSource.swift in Sources */,

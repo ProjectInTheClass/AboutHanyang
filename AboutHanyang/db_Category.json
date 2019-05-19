@@ -20,7 +20,7 @@
         
 		{
 			"c_name" : "인쇄실",
-			"place_list" : ["1공학관 인쇄실, 한양플라자 인쇄실, 중앙도서관 인쇄실", "IT/BT 인쇄실"],
+            "place_list" : ["1공학관 인쇄실", "한양플라자 인쇄실", "중앙도서관 인쇄실", "IT/BT 인쇄실"],
             "category_icon" : "printer.png"
 		},
         

@@ -54,13 +54,19 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
     }
     //입력 시작
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        self.searchBar.showsCancelButton = true
+        self.searchBar.showsCancelButton = false
+        self.searchBar.becomeFirstResponder()
     }
     //취소버튼 클릭
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.searchBar.showsCancelButton = false
         self.searchBar.text = ""
         self.searchBar.resignFirstResponder()
+    }
+
+    //검색버튼, 완료버튼 클릭
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.performSegue(withIdentifier: "search_listService", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,6 +96,16 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
     
             destination.placeName = filteredData[selectedIndex].p_name
             print(filteredData[selectedIndex].p_name)
+        }
+        
+        if segue.identifier == "search_listService"{
+            guard let destination = segue.destination as? SelectedTableViewController
+                else {return }
+            for i in filteredData{
+                destination.placeList.append(i.p_name)
+            }
+            
+            //destination.placeList = filteredData
         }
         
     }

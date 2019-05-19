@@ -31,7 +31,7 @@ class PlaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //임시, Label 채우기로 segue값 넘기기 확인
         placeText.text = placeName
         
         ref = Database.database().reference()
@@ -71,15 +71,21 @@ class PlaceViewController: UIViewController {
     }
  
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "info_commentService"{
+            guard let destination = segue.destination as? CommentViewController
+                else {return }
+            destination.place_name = placeName
+        }
+        
     }
-    */
+    
 
     
 }

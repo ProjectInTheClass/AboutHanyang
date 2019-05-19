@@ -1,0 +1,28 @@
+[
+    {
+        "b_name" : "IT/BT관",
+        "b_number" : "305",
+        "b_description" : "IT/BT관입니다",
+        "place_list" : "",
+        "b_outsidePicture" : ""
+        "b_majorInBuilding" : "컴퓨터 소프트웨어, 정보시스템, 연극영화 ,,,"
+    },
+    
+    {
+        "b_name" : "인문관",
+        "b_number" : "508",
+        "b_description" : "인문관입니다",
+        "place_list" : "",
+        "b_outsidePicture" : ""
+        "b_majorInBuilding" : ",,,,"
+    },
+    
+    {
+        "b_name" : "사범대학본관",
+        "b_number" : "505",
+        "b_description" : "사범대학본관입니다",
+        "place_list" : "",
+        "b_outsidePicture" : ""
+        "b_majorInBuilding" : ",,,,"
+    },
+]
