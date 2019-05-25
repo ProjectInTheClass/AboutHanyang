@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D01D49D22981FB900073C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D49C22981FB900073C27 /* AppDelegate.swift */; };
+		5D01D4A222981FB900073C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A022981FB900073C27 /* Main.storyboard */; };
+		5D01D4A422981FBB00073C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A322981FBB00073C27 /* Assets.xcassets */; };
+		5D01D4A722981FBB00073C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A522981FBB00073C27 /* LaunchScreen.storyboard */; };
+		5D01D4B222981FBB00073C27 /* aboutHanyangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D4B122981FBB00073C27 /* aboutHanyangTests.swift */; };
+		5D01D4BD22981FBB00073C27 /* aboutHanyangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D4BC22981FBB00073C27 /* aboutHanyangUITests.swift */; };
+		5D01D5132298255D00073C27 /* PlaceMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D5042298255C00073C27 /* PlaceMenuViewController.swift */; };
+		5D01D5152298255D00073C27 /* db_Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D5062298255C00073C27 /* db_Category.json */; };
+		5D01D5162298255D00073C27 /* db_Place.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D5072298255C00073C27 /* db_Place.json */; };
+		5D01D5172298255D00073C27 /* BuildingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D5082298255C00073C27 /* BuildingMapViewController.swift */; };
+		5D01D5182298255D00073C27 /* SearchSelectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D5092298255C00073C27 /* SearchSelectedTableViewController.swift */; };
+		5D01D5192298255D00073C27 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50A2298255C00073C27 /* CategoryViewController.swift */; };
+		5D01D51A2298255D00073C27 /* PlaceCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50B2298255C00073C27 /* PlaceCommentViewController.swift */; };
+		5D01D51B2298255D00073C27 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50C2298255C00073C27 /* PlaceDetailViewController.swift */; };
+		5D01D51C2298255D00073C27 /* PlaceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50D2298255C00073C27 /* PlaceMapViewController.swift */; };
+		5D01D51D2298255D00073C27 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50E2298255C00073C27 /* DataSource.swift */; };
+		5D01D51E2298255D00073C27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D50F2298255C00073C27 /* GoogleService-Info.plist */; };
+		5D01D51F2298255D00073C27 /* BuildingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D5102298255C00073C27 /* BuildingDetailViewController.swift */; };
+		5D01D5202298255D00073C27 /* db_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D5112298255C00073C27 /* db_Building.json */; };
+		5D01D5212298255D00073C27 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D5122298255D00073C27 /* SearchViewController.swift */; };
+		5DC8BC6A229913EF00404FA3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8BC69229913EF00404FA3 /* SettingViewController.swift */; };
+		5DC8BC6C2299180E00404FA3 /* PlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8BC6B2299180E00404FA3 /* PlaceListViewController.swift */; };
+		6490926FE1A370D9F9841882 /* Pods_aboutHanyang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B231FB4429F0F20BD9C14EB8 /* Pods_aboutHanyang.framework */; };
+		DB586189F4BBD2A28ED6335D /* Pods_aboutHanyangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A44FD9D8CD240BE0D6E6576 /* Pods_aboutHanyangUITests.framework */; };
+		ED41293CEF31E04BE9C18334 /* Pods_aboutHanyangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCCFCE8DB49039386F3B4AF /* Pods_aboutHanyangTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D01D4AE22981FBB00073C27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D01D49122981FB900073C27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D01D49822981FB900073C27;
+			remoteInfo = aboutHanyang;
+		};
+		5D01D4B922981FBB00073C27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D01D49122981FB900073C27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D01D49822981FB900073C27;
+			remoteInfo = aboutHanyang;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16D550F46E9BEA78D71B9563 /* Pods-aboutHanyangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyangUITests.release.xcconfig"; path = "Target Support Files/Pods-aboutHanyangUITests/Pods-aboutHanyangUITests.release.xcconfig"; sourceTree = "<group>"; };
+		263094F8AC569EF86E56198A /* Pods-aboutHanyangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyangTests.release.xcconfig"; path = "Target Support Files/Pods-aboutHanyangTests/Pods-aboutHanyangTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A44FD9D8CD240BE0D6E6576 /* Pods_aboutHanyangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE9C1E5CA427694517FFBDE /* Pods-aboutHanyangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyangUITests.debug.xcconfig"; path = "Target Support Files/Pods-aboutHanyangUITests/Pods-aboutHanyangUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		51C5C0C1FC2EF599B5319C63 /* Pods-aboutHanyang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyang.debug.xcconfig"; path = "Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang.debug.xcconfig"; sourceTree = "<group>"; };
+		5D01D49922981FB900073C27 /* aboutHanyang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aboutHanyang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D01D49C22981FB900073C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5D01D4A122981FB900073C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D01D4A322981FBB00073C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D01D4A622981FBB00073C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D01D4A822981FBB00073C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D01D4AD22981FBB00073C27 /* aboutHanyangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aboutHanyangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D01D4B122981FBB00073C27 /* aboutHanyangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutHanyangTests.swift; sourceTree = "<group>"; };
+		5D01D4B322981FBB00073C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D01D4B822981FBB00073C27 /* aboutHanyangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aboutHanyangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D01D4BC22981FBB00073C27 /* aboutHanyangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutHanyangUITests.swift; sourceTree = "<group>"; };
+		5D01D4BE22981FBB00073C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D01D5042298255C00073C27 /* PlaceMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMenuViewController.swift; sourceTree = "<group>"; };
+		5D01D5062298255C00073C27 /* db_Category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Category.json; sourceTree = "<group>"; };
+		5D01D5072298255C00073C27 /* db_Place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Place.json; sourceTree = "<group>"; };
+		5D01D5082298255C00073C27 /* BuildingMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingMapViewController.swift; sourceTree = "<group>"; };
+		5D01D5092298255C00073C27 /* SearchSelectedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSelectedTableViewController.swift; sourceTree = "<group>"; };
+		5D01D50A2298255C00073C27 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		5D01D50B2298255C00073C27 /* PlaceCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCommentViewController.swift; sourceTree = "<group>"; };
+		5D01D50C2298255C00073C27 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		5D01D50D2298255C00073C27 /* PlaceMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMapViewController.swift; sourceTree = "<group>"; };
+		5D01D50E2298255C00073C27 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		5D01D50F2298255C00073C27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D01D5102298255C00073C27 /* BuildingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingDetailViewController.swift; sourceTree = "<group>"; };
+		5D01D5112298255C00073C27 /* db_Building.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Building.json; sourceTree = "<group>"; };
+		5D01D5122298255D00073C27 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5DC8BC69229913EF00404FA3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5DC8BC6B2299180E00404FA3 /* PlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewController.swift; sourceTree = "<group>"; };
+		8371E596802A6C472FA5AF66 /* Pods-aboutHanyangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyangTests.debug.xcconfig"; path = "Target Support Files/Pods-aboutHanyangTests/Pods-aboutHanyangTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B231FB4429F0F20BD9C14EB8 /* Pods_aboutHanyang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1279E5A5DCA7FDCC005DF26 /* Pods-aboutHanyang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyang.release.xcconfig"; path = "Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang.release.xcconfig"; sourceTree = "<group>"; };
+		DDCCFCE8DB49039386F3B4AF /* Pods_aboutHanyangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D01D49622981FB900073C27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6490926FE1A370D9F9841882 /* Pods_aboutHanyang.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D01D4AA22981FBB00073C27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED41293CEF31E04BE9C18334 /* Pods_aboutHanyangTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D01D4B522981FBB00073C27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB586189F4BBD2A28ED6335D /* Pods_aboutHanyangUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		552597D60EF5DD72A67AF7AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51C5C0C1FC2EF599B5319C63 /* Pods-aboutHanyang.debug.xcconfig */,
+				D1279E5A5DCA7FDCC005DF26 /* Pods-aboutHanyang.release.xcconfig */,
+				8371E596802A6C472FA5AF66 /* Pods-aboutHanyangTests.debug.xcconfig */,
+				263094F8AC569EF86E56198A /* Pods-aboutHanyangTests.release.xcconfig */,
+				2BE9C1E5CA427694517FFBDE /* Pods-aboutHanyangUITests.debug.xcconfig */,
+				16D550F46E9BEA78D71B9563 /* Pods-aboutHanyangUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5D01D49022981FB900073C27 = {
+			isa = PBXGroup;
+			children = (
+				5D01D49B22981FB900073C27 /* aboutHanyang */,
+				5D01D4B022981FBB00073C27 /* aboutHanyangTests */,
+				5D01D4BB22981FBB00073C27 /* aboutHanyangUITests */,
+				5D01D49A22981FB900073C27 /* Products */,
+				552597D60EF5DD72A67AF7AB /* Pods */,
+				CFAFA91D8ACCDD17975B264D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D01D49A22981FB900073C27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D01D49922981FB900073C27 /* aboutHanyang.app */,
+				5D01D4AD22981FBB00073C27 /* aboutHanyangTests.xctest */,
+				5D01D4B822981FBB00073C27 /* aboutHanyangUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D01D49B22981FB900073C27 /* aboutHanyang */ = {
+			isa = PBXGroup;
+			children = (
+				5D01D4A322981FBB00073C27 /* Assets.xcassets */,
+				5D01D4A022981FB900073C27 /* Main.storyboard */,
+				5D01D5062298255C00073C27 /* db_Category.json */,
+				5D01D5112298255C00073C27 /* db_Building.json */,
+				5D01D5072298255C00073C27 /* db_Place.json */,
+				5D01D49C22981FB900073C27 /* AppDelegate.swift */,
+				5D01D50E2298255C00073C27 /* DataSource.swift */,
+				5DC8BC69229913EF00404FA3 /* SettingViewController.swift */,
+				5D01D50A2298255C00073C27 /* CategoryViewController.swift */,
+				5D01D5082298255C00073C27 /* BuildingMapViewController.swift */,
+				5D01D5102298255C00073C27 /* BuildingDetailViewController.swift */,
+				5DC8BC6B2299180E00404FA3 /* PlaceListViewController.swift */,
+				5D01D50D2298255C00073C27 /* PlaceMapViewController.swift */,
+				5D01D50C2298255C00073C27 /* PlaceDetailViewController.swift */,
+				5D01D50B2298255C00073C27 /* PlaceCommentViewController.swift */,
+				5D01D5042298255C00073C27 /* PlaceMenuViewController.swift */,
+				5D01D5122298255D00073C27 /* SearchViewController.swift */,
+				5D01D5092298255C00073C27 /* SearchSelectedTableViewController.swift */,
+				5D01D50F2298255C00073C27 /* GoogleService-Info.plist */,
+				5D01D4A522981FBB00073C27 /* LaunchScreen.storyboard */,
+				5D01D4A822981FBB00073C27 /* Info.plist */,
+			);
+			path = aboutHanyang;
+			sourceTree = "<group>";
+		};
+		5D01D4B022981FBB00073C27 /* aboutHanyangTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D01D4B122981FBB00073C27 /* aboutHanyangTests.swift */,
+				5D01D4B322981FBB00073C27 /* Info.plist */,
+			);
+			path = aboutHanyangTests;
+			sourceTree = "<group>";
+		};
+		5D01D4BB22981FBB00073C27 /* aboutHanyangUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5D01D4BC22981FBB00073C27 /* aboutHanyangUITests.swift */,
+				5D01D4BE22981FBB00073C27 /* Info.plist */,
+			);
+			path = aboutHanyangUITests;
+			sourceTree = "<group>";
+		};
+		CFAFA91D8ACCDD17975B264D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B231FB4429F0F20BD9C14EB8 /* Pods_aboutHanyang.framework */,
+				DDCCFCE8DB49039386F3B4AF /* Pods_aboutHanyangTests.framework */,
+				2A44FD9D8CD240BE0D6E6576 /* Pods_aboutHanyangUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D01D49822981FB900073C27 /* aboutHanyang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D01D4C122981FBB00073C27 /* Build configuration list for PBXNativeTarget "aboutHanyang" */;
+			buildPhases = (
+				A9D21BC2B54CF7CEAA2A6C98 /* [CP] Check Pods Manifest.lock */,
+				5D01D49522981FB900073C27 /* Sources */,
+				5D01D49622981FB900073C27 /* Frameworks */,
+				5D01D49722981FB900073C27 /* Resources */,
+				412D53FF494BE2C96472BAF1 /* [CP] Embed Pods Frameworks */,
+				EB551DA69135F00C2BC498BD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aboutHanyang;
+			productName = aboutHanyang;
+			productReference = 5D01D49922981FB900073C27 /* aboutHanyang.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5D01D4AC22981FBB00073C27 /* aboutHanyangTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D01D4C422981FBB00073C27 /* Build configuration list for PBXNativeTarget "aboutHanyangTests" */;
+			buildPhases = (
+				A04A3183CC216A48C453BC5B /* [CP] Check Pods Manifest.lock */,
+				5D01D4A922981FBB00073C27 /* Sources */,
+				5D01D4AA22981FBB00073C27 /* Frameworks */,
+				5D01D4AB22981FBB00073C27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D01D4AF22981FBB00073C27 /* PBXTargetDependency */,
+			);
+			name = aboutHanyangTests;
+			productName = aboutHanyangTests;
+			productReference = 5D01D4AD22981FBB00073C27 /* aboutHanyangTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5D01D4B722981FBB00073C27 /* aboutHanyangUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D01D4C722981FBB00073C27 /* Build configuration list for PBXNativeTarget "aboutHanyangUITests" */;
+			buildPhases = (
+				68D1E8DA84F7E8A821C5EDC7 /* [CP] Check Pods Manifest.lock */,
+				5D01D4B422981FBB00073C27 /* Sources */,
+				5D01D4B522981FBB00073C27 /* Frameworks */,
+				5D01D4B622981FBB00073C27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D01D4BA22981FBB00073C27 /* PBXTargetDependency */,
+			);
+			name = aboutHanyangUITests;
+			productName = aboutHanyangUITests;
+			productReference = 5D01D4B822981FBB00073C27 /* aboutHanyangUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D01D49122981FB900073C27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = aboutHanyang;
+				TargetAttributes = {
+					5D01D49822981FB900073C27 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					5D01D4AC22981FBB00073C27 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 5D01D49822981FB900073C27;
+					};
+					5D01D4B722981FBB00073C27 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 5D01D49822981FB900073C27;
+					};
+				};
+			};
+			buildConfigurationList = 5D01D49422981FB900073C27 /* Build configuration list for PBXProject "aboutHanyang" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D01D49022981FB900073C27;
+			productRefGroup = 5D01D49A22981FB900073C27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D01D49822981FB900073C27 /* aboutHanyang */,
+				5D01D4AC22981FBB00073C27 /* aboutHanyangTests */,
+				5D01D4B722981FBB00073C27 /* aboutHanyangUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D01D49722981FB900073C27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D01D4A722981FBB00073C27 /* LaunchScreen.storyboard in Resources */,
+				5D01D4A422981FBB00073C27 /* Assets.xcassets in Resources */,
+				5D01D4A222981FB900073C27 /* Main.storyboard in Resources */,
+				5D01D5202298255D00073C27 /* db_Building.json in Resources */,
+				5D01D51E2298255D00073C27 /* GoogleService-Info.plist in Resources */,
+				5D01D5152298255D00073C27 /* db_Category.json in Resources */,
+				5D01D5162298255D00073C27 /* db_Place.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D01D4AB22981FBB00073C27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D01D4B622981FBB00073C27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		412D53FF494BE2C96472BAF1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68D1E8DA84F7E8A821C5EDC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aboutHanyangUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A04A3183CC216A48C453BC5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aboutHanyangTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9D21BC2B54CF7CEAA2A6C98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aboutHanyang-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB551DA69135F00C2BC498BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D01D49522981FB900073C27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D01D51F2298255D00073C27 /* BuildingDetailViewController.swift in Sources */,
+				5D01D5132298255D00073C27 /* PlaceMenuViewController.swift in Sources */,
+				5D01D5192298255D00073C27 /* CategoryViewController.swift in Sources */,
+				5D01D51C2298255D00073C27 /* PlaceMapViewController.swift in Sources */,
+				5D01D51B2298255D00073C27 /* PlaceDetailViewController.swift in Sources */,
+				5D01D5182298255D00073C27 /* SearchSelectedTableViewController.swift in Sources */,
+				5D01D51D2298255D00073C27 /* DataSource.swift in Sources */,
+				5D01D5212298255D00073C27 /* SearchViewController.swift in Sources */,
+				5D01D51A2298255D00073C27 /* PlaceCommentViewController.swift in Sources */,
+				5D01D5172298255D00073C27 /* BuildingMapViewController.swift in Sources */,
+				5D01D49D22981FB900073C27 /* AppDelegate.swift in Sources */,
+				5DC8BC6C2299180E00404FA3 /* PlaceListViewController.swift in Sources */,
+				5DC8BC6A229913EF00404FA3 /* SettingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D01D4A922981FBB00073C27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D01D4B222981FBB00073C27 /* aboutHanyangTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D01D4B422981FBB00073C27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D01D4BD22981FBB00073C27 /* aboutHanyangUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D01D4AF22981FBB00073C27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D01D49822981FB900073C27 /* aboutHanyang */;
+			targetProxy = 5D01D4AE22981FBB00073C27 /* PBXContainerItemProxy */;
+		};
+		5D01D4BA22981FBB00073C27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D01D49822981FB900073C27 /* aboutHanyang */;
+			targetProxy = 5D01D4B922981FBB00073C27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5D01D4A022981FB900073C27 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D01D4A122981FB900073C27 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D01D4A522981FBB00073C27 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D01D4A622981FBB00073C27 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D01D4BF22981FBB00073C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5D01D4C022981FBB00073C27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D01D4C222981FBB00073C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C5C0C1FC2EF599B5319C63 /* Pods-aboutHanyang.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = aboutHanyang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aboutHanyang.aboutHanyang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D01D4C322981FBB00073C27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1279E5A5DCA7FDCC005DF26 /* Pods-aboutHanyang.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = aboutHanyang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aboutHanyang.aboutHanyang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5D01D4C522981FBB00073C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8371E596802A6C472FA5AF66 /* Pods-aboutHanyangTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = aboutHanyangTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aboutHanyang.aboutHanyangTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/aboutHanyang.app/aboutHanyang";
+			};
+			name = Debug;
+		};
+		5D01D4C622981FBB00073C27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 263094F8AC569EF86E56198A /* Pods-aboutHanyangTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = aboutHanyangTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aboutHanyang.aboutHanyangTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/aboutHanyang.app/aboutHanyang";
+			};
+			name = Release;
+		};
+		5D01D4C822981FBB00073C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE9C1E5CA427694517FFBDE /* Pods-aboutHanyangUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = aboutHanyangUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aboutHanyang.aboutHanyangUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = aboutHanyang;
+			};
+			name = Debug;
+		};
+		5D01D4C922981FBB00073C27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16D550F46E9BEA78D71B9563 /* Pods-aboutHanyangUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = aboutHanyangUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aboutHanyang.aboutHanyangUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = aboutHanyang;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D01D49422981FB900073C27 /* Build configuration list for PBXProject "aboutHanyang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D01D4BF22981FBB00073C27 /* Debug */,
+				5D01D4C022981FBB00073C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D01D4C122981FBB00073C27 /* Build configuration list for PBXNativeTarget "aboutHanyang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D01D4C222981FBB00073C27 /* Debug */,
+				5D01D4C322981FBB00073C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D01D4C422981FBB00073C27 /* Build configuration list for PBXNativeTarget "aboutHanyangTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D01D4C522981FBB00073C27 /* Debug */,
+				5D01D4C622981FBB00073C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D01D4C722981FBB00073C27 /* Build configuration list for PBXNativeTarget "aboutHanyangUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D01D4C822981FBB00073C27 /* Debug */,
+				5D01D4C922981FBB00073C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D01D49122981FB900073C27 /* Project object */;
+}
