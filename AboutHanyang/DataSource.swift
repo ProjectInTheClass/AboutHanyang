@@ -45,8 +45,36 @@ func initPlaceMarkers() {
 let category_titles : Array<String> = ["카페", "식당", "도서관", "인쇄실", "PC실", "샤워실", "자판기"]
 let category_images : Array<String> = ["cafe.png", "restaurant.png", "library.png", "printer.png", "laptop.png", "shower.png", "beverage.png"]
 
-//search bar 테스트용 배열
-let array_test : Array<String> = ["IT/BT", "올림픽 체육관", "경제금융대", "경영대", "행원파크"]
+func findPlace(place_name : String) -> Place {
+    var placeList : Array<Place> = []
+    
+    do {
+        let url = Bundle.main.url(forResource:"db_Place", withExtension:"json")
+        let jsonData = try Data(contentsOf: url!)
+        placeList = try JSONDecoder().decode([Place].self, from: jsonData)
+    }
+        
+    catch _ { print("some error") }
+    
+    let matchList = placeList.filter{$0.p_name == place_name}
+    return matchList[0]
+}
+
+func findPlace(place_list : Array<String>) -> Array<Place> {
+    var placeList : Array<Place> = []
+    
+    do {
+        let url = Bundle.main.url(forResource:"db_Place", withExtension:"json")
+        let jsonData = try Data(contentsOf: url!)
+        placeList = try JSONDecoder().decode([Place].self, from: jsonData)
+        
+    }
+        
+    catch _ { print("some error") }
+    
+    let resultPlace = placeList.filter{place_list.contains($0.p_name)}
+    return resultPlace
+}
 
 class Category : Decodable{
     
