@@ -99,18 +99,16 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                   else { return }
             
             destVC.selectedPlace = filteredData[selectedIndex].p_name
-            print(filteredData[selectedIndex].p_name)
         }
         
         if (segue.identifier == "showSearchList") {
-            guard let destVC = segue.destination as? SearchSelectedTableViewController
+            guard let destVC = segue.destination as? SelectedTableViewController
                   else { return }
-            
-            for i in filteredData {
-                destVC.placeList.append(i.p_name)
+            var tempList : Array<String> = []
+            for i in filteredData{
+                tempList.append(i.p_name)
             }
-            
-            //destination.placeList = filteredData
+            destVC.placeList = tempList
         }
     }
     

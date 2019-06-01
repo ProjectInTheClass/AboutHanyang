@@ -13,9 +13,26 @@ class PlaceDetailViewController: UIViewController {
     var selectedPlace:String = ""
     var selectedBuilding:String = ""
     
+    
+    var jsonSetter_place_queue: JSON = JSON([
+        "p_name": "default name",
+        "p_pos": "default simple pos exp",
+        "p_phone": "010-1234-4321",
+        "p_email": "default email",
+        "p_description": "some exp for place"
+        ])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = selectedPlace
+        if let placeShowed = findPlace(place_name: selectedPlace){
+            jsonSetter_place_queue["p_name"].string = placeShowed.p_name
+            jsonSetter_place_queue["p_pos"].string = placeShowed.p_pos
+            jsonSetter_place_queue["p_phone"].string = placeShowed.p_phone
+            jsonSetter_place_queue["p_email"].string = placeShowed.p_email
+            jsonSetter_place_queue["p_description"].string = placeShowed.p_description
+        }
+        //print(placeShowed.p_pos)
     }
     
     @IBAction func tapComment(_ sender: UIButton) {

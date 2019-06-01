@@ -82,30 +82,12 @@
                     <connections>
                         <outlet property="categoryView" destination="iaa-Dk-NeZ" id="2CQ-IX-egn"/>
                         <segue destination="77T-7S-KRl" kind="show" identifier="showCategoryAsMap" id="h0j-gG-baA"/>
-                        <segue destination="IP5-QT-gda" kind="show" identifier="showCategoryAsList" id="71t-Nd-vug"/>
+                        <segue destination="luV-5g-SBc" kind="show" identifier="showCategoryAsList" id="k7m-yJ-QxF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjB-B0-DUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="-958"/>
-        </scene>
-        <!--Place List View Controller-->
-        <scene sceneID="LZX-KV-33g">
-            <objects>
-                <viewController id="IP5-QT-gda" customClass="PlaceListViewController" customModule="aboutHanyang" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FGJ-ip-lZV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="AMF-it-Tbq"/>
-                    </view>
-                    <connections>
-                        <segue destination="qTm-cL-y31" kind="show" identifier="tapPlaceInList" id="9Dz-3r-QQG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tVG-y5-jQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1038" y="-1274"/>
+            <point key="canvasLocation" x="187" y="-741"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nOy-MZ-Lrs">
@@ -124,7 +106,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJH-R8-aHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1657" y="-381"/>
+            <point key="canvasLocation" x="-2152" y="-374"/>
         </scene>
         <!--지도-->
         <scene sceneID="eSQ-gl-KgN">
@@ -183,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEY-Gh-ozX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="-1673"/>
+            <point key="canvasLocation" x="187" y="-1531"/>
         </scene>
         <!--검색-->
         <scene sceneID="z7g-Hu-Phv">
@@ -282,22 +264,42 @@
             </objects>
             <point key="canvasLocation" x="187" y="887"/>
         </scene>
-        <!--Search Selected Table View Controller-->
+        <!--Selected Table View Controller-->
         <scene sceneID="mAT-3w-mtz">
             <objects>
-                <tableViewController id="luV-5g-SBc" customClass="SearchSelectedTableViewController" customModule="aboutHanyang" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="luV-5g-SBc" customClass="SelectedTableViewController" customModule="aboutHanyang" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ddb-Jp-Nlm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" id="35N-II-lZW" customClass="searchPlaceCell" customModule="aboutHanyang" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" id="i1z-26-LUq" customClass="SelectedCell" customModule="aboutHanyang" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="35N-II-lZW" id="i3j-Tm-YIB">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i1z-26-LUq" id="0jP-X2-QLs">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heH-9i-egg">
+                                            <rect key="frame" x="20" y="11" width="186" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0Z-5h-DPa">
+                                            <rect key="frame" x="214" y="11" width="180" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="heH-9i-egg" id="Qbh-4g-uwv"/>
+                                    <outlet property="pos" destination="x0Z-5h-DPa" id="6sJ-Yu-4yS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -311,7 +313,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCo-5P-TkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="1260"/>
+            <point key="canvasLocation" x="1688" y="126"/>
         </scene>
         <!--Building Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -338,63 +340,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="ug8-F3-zQz" kind="show" identifier="tapMarker" id="4bI-2u-0ll"/>
+                        <segue destination="luV-5g-SBc" kind="show" identifier="tapMarker" id="swk-nU-629"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="187" y="126"/>
-        </scene>
-        <!--Building Detail View Controller-->
-        <scene sceneID="2AE-Kf-ZFl">
-            <objects>
-                <viewController id="ug8-F3-zQz" customClass="BuildingDetailViewController" customModule="aboutHanyang" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ruX-PH-522">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rdV-RW-GRj">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" id="Shk-kq-AuA" customClass="PlaceTableViewCell" customModule="aboutHanyang" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Shk-kq-AuA" id="NpM-KX-o1N">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6k-70-ncq">
-                                                    <rect key="frame" x="20" y="11" width="130" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="name" destination="t6k-70-ncq" id="iSH-6n-8Ir"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="ug8-F3-zQz" id="r0g-DU-CE6"/>
-                                    <outlet property="delegate" destination="ug8-F3-zQz" id="5Xa-ms-aRm"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="W6q-1I-zpX"/>
-                    </view>
-                    <connections>
-                        <segue destination="qTm-cL-y31" kind="show" identifier="tapPlaceInBuilding" id="4lk-zw-cJ8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4cR-dd-WXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1038" y="126"/>
         </scene>
         <!--Place Detail View Controller-->
         <scene sceneID="lbV-67-Xs6">
@@ -433,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqb-eg-KTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064" y="508"/>
+            <point key="canvasLocation" x="2907" y="887"/>
         </scene>
         <!--Place Comment View Controller-->
         <scene sceneID="cJy-Ub-ymR">
@@ -448,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgw-DS-nD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3074" y="126"/>
+            <point key="canvasLocation" x="3942" y="126"/>
         </scene>
         <!--Place Menu View Controller-->
         <scene sceneID="hfe-pm-ywg">
@@ -463,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAi-NJ-olZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3075" y="887"/>
+            <point key="canvasLocation" x="3941" y="887"/>
         </scene>
         <!--Place Map View Controller-->
         <scene sceneID="iUM-7f-Yn5">
@@ -495,7 +446,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9E-WU-x71" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="-587"/>
+            <point key="canvasLocation" x="1688" y="-741"/>
         </scene>
         <!--카테고리-->
         <scene sceneID="hSo-9D-nhE">
@@ -512,10 +463,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gh7-Eh-kDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-671" y="-958"/>
+            <point key="canvasLocation" x="-671" y="-740"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Dz-3r-QQG"/>
+        <segue reference="181-LR-JqC"/>
+        <segue reference="swk-nU-629"/>
     </inferredMetricsTieBreakers>
 </document>

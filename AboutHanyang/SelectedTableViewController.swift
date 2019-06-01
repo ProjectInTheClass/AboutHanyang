@@ -8,19 +8,32 @@
 
 import UIKit
 
-class SearchSelectedTableViewController: UITableViewController {
+class SelectedTableViewController: UITableViewController {
 
     var placeList : Array<String> = []
+    var resultList : Array<Place> = []
+    var selectedBuilding : String = ""
     
     override func viewDidLoad() {
-        self.navigationItem.title = "검색 결과"
+        if (selectedBuilding.count == 0){
+            self.navigationItem.title = "검색 결과"
+        }
+        else { // tab 2 로 접근
+            self.navigationItem.title = selectedBuilding
+        }
         super.viewDidLoad()
+        //print(placeList , "selected table view controller")
+        
+        //resultList = findPlace(place_list: placeList)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        resultList = findPlace(place_list: placeList)
     }
     
     // MARK: - Table view data source
@@ -32,15 +45,15 @@ class SearchSelectedTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return placeList.count
+        return resultList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as? SelectedCell else{ return UITableViewCell()}
         // Configure the cell...
-        cell.textLabel?.text = placeList[indexPath.row]
-        //cell.textLabel?.text = placeList[indexPath.row].p_name
-        //cell.detailTextLabel?.text = placeList[indexPath.row].p_description
+        //cell.textLabel?.text = placeList[indexPath.row]
+        cell.name.text = resultList[indexPath.row].p_name
+        cell.pos.text = resultList[indexPath.row].p_pos
         return cell
     }
     

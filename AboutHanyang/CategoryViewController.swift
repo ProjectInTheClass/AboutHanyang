@@ -65,10 +65,11 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         }
         
         if (segue.identifier == "showCategoryAsList") {
-            guard let destVC = segue.destination as? PlaceListViewController,
+            guard let destVC = segue.destination as? SelectedTableViewController,
                 let selectedIndex = self.categoryView.indexPathsForSelectedItems?.first
                 else { return }
-            destVC.selectedCategory = categoryList[selectedIndex.row].c_name
+            destVC.placeList = categoryList[selectedIndex.row].place_list
+            print(destVC.placeList)
             // category_list[selectedIndex.row].place_list
         }
     }

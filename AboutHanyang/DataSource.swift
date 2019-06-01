@@ -45,7 +45,7 @@ func initPlaceMarkers() {
 let category_titles : Array<String> = ["카페", "식당", "도서관", "인쇄실", "PC실", "샤워실", "자판기"]
 let category_images : Array<String> = ["cafe.png", "restaurant.png", "library.png", "printer.png", "laptop.png", "shower.png", "beverage.png"]
 
-func findPlace(place_name : String) -> Place {
+func findPlace(place_name : String) -> Place? {
     var placeList : Array<Place> = []
     
     do {
@@ -56,8 +56,13 @@ func findPlace(place_name : String) -> Place {
         
     catch _ { print("some error") }
     
-    let matchList = placeList.filter{$0.p_name == place_name}
-    return matchList[0]
+    for i in placeList{
+        if (i.p_name == place_name){
+            return i
+        }
+    }
+    
+    return nil
 }
 
 func findPlace(place_list : Array<String>) -> Array<Place> {
@@ -74,6 +79,24 @@ func findPlace(place_list : Array<String>) -> Array<Place> {
     
     let resultPlace = placeList.filter{place_list.contains($0.p_name)}
     return resultPlace
+}
+func findBuilding(building_name : String) -> Building? {
+    var buildingList : Array<Building> = []
+    
+    do {
+        let url = Bundle.main.url(forResource:"db_Building", withExtension:"json")
+        let jsonData = try Data(contentsOf: url!)
+        buildingList = try JSONDecoder().decode([Building].self, from: jsonData)
+    }
+        
+    catch _ { print("some error") }
+    
+    for i in buildingList{
+        if (i.b_name == building_name){
+            return i
+        }
+    }
+    return nil
 }
 
 class Category : Decodable{
@@ -110,7 +133,7 @@ class Building : Decodable{
     let b_name : String
     let b_number : Int
     let b_description : String
-    let place_list : Array<Place>
+    let place_list : Array<String>
     let b_outsidePicture : String
     let b_majorInBuilding : Array<String>
     
@@ -126,13 +149,37 @@ class Place : Decodable
     let p_description : String
 //  let p_review : Array<review>
     
-//  init(_ name : String, _ pos : String, _ phone : String, _ description : String)
-//   {
-//       self.p_name = name
-//       self.p_pos = pos
-//      self.p_phone = phone
-//      self.p_description = description
-//      self.p_email = ""
-//        self.p_review = []
-//  }
+    init(_ name : String, _ pos : String, _ phone : String, _ email : String, _ description : String)
+     {
+         self.p_name = name
+         self.p_pos = pos
+         self.p_phone = phone
+         self.p_description = description
+         self.p_email = email
+         //self.p_review = []
+    }
 }
+
+/// 크기에 제약이 없는 FIFO 큐
+/// 복잡도: push O(1), pop O(`count`)
+public struct Queue<T>: ExpressibleByArrayLiteral {
+    /// 내부 배열 저장소
+    public private(set) var elements: Array<T> = []
+    
+    /// 새로운 엘리먼트 추가. 소요 시간 = O(1)
+    public mutating func push(value: T) { elements.append(value) }
+    
+    /// 가장 앞에 있는 엘리먼트를 꺼내오기. 소요시간 = O(`count`)
+    public mutating func pop() -> T { return elements.removeFirst() }
+    
+    /// 큐가 비었는지 검사
+    public var isEmpty: Bool { return elements.isEmpty }
+    
+    /// 큐의 크기, 연산 프로퍼티
+    public var count: Int { return elements.count }
+    
+    /// ArrayLiteralConvertible 지원
+    public init(arrayLiteral elements: T...) { self.elements = elements }
+}
+
+var searchHistoryQueue : Queue<Place> = []

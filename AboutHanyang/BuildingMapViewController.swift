@@ -23,6 +23,8 @@ class BuildingMapViewController: UIViewController, GMSMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // self.tappedMarker = GMSMarker()
         // self.customInfoWindow = CustomInfoWindow().loadView()
         
@@ -46,8 +48,12 @@ class BuildingMapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC = segue.destination as! BuildingDetailViewController
-        destVC.selectedBuilding = self.tappedMarker!.title!
+        guard let title = self.tappedMarker!.title else { return }
+        let destVC = segue.destination as! SelectedTableViewController
+        if let selectedBuilding : Building = findBuilding(building_name: title){
+            destVC.placeList = selectedBuilding.place_list
+        }
+        destVC.selectedBuilding = title
     }
     
     // detail view for places by tapping marker

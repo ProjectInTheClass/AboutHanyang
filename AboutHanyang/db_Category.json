@@ -8,13 +8,13 @@
         
         {
             "c_name" : "식당",
-            "place_list" : ["김밥나라", "청년떡볶이", "신의주 찹쌀 순대국", "플라잉보울"],
+            "place_list" : ["김밥나라", "청년 떡볶이", "신의주 찹쌀 순대국", "플라잉 보울"],
             "category_icon" : "restaurant.png"
         },
         
         {
             "c_name" : "도서관",
-            "place_list" : ["백남학술도서관", "IT/BT 정보도서관", "1공학관 도서관"],
+            "place_list" : ["백남학술도서관", "IT/BT 정보도서관", "1공학관 도서관", "3 열람실"],
             "category_icon" : "library.png"
         },
         

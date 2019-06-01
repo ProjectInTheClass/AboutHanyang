@@ -1,10 +1,42 @@
 [
     {
 		"p_name" : "Cafe Queue",
-        "p_pos" : "IT/BT관 1층",
+        "p_pos" : "IT/BT관 3층(로비)",
         "p_phone" : "123-4567-8910",
 		"p_email" : "",
         "p_description" : "맛있는 커피를 팝니다"
+    },
+    
+    {
+        "p_name" : "IT/BT 인쇄실",
+        "p_pos" : "IT/BT관 1층",
+        "p_phone" : "123-4567-8910",
+        "p_email" : "",
+        "p_description" : "흑백 1장 당 50원"
+    },
+    
+    {
+        "p_name" : "정보도서관",
+        "p_pos" : "IT/BT관 4층",
+        "p_phone" : "123-4567-8910",
+        "p_email" : "",
+        "p_description" : "정보통신관 열람실입니다"
+    },
+    
+    {
+        "p_name" : "올림픽체육관 매점",
+        "p_pos" : "올림픽 체육관 1층",
+        "p_phone" : "123-4567-8910",
+        "p_email" : "",
+        "p_description" : "매점입니다"
+    },
+    
+    {
+        "p_name" : "올림픽체육관 헬스장",
+        "p_pos" : "올림픽 체육관 ?",
+        "p_phone" : "123-4567-8910",
+        "p_email" : "",
+        "p_description" : "헬스장입니다"
     },
     
     {
