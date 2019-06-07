@@ -55,7 +55,6 @@ import UIKit
             super.viewDidLoad()
             self.navigationItem.title = "메뉴"
             self.navigationItem.backBarButtonItem?.title = self.selectedPlace
-            print(selectedPlace)
         }
         
         override func viewWillAppear(_ animated: Bool) {

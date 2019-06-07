@@ -35,7 +35,6 @@ class PlaceDetailViewController: UIViewController {
             jsonSetter_place_queue["p_description"].string = placeShowed.p_description
         }
         //print(placeShowed.p_pos)
-        print(selectedPlace)
         menuButton.isHidden = false
         do{
             let url = Bundle.main.url(forResource:"db_Menu", withExtension:"json")
