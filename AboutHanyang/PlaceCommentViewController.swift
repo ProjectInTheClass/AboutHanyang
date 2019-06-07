@@ -200,15 +200,26 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             return
         }
         
-        self.ref.child("review").child(self.selectedPlace!).child(uid).setValue(["comment":review_comment, "sympathy":[""], "time":time]){
-            (error:Error?, ref:DatabaseReference) in
-            if let error = error {
-                print("Data could not be saved: \(error).")
-            } else {
-                self.getAllComment()
+        let alert = UIAlertController(title: "댓글 쓰기", message: "댓글을 남기시겠습니까?.", preferredStyle: UIAlertController.Style.alert)
+        
+        let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+            self.ref.child("review").child(self.selectedPlace!).child(uid).setValue(["comment":review_comment, "sympathy":[""], "time":time]){
+                (error:Error?, ref:DatabaseReference) in
+                if let error = error {
+                    print("Data could not be saved: \(error).")
+                } else {
+                    self.getAllComment()
+                }
             }
+            textField.text = ""
+            alert.dismiss(animated: true, completion: nil)
         }
-        textField.text = ""
+        
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
