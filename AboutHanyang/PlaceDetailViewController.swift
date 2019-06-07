@@ -10,6 +10,8 @@ import UIKit
 
 class PlaceDetailViewController: UIViewController {
 
+    @IBOutlet weak var menuButton : UIButton!
+    
     var selectedPlace:String = ""
     var selectedBuilding:String = ""
     
@@ -33,6 +35,22 @@ class PlaceDetailViewController: UIViewController {
             jsonSetter_place_queue["p_description"].string = placeShowed.p_description
         }
         //print(placeShowed.p_pos)
+        print(selectedPlace)
+        menuButton.isHidden = false
+        do{
+            let url = Bundle.main.url(forResource:"db_Menu", withExtension:"json")
+            let jsonData = try Data(contentsOf: url!)
+            let data = try JSONDecoder().decode([MenuData].self, from: jsonData)
+            
+            for item in data{
+                if(item.placeName == selectedPlace){
+                    return
+                }
+            }
+            menuButton.isHidden = true
+        }
+            
+        catch _ { menuButton.isHidden = true }
     }
     
     @IBAction func tapComment(_ sender: UIButton) {
@@ -42,6 +60,8 @@ class PlaceDetailViewController: UIViewController {
     @IBAction func tapMenu(_ sender: UIButton) {
         performSegue(withIdentifier: "tapMenu", sender: nil)
     }
+    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "tapComment") {

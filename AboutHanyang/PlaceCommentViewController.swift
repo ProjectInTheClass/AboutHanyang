@@ -173,9 +173,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         
         self.navigationItem.title = "코멘트"
         self.navigationItem.backBarButtonItem?.title = self.selectedPlace
-        
-        self.selectedPlace = "Cafe Queue"
-        
+                
         ref = Database.database().reference()
         
         self.tableView.estimatedRowHeight = 250
@@ -203,7 +201,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         let alert = UIAlertController(title: "댓글 쓰기", message: "댓글을 남기시겠습니까?.", preferredStyle: UIAlertController.Style.alert)
         
         let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
-            self.ref.child("review").child(self.selectedPlace!).child(uid).setValue(["comment":review_comment, "sympathy":[""], "time":time]){
+            self.ref.child("review").child(self.selectedPlace!).child(self.uid).setValue(["comment":review_comment, "sympathy":[""], "time":time]){
                 (error:Error?, ref:DatabaseReference) in
                 if let error = error {
                     print("Data could not be saved: \(error).")
@@ -211,7 +209,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
                     self.getAllComment()
                 }
             }
-            textField.text = ""
+            self.textField.text = ""
             alert.dismiss(animated: true, completion: nil)
         }
         

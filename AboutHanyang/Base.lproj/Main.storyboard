@@ -378,13 +378,14 @@
                         <viewLayoutGuide key="safeArea" id="7tT-Vr-EYZ"/>
                     </view>
                     <connections>
+                        <outlet property="menuButton" destination="nPz-Kg-5WO" id="bnN-Jb-anE"/>
                         <segue destination="scj-hx-96u" kind="show" identifier="tapMenu" id="jtS-Yl-Z7m"/>
                         <segue destination="qbF-Cb-mng" kind="show" identifier="tapComment" id="Jey-wT-cpW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqb-eg-KTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2907" y="887"/>
+            <point key="canvasLocation" x="2905.7971014492755" y="886.60714285714278"/>
         </scene>
         <!--Place Comment View Controller-->
         <scene sceneID="cJy-Ub-ymR">
