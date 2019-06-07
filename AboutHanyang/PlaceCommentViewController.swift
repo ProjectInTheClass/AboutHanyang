@@ -213,7 +213,13 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             alert.dismiss(animated: true, completion: nil)
         }
         
+        let no = UIAlertAction(title: "NO", style: UIAlertAction.Style.default) { (UIAlertAction) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
         alert.addAction(ok)
+        alert.addAction(no)
+
         present(alert, animated: true, completion: nil)
         
         
@@ -372,8 +378,13 @@ extension PlaceCommentViewController : CommentViewDelegate{
             }
             alert.dismiss(animated: true, completion: nil)
         }
+        let no = UIAlertAction(title: "NO", style: UIAlertAction.Style.default) { (UIAlertAction) in
+            alert.dismiss(animated: true, completion: nil)
+        }
         
         alert.addAction(ok)
+        alert.addAction(no)
+
         
         present(alert, animated: true, completion: nil)
        
