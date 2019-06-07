@@ -112,7 +112,7 @@ import UIKit
                 currentMenu = menuData[key[3]]!
                 break
             default:
-                break
+                return
             }
             keys = Array(currentMenu.keys)
             values = Array(currentMenu.values)
