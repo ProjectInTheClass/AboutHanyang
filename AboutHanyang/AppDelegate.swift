@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaults = UserDefaults.standard
         let uuid = UIDevice.current.identifierForVendor?.uuidString
         defaults.set(uuid, forKey: "user_uid")
+        
         return true
     }
 

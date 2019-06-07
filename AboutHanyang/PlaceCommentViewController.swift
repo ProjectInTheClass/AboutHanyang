@@ -4,9 +4,13 @@ import Firebase
 
 struct CommentFormat{
     var comment : String
-    var sympathy : Int
+    var sympathy : [String]
     var time : String
     var uid : String
+}
+
+protocol CommentViewDelegate{
+    func upSympathy(uid:String , sym_list : [String])
 }
 
 
@@ -16,35 +20,15 @@ class CommentViewCell : UITableViewCell {
     @IBOutlet weak var sympathy: UILabel!
     @IBOutlet weak var dateTime: UILabel!
     
-    var ref: DatabaseReference!
-    
-    var selectedPlace : String? = ""
+    var sym_list : [String] = []
     
     var c_uid : String = ""
     
+    var delegate : CommentViewDelegate? = nil
+    
     @IBAction func SympathyComment(_ sender: Any) {
-       print("1")
-        ref.child("review").child(selectedPlace!).child(c_uid).runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
-            print("2")
-            if var post = currentData.value as? [String : AnyObject]
-            {
-                print("3")
-                if var count = post["sympathy"] as! Int?
-            {
-            count = count + 1
-            post["sympathy"] = count as AnyObject?
-            
-            // Set value and report transaction success
-            currentData.value = post
-                }
-            }
-            print("4")
-            return TransactionResult.success(withValue: currentData)
-        }) { (error, committed, snapshot) in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-        }
+        
+        delegate?.upSympathy(uid: c_uid, sym_list: sym_list)
     }
 }
 
@@ -122,11 +106,13 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         
         cell.dateTime.text = dic.time
         
-        cell.sympathy.text = "\(dic.sympathy)"
+        cell.sympathy.text = "\(dic.sympathy.count)"
         
-        cell.ref = self.ref
+        cell.sym_list = dic.sympathy
         
-        cell.selectedPlace = self.selectedPlace
+        cell.c_uid = dic.uid
+        
+        cell.delegate = self
         
         return (cell as UITableViewCell)
     }
@@ -136,15 +122,19 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         if let getkey = defaults.string(forKey: "user_uid") {
             uid = getkey
         }
-        getBestComments()
         getAllComment()
     }
     
     func getAllComment(){
+        
+        comment_best.removeAll();
         comment_normal.removeAll();
+        
         ref.child("review").child(selectedPlace!).observeSingleEvent(of: .value, with: { (snapshot) in
             guard let dic = snapshot.value as? [String:[String:Any]]
                 else {
+                    print("get data error")
+                    self.tableView.reloadData()
                     return
             }
             
@@ -161,39 +151,20 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             self.comment_normal.sort{
                 (a:CommentFormat, b:CommentFormat) -> Bool in return a.time > b.time
             }
+            let best_comment = self.comment_normal.sorted{
+                (a:CommentFormat, b:CommentFormat) -> Bool in return a.sympathy.count > b.sympathy.count
+            }
+            
+            for i in 0..<2{
+                if(i<best_comment.count){
+                    self.comment_best.append(best_comment[i])
+                }
+            }
             
             self.tableView.reloadData()
+            print("tableview reload done")
         })
     }
-    
-    func getBestComments() {
-        
-        comment_best.removeAll();
-        
-        let bestCommentQuery = (ref.child("review").child(selectedPlace!).queryOrdered(byChild: "sympathy").queryLimited(toLast: 2))
-        bestCommentQuery.observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            guard let dic = snapshot.value as? [String:[String:Any]]
-                else{
-                    return
-            }
-            
-            let dic_keys = Array(dic.keys)
-            
-            for index in 0..<dic_keys.count{
-                guard let formatter = self.convertDic(dic_keys[index], dic[dic_keys[index]]!)
-                    else {
-                        print("skip index : \(index)")
-                        continue
-                }
-                self.comment_best.append(formatter)
-                self.tableView.reloadData()
-            }
-        }) { (error) in
-            print("some error")
-        }
-    }
-    
     
     
     
@@ -217,12 +188,27 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         let review_comment = textField.text ?? ""
         let time = Double(NSDate().timeIntervalSince1970)
         
+        if(review_comment.count > 40){
+            let alert = UIAlertController(title: "작성 불가", message: "댓글 길이 제한은 40자입니다.", preferredStyle: UIAlertController.Style.alert)
+            
+            let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                alert.dismiss(animated: true, completion: nil)
+            }
+            
+            alert.addAction(ok)
+            present(alert, animated: true, completion: nil)
+            return
+        }
         
-        self.ref.child("review").child(self.selectedPlace!).child(uid).setValue(["comment":review_comment, "sympathy":0, "time":time])
-        
-        getBestComments()
-        getAllComment()
-        self.tableView.reloadData()
+        self.ref.child("review").child(self.selectedPlace!).child(uid).setValue(["comment":review_comment, "sympathy":[""], "time":time]){
+            (error:Error?, ref:DatabaseReference) in
+            if let error = error {
+                print("Data could not be saved: \(error).")
+            } else {
+                self.getAllComment()
+            }
+        }
+        textField.text = ""
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -233,13 +219,38 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             }
             if(comment_normal[indexPath.row].uid == uid)
             {
-                self.ref.child("review").child(self.selectedPlace!).child(uid).setValue(nil)
-                getBestComments()
-                getAllComment()
+                let alert = UIAlertController(title: "댓글 삭제", message: "정말 삭제하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+                
+                let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                    self.ref.child("review").child(self.selectedPlace!).child(self.uid).setValue(nil){
+                        (error:Error?, ref:DatabaseReference) in
+                        if let error = error {
+                            print("Data could not be saved: \(error).")
+                        } else {
+                            self.getAllComment()
+                        }
+                    }
+                    alert.dismiss(animated: true, completion: nil)
+                }
+                
+                let no = UIAlertAction(title: "NO", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                    alert.dismiss(animated: true, completion: nil)
+                }
+                
+                alert.addAction(ok)
+                alert.addAction(no)
+                present(alert, animated: true, completion: nil)
+                
             }
             else{
-                //show modal view
-            }
+                let alert = UIAlertController(title: "삭제 불가", message: "다른 사람의 댓글은 지울 수 없습니다.", preferredStyle: UIAlertController.Style.alert)
+                
+                let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                    alert.dismiss(animated: true, completion: nil)
+                }
+                
+                alert.addAction(ok)
+                present(alert, animated: true, completion: nil)            }
         }
     }
     
@@ -275,10 +286,11 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             else {
                 return nil
         }
-        guard let sympathy = dic["sympathy"] as? Int
+        guard var sympathy = dic["sympathy"] as? [String]
             else{
                 return nil
         }
+        sympathy.remove(at: 0)
         guard let time = dic["time"] as? Double
             else{
                 return nil
@@ -299,5 +311,63 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
      }
      */
     
+    
+}
+
+extension PlaceCommentViewController : CommentViewDelegate{
+    
+    func upSympathy(uid: String, sym_list : [String]) {
+        for item in sym_list{
+            if(item == self.uid){
+                
+                let alert = UIAlertController(title: "중복 금지", message: "이미 공감한 댓글입니다", preferredStyle: UIAlertController.Style.alert)
+            
+                let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                    alert.dismiss(animated: true, completion: nil)
+                }
+                
+                alert.addAction(ok)
+
+                present(alert, animated: true, completion: nil)
+                return
+                }
+        }
+        let alert = UIAlertController(title: "공감 하기", message: "공감하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+        
+        let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+            self.ref.child("review").child(self.selectedPlace!).child(self.uid).runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+                if var post = currentData.value as? [String : AnyObject]{
+                    
+                    var sympathy = post["sympathy"] as! [String]
+                    
+                    
+                    
+                    sympathy.append(self.uid)
+                    
+                    
+                    post["sympathy"] = sympathy as AnyObject?
+                    
+                    // Set value and report transaction success
+                    currentData.value = post
+                    
+                    return TransactionResult.success(withValue: currentData)
+                }
+                return TransactionResult.success(withValue: currentData)
+            }) { (error, committed, snapshot) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+                if committed {
+                    self.getAllComment()
+                }
+            }
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
+        alert.addAction(ok)
+        
+        present(alert, animated: true, completion: nil)
+       
+    }
     
 }

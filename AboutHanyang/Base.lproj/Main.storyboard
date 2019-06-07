@@ -469,6 +469,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="qbF-Cb-mng" id="GLn-fa-XQE"/>
+                                    <outlet property="delegate" destination="qbF-Cb-mng" id="CGS-gQ-5NO"/>
                                 </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="의견 남기기" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="C5L-Fa-vLy">
