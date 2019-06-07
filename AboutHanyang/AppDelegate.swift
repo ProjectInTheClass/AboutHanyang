@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyCCkkOaz_qi723j6bTwX26_I6obpJ8p6Dk")
         // GMSPlacesClient.provideAPIKey("AIzaSyCCkkOaz_qi723j6bTwX26_I6obpJ8p6Dk")
-        
+        FirebaseApp.configure()
+        let defaults = UserDefaults.standard
+        let uuid = UIDevice.current.identifierForVendor?.uuidString
+        defaults.set(uuid, forKey: "user_uid")
         return true
     }
 

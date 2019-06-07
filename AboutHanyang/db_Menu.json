@@ -1,0 +1,6 @@
+[
+    {"placeName" : "Cafe Queue",
+        "menu" : {"Ice coffe" : {"AA":"2500", "BB":"300"}, "Hot Coffee":{"CC":"200","DD":"680"}}},
+    {"placeName" : "Blue Pot",
+        "menu" : { "Cold Brew":{"CC":"500","DD":"480"}}}
+]

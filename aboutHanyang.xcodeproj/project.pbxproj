@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48E506CE22A90D74002FF7B4 /* SelectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E506CD22A90D74002FF7B4 /* SelectedTableViewController.swift */; };
+		48E506D022A9170D002FF7B4 /* db_Menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 48E506CF22A9170D002FF7B4 /* db_Menu.json */; };
 		5D01D49D22981FB900073C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D49C22981FB900073C27 /* AppDelegate.swift */; };
 		5D01D4A222981FB900073C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A022981FB900073C27 /* Main.storyboard */; };
 		5D01D4A422981FBB00073C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A322981FBB00073C27 /* Assets.xcassets */; };
@@ -31,7 +33,6 @@
 		DB586189F4BBD2A28ED6335D /* Pods_aboutHanyangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A44FD9D8CD240BE0D6E6576 /* Pods_aboutHanyangUITests.framework */; };
 		ED41293CEF31E04BE9C18334 /* Pods_aboutHanyangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCCFCE8DB49039386F3B4AF /* Pods_aboutHanyangTests.framework */; };
 		F3A4F6B022A10E9A00FD6646 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4F6AF22A10E9900FD6646 /* SwiftyJSON.swift */; };
-		F3A4F6B222A23B8000FD6646 /* SelectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4F6B122A23B8000FD6646 /* SelectedTableViewController.swift */; };
 		F3A4F6B422A23BC100FD6646 /* SelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4F6B322A23BC100FD6646 /* SelectedCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		263094F8AC569EF86E56198A /* Pods-aboutHanyangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyangTests.release.xcconfig"; path = "Target Support Files/Pods-aboutHanyangTests/Pods-aboutHanyangTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A44FD9D8CD240BE0D6E6576 /* Pods_aboutHanyangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE9C1E5CA427694517FFBDE /* Pods-aboutHanyangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyangUITests.debug.xcconfig"; path = "Target Support Files/Pods-aboutHanyangUITests/Pods-aboutHanyangUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		48E506CD22A90D74002FF7B4 /* SelectedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedTableViewController.swift; path = AboutHanyang/SelectedTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		48E506CF22A9170D002FF7B4 /* db_Menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Menu.json; sourceTree = "<group>"; };
 		51C5C0C1FC2EF599B5319C63 /* Pods-aboutHanyang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyang.debug.xcconfig"; path = "Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang.debug.xcconfig"; sourceTree = "<group>"; };
 		5D01D49922981FB900073C27 /* aboutHanyang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aboutHanyang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D01D49C22981FB900073C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +92,6 @@
 		D1279E5A5DCA7FDCC005DF26 /* Pods-aboutHanyang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyang.release.xcconfig"; path = "Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang.release.xcconfig"; sourceTree = "<group>"; };
 		DDCCFCE8DB49039386F3B4AF /* Pods_aboutHanyangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A4F6AF22A10E9900FD6646 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		F3A4F6B122A23B8000FD6646 /* SelectedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectedTableViewController.swift; path = /Users/th/SS/team/aboutHanyang/SelectedTableViewController.swift; sourceTree = "<absolute>"; };
 		F3A4F6B322A23BC100FD6646 /* SelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectedCell.swift; path = AboutHanyang/SelectedCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 				5D01D5062298255C00073C27 /* db_Category.json */,
 				5D01D5112298255C00073C27 /* db_Building.json */,
 				5D01D5072298255C00073C27 /* db_Place.json */,
+				48E506CF22A9170D002FF7B4 /* db_Menu.json */,
 				5D01D49C22981FB900073C27 /* AppDelegate.swift */,
 				5D01D50E2298255C00073C27 /* DataSource.swift */,
 				5DC8BC69229913EF00404FA3 /* SettingViewController.swift */,
@@ -174,8 +177,8 @@
 				5D01D50D2298255C00073C27 /* PlaceMapViewController.swift */,
 				5D01D50C2298255C00073C27 /* PlaceDetailViewController.swift */,
 				5D01D50B2298255C00073C27 /* PlaceCommentViewController.swift */,
+				48E506CD22A90D74002FF7B4 /* SelectedTableViewController.swift */,
 				5D01D5042298255C00073C27 /* PlaceMenuViewController.swift */,
-				F3A4F6B122A23B8000FD6646 /* SelectedTableViewController.swift */,
 				F3A4F6B322A23BC100FD6646 /* SelectedCell.swift */,
 				5D01D5122298255D00073C27 /* SearchViewController.swift */,
 				5D01D50F2298255C00073C27 /* GoogleService-Info.plist */,
@@ -336,6 +339,7 @@
 				5D01D5202298255D00073C27 /* db_Building.json in Resources */,
 				5D01D51E2298255D00073C27 /* GoogleService-Info.plist in Resources */,
 				5D01D5152298255D00073C27 /* db_Category.json in Resources */,
+				48E506D022A9170D002FF7B4 /* db_Menu.json in Resources */,
 				5D01D5162298255D00073C27 /* db_Place.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,7 +496,7 @@
 				5D01D51A2298255D00073C27 /* PlaceCommentViewController.swift in Sources */,
 				5D01D5172298255D00073C27 /* BuildingMapViewController.swift in Sources */,
 				5D01D49D22981FB900073C27 /* AppDelegate.swift in Sources */,
-				F3A4F6B222A23B8000FD6646 /* SelectedTableViewController.swift in Sources */,
+				48E506CE22A90D74002FF7B4 /* SelectedTableViewController.swift in Sources */,
 				5DC8BC6A229913EF00404FA3 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
