@@ -15,24 +15,56 @@ class PlaceDetailViewController: UIViewController {
     var selectedPlace:String = ""
     var selectedBuilding:String = ""
     
-    
-    var jsonSetter_place_queue: JSON = JSON([
-        "p_name": "default name",
-        "p_pos": "default simple pos exp",
-        "p_phone": "010-1234-4321",
-        "p_email": "default email",
-        "p_description": "some exp for place"
-        ])
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = selectedPlace
         if let placeShowed = findPlace(place_name: selectedPlace){
-            jsonSetter_place_queue["p_name"].string = placeShowed.p_name
-            jsonSetter_place_queue["p_pos"].string = placeShowed.p_pos
-            jsonSetter_place_queue["p_phone"].string = placeShowed.p_phone
-            jsonSetter_place_queue["p_email"].string = placeShowed.p_email
-            jsonSetter_place_queue["p_description"].string = placeShowed.p_description
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+            let doc = NSHomeDirectory() + "/Documents"
+            let filepath = doc + "/history.json"
+            // history.json file 이 있는지 확인
+            let fileManager = FileManager.default
+            let fileUrl = URL(fileURLWithPath: filepath)
+            if fileManager.fileExists(atPath: filepath) {
+                do {
+                    let jsonData = try Data(contentsOf: fileUrl as URL)
+                    recentQueue = try JSONDecoder().decode([Place].self, from: jsonData)
+                }
+                catch _ { print("some error") } }
+            else {
+                print("recent history doesn't exists")
+            }
+            var duplCheck : Bool = false
+            var temp : Array<Place> = []
+            for i in recentQueue{
+                if i.p_name == placeShowed.p_name {
+                    duplCheck = true
+                    temp.insert(i, at: 0)
+                }
+                else{
+                    temp.append(i)
+                }
+            }
+            if (duplCheck == false){
+                recentQueue.insert(placeShowed, at: 0)
+                while (recentQueue.count > queueSize){
+                    recentQueue = recentQueue.dropLast()
+                }
+            }
+            else{
+                recentQueue = temp
+            }
+            let myJson = try? encoder.encode(recentQueue)
+            if let myJsonFile = myJson , let myString = String(data: myJsonFile, encoding: .utf8){
+                do{
+                    try myString.write(to: fileUrl, atomically: false, encoding: .utf8)
+                    print(myString)
+                }
+                catch _ {
+                    print("history.json file write failed")
+                }
+            }
         }
         //print(placeShowed.p_pos)
         menuButton.isHidden = false

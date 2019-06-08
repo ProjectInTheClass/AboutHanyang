@@ -36,14 +36,9 @@ func initBuildingMarkers() {
 }
 
 func initPlaceMarkers() {
-    addPlaceMarker(CLLocationCoordinate2D(latitude: 37.55575345, longitude: 127.04946946), "큐카페", "정보통신관 3F", .green)
-    addPlaceMarker(CLLocationCoordinate2D(latitude: 37.55639986, longitude: 127.04996567), "매점", "올림픽체육관 3F", .blue)
+    addPlaceMarker(CLLocationCoordinate2D(latitude: 37.55575345, longitude: 127.04946946), "Cafe Queue", "정보통신관 3F", .green)
+    addPlaceMarker(CLLocationCoordinate2D(latitude: 37.55639986, longitude: 127.04996567), "올림픽체육관 매점", "올림픽체육관 3F", .blue)
 }
-
-
-//카테고리 타이틀, 아이콘 이미지
-let category_titles : Array<String> = ["카페", "식당", "도서관", "인쇄실", "PC실", "샤워실", "자판기"]
-let category_images : Array<String> = ["cafe.png", "restaurant.png", "library.png", "printer.png", "laptop.png", "shower.png", "beverage.png"]
 
 func findPlace(place_name : String) -> Place? {
     var placeList : Array<Place> = []
@@ -139,7 +134,7 @@ class Building : Decodable{
     
 }
 
-class Place : Decodable
+class Place : Decodable & Encodable
 {
     
     let p_name : String
@@ -182,4 +177,5 @@ public struct Queue<T>: ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: T...) { self.elements = elements }
 }
 
-var searchHistoryQueue : Queue<Place> = []
+var recentQueue : Array<Place> = []
+var queueSize : Int = 12

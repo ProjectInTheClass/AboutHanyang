@@ -32,8 +32,8 @@
 		6490926FE1A370D9F9841882 /* Pods_aboutHanyang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B231FB4429F0F20BD9C14EB8 /* Pods_aboutHanyang.framework */; };
 		DB586189F4BBD2A28ED6335D /* Pods_aboutHanyangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A44FD9D8CD240BE0D6E6576 /* Pods_aboutHanyangUITests.framework */; };
 		ED41293CEF31E04BE9C18334 /* Pods_aboutHanyangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCCFCE8DB49039386F3B4AF /* Pods_aboutHanyangTests.framework */; };
+		F35687DC22AB8D8100C332C2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35687DB22AB8D8100C332C2 /* HistoryViewController.swift */; };
 		F3A4F6B022A10E9A00FD6646 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4F6AF22A10E9900FD6646 /* SwiftyJSON.swift */; };
-		F3A4F6B422A23BC100FD6646 /* SelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4F6B322A23BC100FD6646 /* SelectedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +91,8 @@
 		B231FB4429F0F20BD9C14EB8 /* Pods_aboutHanyang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1279E5A5DCA7FDCC005DF26 /* Pods-aboutHanyang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyang.release.xcconfig"; path = "Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang.release.xcconfig"; sourceTree = "<group>"; };
 		DDCCFCE8DB49039386F3B4AF /* Pods_aboutHanyangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F35687DB22AB8D8100C332C2 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = AboutHanyang/HistoryViewController.swift; sourceTree = SOURCE_ROOT; };
 		F3A4F6AF22A10E9900FD6646 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		F3A4F6B322A23BC100FD6646 /* SelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectedCell.swift; path = AboutHanyang/SelectedCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +179,8 @@
 				5D01D50B2298255C00073C27 /* PlaceCommentViewController.swift */,
 				48E506CD22A90D74002FF7B4 /* SelectedTableViewController.swift */,
 				5D01D5042298255C00073C27 /* PlaceMenuViewController.swift */,
-				F3A4F6B322A23BC100FD6646 /* SelectedCell.swift */,
 				5D01D5122298255D00073C27 /* SearchViewController.swift */,
+				F35687DB22AB8D8100C332C2 /* HistoryViewController.swift */,
 				5D01D50F2298255C00073C27 /* GoogleService-Info.plist */,
 				5D01D4A522981FBB00073C27 /* LaunchScreen.storyboard */,
 				5D01D4A822981FBB00073C27 /* Info.plist */,
@@ -485,8 +485,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D01D51F2298255D00073C27 /* BuildingDetailViewController.swift in Sources */,
-				F3A4F6B422A23BC100FD6646 /* SelectedCell.swift in Sources */,
 				5D01D5132298255D00073C27 /* PlaceMenuViewController.swift in Sources */,
+				F35687DC22AB8D8100C332C2 /* HistoryViewController.swift in Sources */,
 				5D01D5192298255D00073C27 /* CategoryViewController.swift in Sources */,
 				5D01D51C2298255D00073C27 /* PlaceMapViewController.swift in Sources */,
 				5D01D51B2298255D00073C27 /* PlaceDetailViewController.swift in Sources */,

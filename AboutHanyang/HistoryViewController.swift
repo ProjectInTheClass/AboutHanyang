@@ -8,11 +8,40 @@
 
 import UIKit
 
+class HistoryViewCell: UITableViewCell{
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var pos: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+}
+
 class HistoryViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "최근 검색기록"
+        //recentQueue init
+        let doc = NSHomeDirectory() + "/Documents"
+        let filepath = doc + "/history.json"
+        let fileManager = FileManager.default
+        let fileUrl = URL(fileURLWithPath: filepath)
+        if fileManager.fileExists(atPath: filepath) {
+            do {
+                let jsonData = try Data(contentsOf: fileUrl as URL)
+                recentQueue = try JSONDecoder().decode([Place].self, from: jsonData)
+            }
+            catch _ { print("some error") } }
+        else {
+            print("recent history doesn't exists")
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,23 +53,23 @@ class HistoryViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return recentQueue.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "history", for: indexPath) as! HistoryViewCell
         // Configure the cell...
-
+        cell.name.text = recentQueue[indexPath.row].p_name
+        cell.pos.text = recentQueue[indexPath.row].p_pos
         return cell
-    }
-    */
+        }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,14 +106,19 @@ class HistoryViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        guard let destVC = segue.destination as? PlaceDetailViewController,
+            let selectedIndex = self.tableView.indexPathForSelectedRow?.row
+            else { return }
+        
+        destVC.selectedPlace = recentQueue[selectedIndex].p_name
     }
-    */
+ 
 
 }
