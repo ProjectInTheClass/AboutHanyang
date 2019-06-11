@@ -1,7 +1,8 @@
 [
     {
 		"p_name" : "Cafe Queue",
-        "p_pos" : "IT/BT관 3층(로비)",
+        "p_building" : "IT/BT관",
+        "p_pos" : "IT/BT관 3층 (로비)",
         "p_phone" : "123-4567-8910",
 		"p_email" : "",
         "p_description" : "맛있는 커피를 팝니다"
@@ -9,6 +10,7 @@
     
     {
         "p_name" : "IT/BT 인쇄실",
+        "p_building" : "IT/BT관",
         "p_pos" : "IT/BT관 1층",
         "p_phone" : "123-4567-8910",
         "p_email" : "",
@@ -17,6 +19,7 @@
     
     {
         "p_name" : "정보도서관",
+        "p_building" : "IT/BT관",
         "p_pos" : "IT/BT관 4층",
         "p_phone" : "123-4567-8910",
         "p_email" : "",
@@ -25,7 +28,8 @@
     
     {
         "p_name" : "올림픽체육관 매점",
-        "p_pos" : "올림픽 체육관 1층",
+        "p_building" : "올림픽체육관",
+        "p_pos" : "올림픽체육관 1층",
         "p_phone" : "123-4567-8910",
         "p_email" : "",
         "p_description" : "매점입니다"
@@ -33,7 +37,8 @@
     
     {
         "p_name" : "올림픽체육관 헬스장",
-        "p_pos" : "올림픽 체육관 ?",
+        "p_building" : "올림픽체육관",
+        "p_pos" : "올림픽체육관 ?",
         "p_phone" : "123-4567-8910",
         "p_email" : "",
         "p_description" : "헬스장입니다"
@@ -41,6 +46,7 @@
     
     {
         "p_name" : "3 열람실",
+        "p_building" : "백남학술정보관",
         "p_pos" : "백남학술정보관 3층",
         "p_phone" : "333-333-3333",
         "p_email" : "123@gmail.com",
@@ -49,6 +55,7 @@
     
     {
         "p_name" : "김밥나라",
+        "p_building" : "한양플라자",
         "p_pos" : "한양플라자 1층",
         "p_phone" : "333-333-3333",
         "p_email" : "123@gmail.com",
@@ -56,7 +63,8 @@
     },
     
     {
-        "p_name" : "청년 떡볶이",
+        "p_name" : "청년떡볶이",
+        "p_building" : "한양플라자",
         "p_pos" : "한양플라자 1층",
         "p_phone" : "333-333-3333",
         "p_email" : "123@gmail.com",
@@ -64,7 +72,8 @@
     },
     
     {
-        "p_name" : "신의주 찹쌀 순대국",
+        "p_name" : "신의주 찹쌀순대국",
+        "p_building" : "한양플라자",
         "p_pos" : "한양플라자 1층",
         "p_phone" : "333-333-3333",
         "p_email" : "123@gmail.com",
@@ -72,7 +81,8 @@
     },
     
     {
-        "p_name" : "플라잉 보울",
+        "p_name" : "플라잉보울",
+        "p_building" : "한양플라자",
         "p_pos" : "한양플라자 1층",
         "p_phone" : "333-333-3333",
         "p_email" : "123@gmail.com",
@@ -81,6 +91,7 @@
     
     {
         "p_name" : "이순규 라운지",
+        "p_building" : "백남학술정보관",
         "p_pos" : "백남학술정보관 1층",
         "p_phone" : "333-333-3333",
         "p_email" : "123@gmail.com",
@@ -89,6 +100,7 @@
     
     {
         "p_name" : "하브루타 존",
+        "p_building" : "백남학술정보관",
         "p_pos" : "백남학술정보관 지하 1층",
         "p_phone" : "333-333-3333",
         "p_email" : "123@gmail.com",

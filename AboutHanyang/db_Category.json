@@ -2,44 +2,44 @@
     
 		{
 			"c_name" : "카페",
-			"place_list" : ["Cafe Queue"],
-            "category_icon" : "cafe.png"
+			"c_place_list" : ["Cafe Queue"],
+            "c_icon" : "cafe.png"
 		},
         
         {
             "c_name" : "식당",
-            "place_list" : ["김밥나라", "청년 떡볶이", "신의주 찹쌀 순대국", "플라잉 보울"],
-            "category_icon" : "restaurant.png"
+            "c_place_list" : ["김밥나라", "청년떡볶이", "신의주 찹쌀순대국", "플라잉보울"],
+            "c_icon" : "restaurant.png"
         },
         
         {
             "c_name" : "도서관",
-            "place_list" : ["백남학술도서관", "IT/BT 정보도서관", "1공학관 도서관", "3 열람실"],
-            "category_icon" : "library.png"
+            "c_place_list" : ["정보도서관", "3 열람실", "백남학술도서관", "1공학관 도서관"],
+            "c_icon" : "library.png"
         },
         
 		{
 			"c_name" : "인쇄실",
-            "place_list" : ["1공학관 인쇄실", "한양플라자 인쇄실", "중앙도서관 인쇄실", "IT/BT 인쇄실"],
-            "category_icon" : "printer.png"
+            "c_place_list" : ["1공학관 인쇄실", "한양플라자 인쇄실", "중앙도서관 인쇄실", "IT/BT 인쇄실"],
+            "c_icon" : "printer.png"
 		},
         
         {
             "c_name" : "PC실",
-            "place_list" : ["이순규 라운지", "I-cafe"],
-            "category_icon" : "laptop.png"
+            "c_place_list" : ["이순규 라운지", "I-cafe"],
+            "c_icon" : "laptop.png"
         },
         
         {
             "c_name" : "샤워실",
-            "place_list" : ["IT/BT 3층 제외"],
-            "category_icon" : "shower.png"
+            "c_place_list" : ["IT/BT 3층 제외"],
+            "c_icon" : "shower.png"
         },
         
         {
             "c_name" : "자판기",
-            "place_list" : ["중앙도서관 지하 1층", "중앙도서관 3층"],
-            "category_icon" : "beverage.png"
+            "c_place_list" : ["중앙도서관 지하 1층", "중앙도서관 3층"],
+            "c_icon" : "beverage.png"
         }
         
 ]

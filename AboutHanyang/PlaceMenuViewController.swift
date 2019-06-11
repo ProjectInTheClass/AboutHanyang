@@ -69,8 +69,8 @@ import UIKit
                     }
                 }
             }
-                
-            catch _ { print("some error") }
+            catch _ { print("json error: failed to load menu info") }
+            
             addControl()
             let key = Array(menuData.keys)
             currentMenu = menuData[key[0]]!

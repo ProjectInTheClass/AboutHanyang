@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HistoryViewCell: UITableViewCell{
+class HistoryViewCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var pos: UILabel!
@@ -27,18 +27,21 @@ class HistoryViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "최근 검색기록"
+        self.title = "검색 기록"
+        
         //recentQueue init
         let doc = NSHomeDirectory() + "/Documents"
         let filepath = doc + "/history.json"
         let fileManager = FileManager.default
         let fileUrl = URL(fileURLWithPath: filepath)
+        
         if fileManager.fileExists(atPath: filepath) {
             do {
                 let jsonData = try Data(contentsOf: fileUrl as URL)
                 recentQueue = try JSONDecoder().decode([Place].self, from: jsonData)
             }
-            catch _ { print("some error") } }
+            catch _ { print("json error: failed to load search history") } }
+            
         else {
             print("recent history doesn't exists")
         }
@@ -61,7 +64,6 @@ class HistoryViewController: UITableViewController {
         return recentQueue.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "history", for: indexPath) as! HistoryViewCell
         // Configure the cell...
@@ -70,7 +72,6 @@ class HistoryViewController: UITableViewController {
         return cell
         }
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -119,6 +120,5 @@ class HistoryViewController: UITableViewController {
         
         destVC.selectedPlace = recentQueue[selectedIndex].p_name
     }
- 
 
 }

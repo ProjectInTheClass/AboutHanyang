@@ -26,16 +26,16 @@ class SelectedCell: UITableViewCell {
     
 }
 
-
 class SelectedTableViewController: UITableViewController {
 
     var placeList : Array<String> = []
     var resultList : Array<Place> = []
     var selectedBuilding : String = ""
+    var selectedCategory : String = ""
     
     override func viewDidLoad() {
-        if (selectedBuilding.count == 0){
-            self.navigationItem.title = "검색 결과"
+        if (selectedBuilding.count == 0) {
+            self.navigationItem.title = selectedCategory
         }
         else { // tab 2 로 접근
             self.navigationItem.title = selectedBuilding
@@ -53,6 +53,7 @@ class SelectedTableViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         resultList = findPlace(place_list: placeList)
+        print(resultList)
     }
     
     // MARK: - Table view data source
@@ -68,7 +69,8 @@ class SelectedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as? SelectedCell else{ return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as? SelectedCell
+              else { return UITableViewCell() }
         // Configure the cell...
         //cell.textLabel?.text = placeList[indexPath.row]
         cell.name.text = resultList[indexPath.row].p_name

@@ -18,69 +18,73 @@ class PlaceDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = selectedPlace
-        if let placeShowed = findPlace(place_name: selectedPlace){
+        
+        if let placeShowed = findPlace(place_name: selectedPlace) {
             let encoder = JSONEncoder()
             encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
             let doc = NSHomeDirectory() + "/Documents"
             let filepath = doc + "/history.json"
+            
             // history.json file 이 있는지 확인
             let fileManager = FileManager.default
             let fileUrl = URL(fileURLWithPath: filepath)
+            
             if fileManager.fileExists(atPath: filepath) {
                 do {
                     let jsonData = try Data(contentsOf: fileUrl as URL)
                     recentQueue = try JSONDecoder().decode([Place].self, from: jsonData)
                 }
-                catch _ { print("some error") } }
-            else {
-                print("recent history doesn't exists")
-            }
+                catch _ { print("json error: failed to load place info") } }
+            else { print("recent history doesn't exists") }
+            
             var duplCheck : Bool = false
             var temp : Array<Place> = []
-            for i in recentQueue{
+            
+            for i in recentQueue {
                 if i.p_name == placeShowed.p_name {
                     duplCheck = true
                     temp.insert(i, at: 0)
                 }
-                else{
+                else {
                     temp.append(i)
                 }
             }
-            if (duplCheck == false){
+            
+            if (duplCheck == false) {
                 recentQueue.insert(placeShowed, at: 0)
-                while (recentQueue.count > queueSize){
+                while (recentQueue.count > queueSize) {
                     recentQueue = recentQueue.dropLast()
                 }
             }
-            else{
+            else {
                 recentQueue = temp
             }
+            
             let myJson = try? encoder.encode(recentQueue)
             if let myJsonFile = myJson , let myString = String(data: myJsonFile, encoding: .utf8){
-                do{
+                do {
                     try myString.write(to: fileUrl, atomically: false, encoding: .utf8)
                     print(myString)
                 }
-                catch _ {
-                    print("history.json file write failed")
-                }
+                catch _ { print("history.json file write failed") }
             }
         }
+        
         //print(placeShowed.p_pos)
         menuButton.isHidden = false
-        do{
+        
+        do {
             let url = Bundle.main.url(forResource:"db_Menu", withExtension:"json")
             let jsonData = try Data(contentsOf: url!)
             let data = try JSONDecoder().decode([MenuData].self, from: jsonData)
             
-            for item in data{
-                if(item.placeName == selectedPlace){
+            for item in data {
+                if(item.placeName == selectedPlace) {
                     return
                 }
             }
             menuButton.isHidden = true
         }
-            
         catch _ { menuButton.isHidden = true }
     }
     
@@ -91,8 +95,6 @@ class PlaceDetailViewController: UIViewController {
     @IBAction func tapMenu(_ sender: UIButton) {
         performSegue(withIdentifier: "tapMenu", sender: nil)
     }
-    
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "tapComment") {

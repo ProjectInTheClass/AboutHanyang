@@ -15,7 +15,7 @@ class searchPlaceCell: UITableViewCell {
 
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
-    var place_list : Array<Place> = []
+    var placeList : Array<Place> = []
     
     @IBOutlet weak var searchTable: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -25,19 +25,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         do {
-            let url = Bundle.main.url(forResource:"db_Place", withExtension:"json")
+            let url = Bundle.main.url(forResource: "db_Place", withExtension: "json")
             let jsonData = try Data(contentsOf: url!)
-            place_list = try JSONDecoder().decode([Place].self, from: jsonData)
+            placeList = try JSONDecoder().decode([Place].self, from: jsonData)
             
             /*
-             for i in place_list{
+             for i in placeList{
              originData.append(i.p_name)
              }
              */
             
-            filteredData = place_list
+            filteredData = placeList
         }
-        catch _ { print("some error") }
+        catch _ { print("json error: failed to load place info") }
         
         self.searchTable.dataSource = self
         self.searchTable.dataSource = self
@@ -49,7 +49,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     //입력 텍스트 변경
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredData = searchText.isEmpty ? place_list : place_list.filter({ (datastring : Place) -> Bool in
+        filteredData = searchText.isEmpty ? placeList : placeList.filter({ (datastring : Place) -> Bool in
             return datastring.p_name.range(of : searchText, options: .caseInsensitive) != nil
         })
         searchTable.reloadData()

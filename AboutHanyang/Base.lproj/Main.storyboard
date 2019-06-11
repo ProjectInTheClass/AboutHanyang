@@ -18,8 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zai-9r-0kS">
+                                <rect key="frame" x="347" y="762" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.50337215578834904" green="0.80934003100801177" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="setCategoryShowMode:" destination="DwE-iX-bIi" eventType="valueChanged" id="7iU-OU-smM"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="지도에 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onp-Uj-GNL">
+                                <rect key="frame" x="250" y="767" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.21289840339999999" green="0.51950989039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iaa-Dk-NeZ">
-                                <rect key="frame" x="0.0" y="223" width="414" height="450"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="570"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y2f-gM-GL8">
@@ -67,19 +82,9 @@
                     <tabBarItem key="tabBarItem" title="카테고리" id="p1l-9w-g80"/>
                     <navigationItem key="navigationItem" id="fHQ-Xn-d14">
                         <barButtonItem key="backBarButtonItem" title="카테고리" id="lOk-dF-z1a"/>
-                        <barButtonItem key="rightBarButtonItem" id="sn2-8R-6lW">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lM8-RC-Lp8">
-                                <rect key="frame" x="364" y="6" width="30" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="설정"/>
-                                <connections>
-                                    <segue destination="MJf-Od-b1d" kind="show" identifier="tapSetting" id="Zra-gP-mYM"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="categoryModeSwitch" destination="Zai-9r-0kS" id="ssv-Ci-qhJ"/>
                         <outlet property="categoryView" destination="iaa-Dk-NeZ" id="2CQ-IX-egn"/>
                         <segue destination="77T-7S-KRl" kind="show" identifier="showCategoryAsMap" id="h0j-gG-baA"/>
                         <segue destination="luV-5g-SBc" kind="show" identifier="showCategoryAsList" id="k7m-yJ-QxF"/>
@@ -87,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjB-B0-DUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="-741"/>
+            <point key="canvasLocation" x="186.95652173913044" y="-741.29464285714278"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nOy-MZ-Lrs">
@@ -124,48 +129,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9l-bQ-1TF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-670" y="126"/>
-        </scene>
-        <!--설정-->
-        <scene sceneID="02A-pb-EZR">
-            <objects>
-                <viewController id="MJf-Od-b1d" customClass="SettingViewController" customModule="aboutHanyang" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wi1-Us-YLu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5E4-yU-921">
-                                <rect key="frame" x="325" y="130" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="setCategoryShowMode:" destination="MJf-Od-b1d" eventType="valueChanged" id="5Sx-Ei-Cfh"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="카테고리 선택 시 지도에 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOP-Yi-nFQ">
-                                <rect key="frame" x="41" y="135" width="195" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="지도 초기 시점 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDJ-Ed-84w">
-                                <rect key="frame" x="41" y="190" width="131" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="yAb-JP-OPJ"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="설정" id="mBr-7c-XHO"/>
-                    <connections>
-                        <outlet property="categoryModeSwitch" destination="5E4-yU-921" id="MLf-Gg-QAp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LEY-Gh-ozX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="187" y="-1531"/>
         </scene>
         <!--검색-->
         <scene sceneID="z7g-Hu-Phv">
@@ -383,13 +346,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zzp-Hi-xA3">
-                        <barButtonItem key="backBarButtonItem" title="건물 뷰" id="ITn-NA-TrS"/>
+                        <barButtonItem key="backBarButtonItem" title="지도" id="ITn-NA-TrS"/>
                         <barButtonItem key="rightBarButtonItem" id="nGC-jh-Aw5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ytf-h3-2Kz">
                                 <rect key="frame" x="314" y="1.5" width="80" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="시점 복원"/>
+                                <state key="normal" title="현 위치"/>
                                 <connections>
                                     <action selector="tapRestore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiL-Mp-9fZ"/>
                                 </connections>
@@ -616,10 +579,10 @@
             </objects>
             <point key="canvasLocation" x="3940.579710144928" y="886.60714285714278"/>
         </scene>
-        <!--Place Map View Controller-->
+        <!--Category Map View Controller-->
         <scene sceneID="iUM-7f-Yn5">
             <objects>
-                <viewController id="77T-7S-KRl" customClass="PlaceMapViewController" customModule="aboutHanyang" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="77T-7S-KRl" customClass="CategoryMapViewController" customModule="aboutHanyang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W7j-51-1ca">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -627,13 +590,12 @@
                         <viewLayoutGuide key="safeArea" id="iYx-iF-C1G"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q8f-gw-zj5">
-                        <barButtonItem key="backBarButtonItem" title="장소 뷰" id="bSy-ou-zL8"/>
                         <barButtonItem key="rightBarButtonItem" id="tV6-ho-g3f">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sx9-TM-Y31">
                                 <rect key="frame" x="314" y="1.5" width="80" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="시점 복원"/>
+                                <state key="normal" title="현 위치"/>
                                 <connections>
                                     <action selector="tapRestore:" destination="77T-7S-KRl" eventType="touchUpInside" id="18F-SE-dhs"/>
                                 </connections>
@@ -641,7 +603,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="qTm-cL-y31" kind="show" identifier="tapInfoWindow" id="181-LR-JqC"/>
+                        <segue destination="luV-5g-SBc" kind="show" identifier="tapMarkerToList" id="FgL-pM-Aav"/>
+                        <segue destination="qTm-cL-y31" kind="show" identifier="tapMarkerToDetail" id="glO-0W-JNT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9E-WU-x71" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -670,7 +633,7 @@
         <image name="history" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sk7-RJ-RvZ"/>
-        <segue reference="k7m-yJ-QxF"/>
+        <segue reference="glO-0W-JNT"/>
+        <segue reference="FgL-pM-Aav"/>
     </inferredMetricsTieBreakers>
 </document>
