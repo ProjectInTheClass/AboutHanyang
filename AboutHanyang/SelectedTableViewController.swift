@@ -53,7 +53,6 @@ class SelectedTableViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         resultList = findPlace(place_list: placeList)
-        print(resultList)
     }
     
     // MARK: - Table view data source

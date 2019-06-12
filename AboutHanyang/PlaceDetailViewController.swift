@@ -64,7 +64,7 @@ class PlaceDetailViewController: UIViewController {
             if let myJsonFile = myJson , let myString = String(data: myJsonFile, encoding: .utf8){
                 do {
                     try myString.write(to: fileUrl, atomically: false, encoding: .utf8)
-                    print(myString)
+                    // print(myString)
                 }
                 catch _ { print("history.json file write failed") }
             }
