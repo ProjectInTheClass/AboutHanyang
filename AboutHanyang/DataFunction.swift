@@ -24,20 +24,32 @@ func addMarker(_ position:CLLocationCoordinate2D, _ title:String) {
 func initMarkers() {
     // [1] 애지문 및 한양플라자
     markerColor = .blue
-    addMarker(CLLocationCoordinate2D(latitude: 37.556053, longitude: 127.044810), "역사관")      // 101
-    addMarker(CLLocationCoordinate2D(latitude: 37.556569, longitude: 127.044657), "본관")       // 102
-    addMarker(CLLocationCoordinate2D(latitude: 37.556008, longitude: 127.043823), "애지문")      // 104
-    addMarker(CLLocationCoordinate2D(latitude: 37.556565, longitude: 127.043904), "한양플라자")   // 105
-    addMarker(CLLocationCoordinate2D(latitude: 37.557594, longitude: 127.044201), "학생회관")    // 107
-    addMarker(CLLocationCoordinate2D(latitude: 37.555147, longitude: 127.044276), "국제관")      // 108
-    addMarker(CLLocationCoordinate2D(latitude: 37.555028, longitude: 127.044679), "박물관")      // 109
+    addMarker(CLLocationCoordinate2D(latitude: 37.556053, longitude: 127.044810), "역사관")              // 101
+    addMarker(CLLocationCoordinate2D(latitude: 37.556706, longitude: 127.044445), "본관")               // 102
+    addMarker(CLLocationCoordinate2D(latitude: 37.556008, longitude: 127.043823), "애지문")              // 104
+    addMarker(CLLocationCoordinate2D(latitude: 37.556565, longitude: 127.043904), "한양플라자")           // 105
+    addMarker(CLLocationCoordinate2D(latitude: 37.557594, longitude: 127.044201), "학생회관")            // 107
+    addMarker(CLLocationCoordinate2D(latitude: 37.555147, longitude: 127.044276), "국제관")              // 108
+    addMarker(CLLocationCoordinate2D(latitude: 37.555289, longitude: 127.044740), "박물관")              // 109
     
     // [2] 공학관
     markerColor = .yellow
+    addMarker(CLLocationCoordinate2D(latitude: 37.554524, longitude: 127.044142), "재성토목관")            // 201
+    addMarker(CLLocationCoordinate2D(latitude: 37.554077, longitude: 127.044375), "건축관")               // 202
+    addMarker(CLLocationCoordinate2D(latitude: 37.554320, longitude: 127.044716), "과학기술관")            // 203
+    addMarker(CLLocationCoordinate2D(latitude: 37.554528, longitude: 127.045185), "신소재공학관")           // 204
+    addMarker(CLLocationCoordinate2D(latitude: 37.554928, longitude: 127.046140), "공업센터 본관")          // 206
+    addMarker(CLLocationCoordinate2D(latitude: 37.554732, longitude: 127.046537), "공업센터 별관")          // 207
+    addMarker(CLLocationCoordinate2D(latitude: 37.554634, longitude: 127.047152), "FTC")                // 208
+    addMarker(CLLocationCoordinate2D(latitude: 37.555517, longitude: 127.045250), "노천극장")              // 209
+    addMarker(CLLocationCoordinate2D(latitude: 37.555396, longitude: 127.044885), "정몽구 미래자동차연구센터")  // 210
+    addMarker(CLLocationCoordinate2D(latitude: 37.555655, longitude: 127.046237), "제2공학관")             // 211
+    addMarker(CLLocationCoordinate2D(latitude: 37.556650, longitude: 127.045534), "제1공학관")             // 212
     
     
     // [3] IT/BT관
     markerColor = .red
+    addMarker(CLLocationCoordinate2D(latitude: 37.555549, longitude: 127.049246), "산학기술관")    // 304
     addMarker(CLLocationCoordinate2D(latitude: 37.555936, longitude: 127.049456), "IT/BT관")    // 305
     addMarker(CLLocationCoordinate2D(latitude: 37.556635, longitude: 127.049952), "올림픽체육관")  // 306
     
