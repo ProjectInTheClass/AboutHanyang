@@ -19,7 +19,8 @@ class CommentViewCell : UITableViewCell {
     @IBOutlet weak var userComment: UILabel!
     @IBOutlet weak var sympathy: UILabel!
     @IBOutlet weak var dateTime: UILabel!
-    
+    @IBOutlet weak var symButton: UIButton!
+
     var sym_list : [String] = []
     
     var c_uid : String = ""
@@ -110,6 +111,18 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         
         cell.sym_list = dic.sympathy
         
+        let normal_button = UIImage(named: "Like2")
+        let highlited_button = UIImage(named: "Like1")
+        
+        cell.symButton.setImage(normal_button, for: .init())
+        
+        for item in dic.sympathy{
+            if(item == uid){
+                cell.symButton.setImage(highlited_button, for: .init())
+                break;
+            }
+        }
+        
         cell.c_uid = dic.uid
         
         cell.delegate = self
@@ -186,6 +199,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         let review_comment = textField.text ?? ""
         let time = Double(NSDate().timeIntervalSince1970)
         
+        
         if(review_comment.count > 40){
             let alert = UIAlertController(title: "작성 불가", message: "댓글 길이 제한은 40자입니다.", preferredStyle: UIAlertController.Style.alert)
             
@@ -196,6 +210,37 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
             return
+        }
+        
+        
+        for item in comment_normal{
+            if(item.uid == uid){
+                let alert = UIAlertController(title: "이미 의견을 남기셨습니다.", message: "기존 의견을 지우고 새 의견을 쓰시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+                
+                let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                    self.ref.child("review").child(self.selectedPlace!).child(self.uid).setValue(["comment":review_comment, "sympathy":[""], "time":time]){
+                        (error:Error?, ref:DatabaseReference) in
+                        if let error = error {
+                            print("Data could not be saved: \(error).")
+                        } else {
+                            self.getAllComment()
+                        }
+                    }
+                    self.textField.text = ""
+                    alert.dismiss(animated: true, completion: nil)
+                    
+                }
+                
+                let no = UIAlertAction(title: "NO", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                    alert.dismiss(animated: true, completion: nil)
+                }
+                
+                alert.addAction(ok)
+                alert.addAction(no)
+                
+                present(alert, animated: true, completion: nil)
+                return
+            }
         }
         
         let alert = UIAlertController(title: "댓글 쓰기", message: "댓글을 남기시겠습니까?.", preferredStyle: UIAlertController.Style.alert)
@@ -230,9 +275,42 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         if editingStyle == UITableViewCell.EditingStyle.delete
         {
             if (indexPath.section == 0){
-                return
+                if(comment_best[indexPath.row].uid == uid){
+                    let alert = UIAlertController(title: "댓글 삭제", message: "정말 삭제하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+                    
+                    let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                        self.ref.child("review").child(self.selectedPlace!).child(self.uid).setValue(nil){
+                            (error:Error?, ref:DatabaseReference) in
+                            if let error = error {
+                                print("Data could not be saved: \(error).")
+                            } else {
+                                self.getAllComment()
+                            }
+                        }
+                        alert.dismiss(animated: true, completion: nil)
+                    }
+                    
+                    let no = UIAlertAction(title: "NO", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                        alert.dismiss(animated: true, completion: nil)
+                    }
+                    
+                    alert.addAction(ok)
+                    alert.addAction(no)
+                    present(alert, animated: true, completion: nil)
+                    
+                }
+                else{
+                    let alert = UIAlertController(title: "삭제 불가", message: "다른 사람의 댓글은 지울 수 없습니다.", preferredStyle: UIAlertController.Style.alert)
+                    
+                    let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                        alert.dismiss(animated: true, completion: nil)
+                    }
+                    
+                    alert.addAction(ok)
+                    present(alert, animated: true, completion: nil)            }
+                
             }
-            if(comment_normal[indexPath.row].uid == uid)
+            else if(comment_normal[indexPath.row].uid == uid)
             {
                 let alert = UIAlertController(title: "댓글 삭제", message: "정말 삭제하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
                 
@@ -332,20 +410,51 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
 extension PlaceCommentViewController : CommentViewDelegate{
     
     func upSympathy(uid: String, sym_list : [String]) {
+        var index = 0;
         for item in sym_list{
             if(item == self.uid){
                 
-                let alert = UIAlertController(title: "중복 금지", message: "이미 공감한 댓글입니다", preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "이미 공감한 댓글입니다", message: "공감을 취소하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
             
                 let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                    
+                    self.ref.child("review").child(self.selectedPlace!).child(self.uid).runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+                        if var post = currentData.value as? [String : AnyObject]{
+                            
+                            var sympathy = post["sympathy"] as! [String]
+                            
+                            sympathy.remove(at: index)
+                            
+                            post["sympathy"] = sympathy as AnyObject?
+                            
+                            // Set value and report transaction success
+                            currentData.value = post
+                            
+                            return TransactionResult.success(withValue: currentData)
+                        }
+                        return TransactionResult.success(withValue: currentData)
+                    }) { (error, committed, snapshot) in
+                        if let error = error {
+                            print(error.localizedDescription)
+                        }
+                        if committed {
+                            self.getAllComment()
+                        }
+                    }
+                    
+                    alert.dismiss(animated: true, completion: nil)
+                }
+                
+                let no = UIAlertAction(title: "NO", style: UIAlertAction.Style.default) { (UIAlertAction) in
                     alert.dismiss(animated: true, completion: nil)
                 }
                 
                 alert.addAction(ok)
-
+                alert.addAction(no)
                 present(alert, animated: true, completion: nil)
                 return
                 }
+            index = index + 1;
         }
         let alert = UIAlertController(title: "공감 하기", message: "공감하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
         
