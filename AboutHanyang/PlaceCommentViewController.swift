@@ -94,7 +94,6 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         cell.dateTime.text = dic.time
         cell.sympathy.text = "\(dic.sympathy.count)"
         cell.sym_list = dic.sympathy
-<<<<<<< HEAD
         
         let normal_button = UIImage(named: "Like2")
         let highlited_button = UIImage(named: "Like1")
@@ -108,8 +107,6 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             }
         }
         
-=======
->>>>>>> 6850fb2ff5f76247e1ae9a1d02ca826d153e74b2
         cell.c_uid = dic.uid
         cell.delegate = self
         
