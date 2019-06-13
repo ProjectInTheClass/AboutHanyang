@@ -10,7 +10,7 @@ struct CommentFormat {
 }
 
 protocol CommentViewDelegate {
-    func upSympathy(uid:String , sym_list : [String])
+    func upSympathy(_uid:String , sym_list : [String])
 }
 
 class CommentViewCell : UITableViewCell {
@@ -25,7 +25,7 @@ class CommentViewCell : UITableViewCell {
     var delegate : CommentViewDelegate? = nil
     
     @IBAction func SympathyComment(_ sender: Any) {
-        delegate?.upSympathy(uid: c_uid, sym_list: sym_list)
+        delegate?.upSympathy(_uid: c_uid, sym_list: sym_list)
     }
 }
 
@@ -58,7 +58,10 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if (section == 0) {
-            return "Best 의견"
+            if(comment_best.count > 0){
+                return "Best 의견"
+            }
+            return nil
         }
         else {
             return "일반 의견"
@@ -151,13 +154,12 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             }
             
             for i in 0..<2 {
-                if (i<best_comment.count) {
+                if (i<best_comment.count && best_comment[i].sympathy.count > 0) {
                     self.comment_best.append(best_comment[i])
                 }
             }
             
             self.tableView.reloadData()
-            print("tableview reload done")
         })
     }
     
@@ -165,11 +167,11 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         
         self.navigationItem.title = "코멘트"
-        self.navigationItem.backBarButtonItem?.title = self.selectedPlace
+        self.navigationItem.backBarButtonItem?.title = ""
                 
         ref = Database.database().reference()
         
-        self.tableView.estimatedRowHeight = 250
+        self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableView.automaticDimension
         
         // Do any additional setup after loading the view.
@@ -203,6 +205,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
                         if let error = error {
                             print("Data could not be saved: \(error).")
                         } else {
+                            self.saveLocalComment(review_comment: review_comment, time: time)
                             self.getAllComment()
                         }
                     }
@@ -231,6 +234,8 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
                 if let error = error {
                     print("Data could not be saved: \(error).")
                 } else {
+                    
+                    self.saveLocalComment(review_comment: review_comment, time: time)
                     self.getAllComment()
                 }
             }
@@ -249,7 +254,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete
+        if editingStyle == .delete
         {
             if (indexPath.section == 0){
                 if(comment_best[indexPath.row].uid == uid){
@@ -261,6 +266,9 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
                             if let error = error {
                                 print("Data could not be saved: \(error).")
                             } else {
+                                
+                                
+                                
                                 self.getAllComment()
                             }
                         }
@@ -297,6 +305,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
                         if let error = error {
                             print("Data could not be saved: \(error).")
                         } else {
+                            self.deleteLocalComment()
                             self.getAllComment()
                         }
                     }
@@ -379,12 +388,99 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
      }
      */
     
+    func deleteLocalComment(){
+        
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        let doc = NSHomeDirectory() + "/Documents"
+        let filepath = doc + "/myComment.json"
+        var myComments : [myComment] = []
+        
+        // myComment.json file 이 있는지 확인
+        let fileManager = FileManager.default
+        let fileUrl = URL(fileURLWithPath: filepath)
+        
+        if fileManager.fileExists(atPath: filepath) {
+            do {
+                let jsonData = try Data(contentsOf: fileUrl as URL)
+                myComments = try JSONDecoder().decode([myComment].self, from: jsonData)
+            }
+            catch _ { print("json error: failed to load place info") } }
+        else { print("recent myComment doesn't exists") }
+        
+        var index = 0;
+        for item in myComments {
+            if(item.place_name == self.selectedPlace!){
+                myComments.remove(at: index)
+                break;
+            }
+            index = index + 1
+        }
+        
+        
+        let myJson = try? encoder.encode(myComments)
+        if let myJsonFile = myJson , let myString = String(data: myJsonFile, encoding: .utf8){
+            do {
+                try myString.write(to: fileUrl, atomically: false, encoding: .utf8)
+                // print(myString)
+            }
+            catch _ { print("myJson.json file write failed") }
+        }
+    }
+    
+    func saveLocalComment(review_comment : String, time : Double){
+        
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        let doc = NSHomeDirectory() + "/Documents"
+        let filepath = doc + "/myComment.json"
+        var myComments : [myComment] = []
+        
+        // myComment.json file 이 있는지 확인
+        let fileManager = FileManager.default
+        let fileUrl = URL(fileURLWithPath: filepath)
+        
+        if fileManager.fileExists(atPath: filepath) {
+            do {
+                let jsonData = try Data(contentsOf: fileUrl as URL)
+                myComments = try JSONDecoder().decode([myComment].self, from: jsonData)
+            }
+            catch _ { print("json error: failed to load place info") } }
+        else { print("recent myComment doesn't exists") }
+        
+        
+        var duplCheck : Bool = false
+        var index = 0;
+        for item in myComments {
+            if(item.place_name == self.selectedPlace!){
+                let newComment = myComment(review_comment, self.selectedPlace!, self.convertTimeStamp(timestamp: time))
+                myComments.remove(at: index)
+                myComments.append(newComment)
+                duplCheck = true
+                break;
+            }
+            index = index + 1
+        }
+        
+        if(!duplCheck){
+            myComments.append(myComment(review_comment, self.selectedPlace!, self.convertTimeStamp(timestamp: time)))
+        }
+        
+        let myJson = try? encoder.encode(myComments)
+        if let myJsonFile = myJson , let myString = String(data: myJsonFile, encoding: .utf8){
+            do {
+                try myString.write(to: fileUrl, atomically: false, encoding: .utf8)
+                // print(myString)
+            }
+            catch _ { print("myJson.json file write failed") }
+        }
+    }
     
 }
 
 extension PlaceCommentViewController : CommentViewDelegate {
     
-    func upSympathy(uid: String, sym_list : [String]) {
+    func upSympathy(_uid: String, sym_list : [String]) {
         var index = 0;
         for item in sym_list{
             if(item == self.uid){
@@ -393,7 +489,7 @@ extension PlaceCommentViewController : CommentViewDelegate {
             
                 let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
                     
-                    self.ref.child("review").child(self.selectedPlace!).child(self.uid).runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+                    self.ref.child("review").child(self.selectedPlace!).child(_uid).runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
                         if var post = currentData.value as? [String : AnyObject]{
                             
                             var sympathy = post["sympathy"] as! [String]
@@ -434,7 +530,7 @@ extension PlaceCommentViewController : CommentViewDelegate {
         let alert = UIAlertController(title: "공감 하기", message: "공감하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
         
         let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
-            self.ref.child("review").child(self.selectedPlace!).child(self.uid).runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+            self.ref.child("review").child(self.selectedPlace!).child(_uid).runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
                 if var post = currentData.value as? [String : AnyObject]{
                     
                     var sympathy = post["sympathy"] as! [String]
@@ -442,7 +538,7 @@ extension PlaceCommentViewController : CommentViewDelegate {
                     
                     
                     sympathy.append(self.uid)
-                    
+                    print(sympathy)
                     
                     post["sympathy"] = sympathy as AnyObject?
                     
