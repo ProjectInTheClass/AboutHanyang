@@ -20,6 +20,12 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBOutlet weak var categoryView: UICollectionView!
     
+    var showCategoryAsMap:Bool = true // true일 때 카테고리 선택 시 지도 상에 결과 출력
+    @IBOutlet weak var categoryModeSwitch: UISwitch!
+    @IBAction func setCategoryShowMode(_ sender: UISwitch) {
+        showCategoryAsMap = sender.isOn
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +35,7 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
             categoryList = try JSONDecoder().decode([Category].self, from: jsonData)
         }
             
-        catch _ { print("some error") }
+        catch _ { print("json error: failed to load category info") }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -39,13 +45,13 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! categoryCollectionViewCell
         cell.name.text = categoryList[indexPath.item].c_name
-        cell.icon.image = UIImage(named: categoryList[indexPath.item].category_icon)
+        cell.icon.image = UIImage(named: categoryList[indexPath.item].c_icon)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndex = indexPath
-        if (settings.showCategoryAsMap) {
+        if (showCategoryAsMap) {
             performSegue(withIdentifier: "showCategoryAsMap", sender: nil)
         }
         else {
@@ -57,10 +63,10 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if (segue.identifier == "showCategoryAsMap") {
-            guard let destVC = segue.destination as? PlaceMapViewController,
+            guard let destVC = segue.destination as? CategoryMapViewController,
                   let selectedIndex = self.categoryView.indexPathsForSelectedItems?.first
                   else { return }
-            destVC.selectedCategory = categoryList[selectedIndex.row].c_name
+            destVC.selectedCategory = categoryList[selectedIndex.row]
             // category_list[selectedIndex.row].place_list
         }
         
@@ -68,8 +74,8 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
             guard let destVC = segue.destination as? SelectedTableViewController,
                 let selectedIndex = self.categoryView.indexPathsForSelectedItems?.first
                 else { return }
-            destVC.placeList = categoryList[selectedIndex.row].place_list
-            print(destVC.placeList)
+            destVC.placeList = categoryList[selectedIndex.row].c_place_list
+            destVC.selectedCategory = categoryList[selectedIndex.row].c_name
             // category_list[selectedIndex.row].place_list
         }
     }

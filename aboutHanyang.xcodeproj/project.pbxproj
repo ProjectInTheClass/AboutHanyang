@@ -22,18 +22,17 @@
 		5D01D5192298255D00073C27 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50A2298255C00073C27 /* CategoryViewController.swift */; };
 		5D01D51A2298255D00073C27 /* PlaceCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50B2298255C00073C27 /* PlaceCommentViewController.swift */; };
 		5D01D51B2298255D00073C27 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50C2298255C00073C27 /* PlaceDetailViewController.swift */; };
-		5D01D51C2298255D00073C27 /* PlaceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50D2298255C00073C27 /* PlaceMapViewController.swift */; };
+		5D01D51C2298255D00073C27 /* CategoryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50D2298255C00073C27 /* CategoryMapViewController.swift */; };
 		5D01D51D2298255D00073C27 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D50E2298255C00073C27 /* DataSource.swift */; };
 		5D01D51E2298255D00073C27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D50F2298255C00073C27 /* GoogleService-Info.plist */; };
-		5D01D51F2298255D00073C27 /* BuildingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D5102298255C00073C27 /* BuildingDetailViewController.swift */; };
 		5D01D5202298255D00073C27 /* db_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D5112298255C00073C27 /* db_Building.json */; };
 		5D01D5212298255D00073C27 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D5122298255D00073C27 /* SearchViewController.swift */; };
-		5DC8BC6A229913EF00404FA3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8BC69229913EF00404FA3 /* SettingViewController.swift */; };
+		5DE5F0CE22AFF2C9005C185F /* DataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5F0CD22AFF2C9005C185F /* DataFunction.swift */; };
 		6490926FE1A370D9F9841882 /* Pods_aboutHanyang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B231FB4429F0F20BD9C14EB8 /* Pods_aboutHanyang.framework */; };
 		DB586189F4BBD2A28ED6335D /* Pods_aboutHanyangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A44FD9D8CD240BE0D6E6576 /* Pods_aboutHanyangUITests.framework */; };
 		ED41293CEF31E04BE9C18334 /* Pods_aboutHanyangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCCFCE8DB49039386F3B4AF /* Pods_aboutHanyangTests.framework */; };
+		F35687DC22AB8D8100C332C2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35687DB22AB8D8100C332C2 /* HistoryViewController.swift */; };
 		F3A4F6B022A10E9A00FD6646 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4F6AF22A10E9900FD6646 /* SwiftyJSON.swift */; };
-		F3A4F6B422A23BC100FD6646 /* SelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4F6B322A23BC100FD6646 /* SelectedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,19 +79,18 @@
 		5D01D50A2298255C00073C27 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		5D01D50B2298255C00073C27 /* PlaceCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCommentViewController.swift; sourceTree = "<group>"; };
 		5D01D50C2298255C00073C27 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
-		5D01D50D2298255C00073C27 /* PlaceMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMapViewController.swift; sourceTree = "<group>"; };
+		5D01D50D2298255C00073C27 /* CategoryMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryMapViewController.swift; sourceTree = "<group>"; };
 		5D01D50E2298255C00073C27 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		5D01D50F2298255C00073C27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5D01D5102298255C00073C27 /* BuildingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingDetailViewController.swift; sourceTree = "<group>"; };
 		5D01D5112298255C00073C27 /* db_Building.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Building.json; sourceTree = "<group>"; };
 		5D01D5122298255D00073C27 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		5DC8BC69229913EF00404FA3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5DE5F0CD22AFF2C9005C185F /* DataFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataFunction.swift; path = AboutHanyang/DataFunction.swift; sourceTree = SOURCE_ROOT; };
 		8371E596802A6C472FA5AF66 /* Pods-aboutHanyangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyangTests.debug.xcconfig"; path = "Target Support Files/Pods-aboutHanyangTests/Pods-aboutHanyangTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B231FB4429F0F20BD9C14EB8 /* Pods_aboutHanyang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1279E5A5DCA7FDCC005DF26 /* Pods-aboutHanyang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyang.release.xcconfig"; path = "Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang.release.xcconfig"; sourceTree = "<group>"; };
 		DDCCFCE8DB49039386F3B4AF /* Pods_aboutHanyangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F35687DB22AB8D8100C332C2 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = AboutHanyang/HistoryViewController.swift; sourceTree = SOURCE_ROOT; };
 		F3A4F6AF22A10E9900FD6646 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		F3A4F6B322A23BC100FD6646 /* SelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectedCell.swift; path = AboutHanyang/SelectedCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,26 +159,25 @@
 		5D01D49B22981FB900073C27 /* aboutHanyang */ = {
 			isa = PBXGroup;
 			children = (
-				F3A4F6B522A2567D00FD6646 /* NotUsed */,
 				5D01D4A322981FBB00073C27 /* Assets.xcassets */,
-				F3A4F6AF22A10E9900FD6646 /* SwiftyJSON.swift */,
 				5D01D4A022981FB900073C27 /* Main.storyboard */,
 				5D01D5062298255C00073C27 /* db_Category.json */,
 				5D01D5112298255C00073C27 /* db_Building.json */,
 				5D01D5072298255C00073C27 /* db_Place.json */,
 				48E506CF22A9170D002FF7B4 /* db_Menu.json */,
-				5D01D49C22981FB900073C27 /* AppDelegate.swift */,
 				5D01D50E2298255C00073C27 /* DataSource.swift */,
-				5DC8BC69229913EF00404FA3 /* SettingViewController.swift */,
+				5DE5F0CD22AFF2C9005C185F /* DataFunction.swift */,
 				5D01D50A2298255C00073C27 /* CategoryViewController.swift */,
+				5D01D50D2298255C00073C27 /* CategoryMapViewController.swift */,
 				5D01D5082298255C00073C27 /* BuildingMapViewController.swift */,
-				5D01D50D2298255C00073C27 /* PlaceMapViewController.swift */,
+				48E506CD22A90D74002FF7B4 /* SelectedTableViewController.swift */,
 				5D01D50C2298255C00073C27 /* PlaceDetailViewController.swift */,
 				5D01D50B2298255C00073C27 /* PlaceCommentViewController.swift */,
-				48E506CD22A90D74002FF7B4 /* SelectedTableViewController.swift */,
 				5D01D5042298255C00073C27 /* PlaceMenuViewController.swift */,
-				F3A4F6B322A23BC100FD6646 /* SelectedCell.swift */,
 				5D01D5122298255D00073C27 /* SearchViewController.swift */,
+				F35687DB22AB8D8100C332C2 /* HistoryViewController.swift */,
+				5D01D49C22981FB900073C27 /* AppDelegate.swift */,
+				F3A4F6AF22A10E9900FD6646 /* SwiftyJSON.swift */,
 				5D01D50F2298255C00073C27 /* GoogleService-Info.plist */,
 				5D01D4A522981FBB00073C27 /* LaunchScreen.storyboard */,
 				5D01D4A822981FBB00073C27 /* Info.plist */,
@@ -214,14 +211,6 @@
 				2A44FD9D8CD240BE0D6E6576 /* Pods_aboutHanyangUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F3A4F6B522A2567D00FD6646 /* NotUsed */ = {
-			isa = PBXGroup;
-			children = (
-				5D01D5102298255C00073C27 /* BuildingDetailViewController.swift */,
-			);
-			path = NotUsed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,11 +473,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D01D51F2298255D00073C27 /* BuildingDetailViewController.swift in Sources */,
-				F3A4F6B422A23BC100FD6646 /* SelectedCell.swift in Sources */,
 				5D01D5132298255D00073C27 /* PlaceMenuViewController.swift in Sources */,
+				5DE5F0CE22AFF2C9005C185F /* DataFunction.swift in Sources */,
+				F35687DC22AB8D8100C332C2 /* HistoryViewController.swift in Sources */,
 				5D01D5192298255D00073C27 /* CategoryViewController.swift in Sources */,
-				5D01D51C2298255D00073C27 /* PlaceMapViewController.swift in Sources */,
+				5D01D51C2298255D00073C27 /* CategoryMapViewController.swift in Sources */,
 				5D01D51B2298255D00073C27 /* PlaceDetailViewController.swift in Sources */,
 				F3A4F6B022A10E9A00FD6646 /* SwiftyJSON.swift in Sources */,
 				5D01D51D2298255D00073C27 /* DataSource.swift in Sources */,
@@ -497,7 +486,6 @@
 				5D01D5172298255D00073C27 /* BuildingMapViewController.swift in Sources */,
 				5D01D49D22981FB900073C27 /* AppDelegate.swift in Sources */,
 				48E506CE22A90D74002FF7B4 /* SelectedTableViewController.swift in Sources */,
-				5DC8BC6A229913EF00404FA3 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

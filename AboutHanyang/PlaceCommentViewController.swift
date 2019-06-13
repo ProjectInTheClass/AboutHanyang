@@ -2,17 +2,16 @@
 import UIKit
 import Firebase
 
-struct CommentFormat{
+struct CommentFormat {
     var comment : String
     var sympathy : [String]
     var time : String
     var uid : String
 }
 
-protocol CommentViewDelegate{
+protocol CommentViewDelegate {
     func upSympathy(uid:String , sym_list : [String])
 }
-
 
 class CommentViewCell : UITableViewCell {
     
@@ -22,23 +21,18 @@ class CommentViewCell : UITableViewCell {
     @IBOutlet weak var symButton: UIButton!
 
     var sym_list : [String] = []
-    
     var c_uid : String = ""
-    
     var delegate : CommentViewDelegate? = nil
     
     @IBAction func SympathyComment(_ sender: Any) {
-        
         delegate?.upSympathy(uid: c_uid, sym_list: sym_list)
     }
 }
 
 class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
     
     var ref: DatabaseReference!
     
@@ -47,6 +41,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
     var comment_best : [CommentFormat] = []
     var comment_normal : [CommentFormat] = []
     var uid : String = ""
+    
     /*
      func addComment(_ userComment : String , _ uid : String) -> Bool {
      
@@ -56,12 +51,13 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
      
      }
      */
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if(section == 0){
+        if (section == 0) {
             return "Best 의견"
         }
         else {
@@ -69,9 +65,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if (section == 0)
         {
             return comment_best.count
@@ -79,37 +73,28 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         return comment_normal.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "comment", for: indexPath) as! CommentViewCell
-        
-        
-        
         let count = indexPath.row
-        
         var dic : CommentFormat
         
-        if(indexPath.section==0)
-        {
-            if(comment_best.count > count){
+        if (indexPath.section==0) {
+            if (comment_best.count > count) {
                 dic = comment_best[count]
             }
-            else{
+            else {
                 return (cell as UITableViewCell)
             }
         }
-        else{
+        else {
             dic = comment_normal[count]
         }
         
         cell.userComment.text = dic.comment
-        
         cell.dateTime.text = dic.time
-        
         cell.sympathy.text = "\(dic.sympathy.count)"
-        
         cell.sym_list = dic.sympathy
+<<<<<<< HEAD
         
         let normal_button = UIImage(named: "Like2")
         let highlited_button = UIImage(named: "Like1")
@@ -123,8 +108,9 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             }
         }
         
+=======
+>>>>>>> 6850fb2ff5f76247e1ae9a1d02ca826d153e74b2
         cell.c_uid = dic.uid
-        
         cell.delegate = self
         
         return (cell as UITableViewCell)
@@ -139,7 +125,6 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func getAllComment(){
-        
         comment_best.removeAll();
         comment_normal.removeAll();
         
@@ -153,23 +138,23 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             
             let dic_keys = Array(dic.keys)
             
-            for index in 0..<dic_keys.count{
+            for index in 0..<dic_keys.count {
                 guard let formatter = self.convertDic(dic_keys[index], dic[dic_keys[index]]!)
-                    else {
-                        continue
-                }
+                      else { continue }
                 
                 self.comment_normal.append(formatter)
             }
+            
             self.comment_normal.sort{
                 (a:CommentFormat, b:CommentFormat) -> Bool in return a.time > b.time
             }
+            
             let best_comment = self.comment_normal.sorted{
                 (a:CommentFormat, b:CommentFormat) -> Bool in return a.sympathy.count > b.sympathy.count
             }
             
-            for i in 0..<2{
-                if(i<best_comment.count){
+            for i in 0..<2 {
+                if (i<best_comment.count) {
                     self.comment_best.append(best_comment[i])
                 }
             }
@@ -178,8 +163,6 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
             print("tableview reload done")
         })
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -266,9 +249,6 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         alert.addAction(no)
 
         present(alert, animated: true, completion: nil)
-        
-        
-        
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -358,14 +338,12 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
      */
     
     
-    func convertTimeStamp(timestamp : Double) -> String{
+    func convertTimeStamp(timestamp : Double) -> String {
         
         let date = NSDate(timeIntervalSince1970:timestamp)
-        
         let formatter = DateFormatter()
         
         formatter.timeZone = TimeZone.current
-        
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         
         let dateString = formatter.string(from: date as Date)
@@ -407,7 +385,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
     
 }
 
-extension PlaceCommentViewController : CommentViewDelegate{
+extension PlaceCommentViewController : CommentViewDelegate {
     
     func upSympathy(uid: String, sym_list : [String]) {
         var index = 0;

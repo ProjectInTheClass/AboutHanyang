@@ -30,8 +30,6 @@ import UIKit
         var values : [String] = [""]
         var selectedPlace : String = ""
         
-        
-        
         func numberOfSections(in tableView: UITableView) -> Int {
             return 1
         }
@@ -48,8 +46,6 @@ import UIKit
                 cell.cost.text = values[indexPath.row]
             }
             return (cell as UITableViewCell)    }
-        
-        
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -69,8 +65,8 @@ import UIKit
                     }
                 }
             }
-                
-            catch _ { print("some error") }
+            catch _ { print("json error: failed to load menu info") }
+            
             addControl()
             let key = Array(menuData.keys)
             currentMenu = menuData[key[0]]!
@@ -88,8 +84,6 @@ import UIKit
             segmentedControl.selectedSegmentIndex = 0
             view.addSubview(segmentedControl)
         }
-        
-        
         
         @objc func segmentAction(_ segmentedControl: UISegmentedControl) {
             switch (segmentedControl.selectedSegmentIndex) {
@@ -116,8 +110,6 @@ import UIKit
             values = Array(currentMenu.values)
             tableView.reloadData()
         }
-        
-        
         
         /*
          // MARK: - Navigation
