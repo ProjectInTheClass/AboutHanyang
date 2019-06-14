@@ -66,7 +66,7 @@ class Place : Decodable & Encodable {
     let p_description : String
 //  let p_review : Array<review>
     
-    init(_ name : String, _ building : String, _ pos : String, _ phone : String, _ email : String, _ description : String) {
+    init(_ name : String, _ building : String, _ pos : String, _ phone : String, _ email : String, _ description : String, _ image : String) {
         self.p_name = name
         self.p_building = building
         self.p_pos = pos

@@ -79,7 +79,7 @@ import UIKit
         func addControl()  {
             let items = Array(menuData.keys)
             let segmentedControl = UISegmentedControl(items: items)
-            segmentedControl.frame = CGRect(x: 100, y: 100, width: 250, height: 50)
+            segmentedControl.frame = CGRect(x: 25, y: 100, width: 350, height: 50)
             segmentedControl.addTarget(self, action: #selector(segmentAction(_:)), for: .valueChanged)
             segmentedControl.selectedSegmentIndex = 0
             view.addSubview(segmentedControl)
@@ -102,6 +102,10 @@ import UIKit
             case 3:
                 let key = Array(menuData.keys)
                 currentMenu = menuData[key[3]]!
+                break
+            case 4:
+                let key = Array(menuData.keys)
+                currentMenu = menuData[key[4]]!
                 break
             default:
                 return
