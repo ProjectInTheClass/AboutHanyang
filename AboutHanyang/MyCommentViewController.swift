@@ -2,7 +2,7 @@
 //  MyCommentViewController.swift
 //  aboutHanyang
 //
-//  Created by jjy on 13/06/2019.
+//  Created by Team aboutHanyang on 13/06/2019.
 //  Copyright © 2019 aboutHanyang. All rights reserved.
 //
 
@@ -13,7 +13,6 @@ struct myComment : Codable{
     var comment : String
     let place_name : String
     let date : String
-    
     
     init(_ comment : String, _ place_name : String, _ date : String) {
         self.comment = comment
@@ -28,7 +27,6 @@ class myCommentCell : UITableViewCell{
     @IBOutlet weak var placeName : UILabel?
 }
 
-
 class MyCommentViewController: UITableViewController {
 
     var myComments : [myComment] = []
@@ -38,6 +36,7 @@ class MyCommentViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "내 댓글"
 
         print(NSHomeDirectory())
         
@@ -49,9 +48,6 @@ class MyCommentViewController: UITableViewController {
         
         self.tableView.estimatedRowHeight = 70
         self.tableView.rowHeight = UITableView.automaticDimension
-        
-       
-        
     }
 
     // MARK: - Table view data source
@@ -65,7 +61,6 @@ class MyCommentViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return myComments.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myComment", for: indexPath) as! myCommentCell
@@ -108,7 +103,6 @@ class MyCommentViewController: UITableViewController {
         return true
     }
     */
-
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -156,7 +150,6 @@ class MyCommentViewController: UITableViewController {
         }
     }
     
-
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {

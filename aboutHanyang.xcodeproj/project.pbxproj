@@ -165,8 +165,6 @@
 			children = (
 				5D01D4A322981FBB00073C27 /* Assets.xcassets */,
 				5D01D4A022981FB900073C27 /* Main.storyboard */,
-				48612DF422B2454300DB6433 /* MyCommentViewController.swift */,
-				48612DF222B2404E00DB6433 /* MyInfoViewController.swift */,
 				5D01D5062298255C00073C27 /* db_Category.json */,
 				5D01D5112298255C00073C27 /* db_Building.json */,
 				5D01D5072298255C00073C27 /* db_Place.json */,
@@ -181,6 +179,8 @@
 				5D01D50B2298255C00073C27 /* PlaceCommentViewController.swift */,
 				5D01D5042298255C00073C27 /* PlaceMenuViewController.swift */,
 				5D01D5122298255D00073C27 /* SearchViewController.swift */,
+				48612DF222B2404E00DB6433 /* MyInfoViewController.swift */,
+				48612DF422B2454300DB6433 /* MyCommentViewController.swift */,
 				F35687DB22AB8D8100C332C2 /* HistoryViewController.swift */,
 				5D01D49C22981FB900073C27 /* AppDelegate.swift */,
 				F3A4F6AF22A10E9900FD6646 /* SwiftyJSON.swift */,
