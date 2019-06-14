@@ -375,30 +375,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPz-Kg-5WO">
-                                <rect key="frame" x="283" y="736" width="89" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPz-Kg-5WO">
+                                <rect key="frame" x="202" y="695" width="92" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="상세 메뉴"/>
+                                <state key="normal" title="상세 메뉴" image="menu"/>
                                 <connections>
                                     <action selector="tapMenu:" destination="qTm-cL-y31" eventType="touchUpInside" id="GDZ-fD-6gK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hn-PR-fR5">
-                                <rect key="frame" x="57" y="735" width="65" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hn-PR-fR5">
+                                <rect key="frame" x="309" y="695" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="코멘트"/>
+                                <state key="normal" title="코멘트" image="chat"/>
                                 <connections>
                                     <action selector="tapComment:" destination="qTm-cL-y31" eventType="touchUpInside" id="Q8r-Eo-QGi"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-0b-4hn">
+                                <rect key="frame" x="20" y="214" width="374" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="위치" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uk-gx-rKH">
+                                <rect key="frame" x="193" y="144" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="가게 설명 " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rwV-R2-qoR">
+                                <rect key="frame" x="20" y="532" width="374" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="가게" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAK-fI-nzb">
+                                <rect key="frame" x="20" y="111" width="174" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="번호" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-a2-7oU">
+                                <rect key="frame" x="193" y="176" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="운영 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0H-kz-5Hr">
+                                <rect key="frame" x="27" y="465" width="360" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7tT-Vr-EYZ"/>
                     </view>
                     <connections>
                         <outlet property="menuButton" destination="nPz-Kg-5WO" id="bnN-Jb-anE"/>
+                        <outlet property="place_connect" destination="eWf-a2-7oU" id="Dty-uw-Jl7"/>
+                        <outlet property="place_exp" destination="rwV-R2-qoR" id="wkF-Mu-51g"/>
+                        <outlet property="place_image" destination="V3b-0b-4hn" id="NtV-ft-Vwc"/>
+                        <outlet property="place_name" destination="WAK-fI-nzb" id="7bt-DT-93u"/>
+                        <outlet property="place_pos" destination="2Uk-gx-rKH" id="lo6-iF-Ce7"/>
+                        <outlet property="place_time" destination="Z0H-kz-5Hr" id="OfD-79-0S4"/>
                         <segue destination="scj-hx-96u" kind="show" identifier="tapMenu" id="jtS-Yl-Z7m"/>
                         <segue destination="qbF-Cb-mng" kind="show" identifier="tapComment" id="Jey-wT-cpW"/>
                     </connections>
@@ -542,7 +585,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-7u-Mis">
-                                                    <rect key="frame" x="20" y="12" width="121" height="21"/>
+                                                    <rect key="frame" x="20" y="12" width="169" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -630,10 +673,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chat" width="512" height="512"/>
         <image name="history" width="512" height="512"/>
+        <image name="menu" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="glO-0W-JNT"/>
-        <segue reference="FgL-pM-Aav"/>
+        <segue reference="k7m-yJ-QxF"/>
     </inferredMetricsTieBreakers>
 </document>

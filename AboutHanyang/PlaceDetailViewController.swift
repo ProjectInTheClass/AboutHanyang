@@ -9,7 +9,16 @@
 import UIKit
 
 class PlaceDetailViewController: UIViewController {
-
+    @IBOutlet weak var place_name : UILabel!
+    @IBOutlet weak var place_image : UIImageView!
+    @IBOutlet weak var place_pos : UILabel!
+    @IBOutlet weak var place_time : UILabel!
+    @IBOutlet weak var place_connect : UILabel!
+    
+    
+    @IBOutlet weak var place_exp : UITextView!
+    
+    
     @IBOutlet weak var menuButton : UIButton!
     
     var selectedPlace:String = ""
@@ -20,6 +29,14 @@ class PlaceDetailViewController: UIViewController {
         self.title = selectedPlace
         
         if let placeShowed = findPlace(place_name: selectedPlace) {
+            //page 구성
+            place_name.text = placeShowed.p_name
+            place_image.image = UIImage(named: placeShowed.p_name)
+            place_pos.text = placeShowed.p_pos
+            place_connect.text = placeShowed.p_email
+            place_time.text = "Open 09:00 am ~ 06:00 pm"
+            place_exp.text = placeShowed.p_description
+            
             let encoder = JSONEncoder()
             encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
             let doc = NSHomeDirectory() + "/Documents"
