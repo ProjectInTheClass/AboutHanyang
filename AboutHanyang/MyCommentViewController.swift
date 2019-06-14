@@ -50,22 +50,7 @@ class MyCommentViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 70
         self.tableView.rowHeight = UITableView.automaticDimension
         
-            let encoder = JSONEncoder()
-            encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-            let doc = NSHomeDirectory() + "/Documents"
-            let filepath = doc + "/myComment.json"
-            
-            // myComment.json file 이 있는지 확인
-        let fileManager = FileManager.default
-            fileUrl = URL(fileURLWithPath: filepath)
-            
-            if fileManager.fileExists(atPath: filepath) {
-                do {
-                    let jsonData = try Data(contentsOf: fileUrl as URL)
-                    myComments = try JSONDecoder().decode([myComment].self, from: jsonData)
-                }
-                catch _ { print("json error: failed to load place info") } }
-            else { print("recent myComment doesn't exists") }
+       
         
     }
 
@@ -96,6 +81,25 @@ class MyCommentViewController: UITableViewController {
         return (cell as UITableViewCell)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        let doc = NSHomeDirectory() + "/Documents"
+        let filepath = doc + "/myComment.json"
+        
+        // myComment.json file 이 있는지 확인
+        let fileManager = FileManager.default
+        fileUrl = URL(fileURLWithPath: filepath)
+        
+        if fileManager.fileExists(atPath: filepath) {
+            do {
+                let jsonData = try Data(contentsOf: fileUrl as URL)
+                myComments = try JSONDecoder().decode([myComment].self, from: jsonData)
+            }
+            catch _ { print("json error: failed to load place info") } }
+        else { print("recent myComment doesn't exists") }
+        tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -133,6 +137,7 @@ class MyCommentViewController: UITableViewController {
                         }
                         
                         tableView.deleteRows(at: [indexPath], with: .fade)
+                        tableView.reloadData()
                     }
                 }
                 alert.dismiss(animated: true, completion: nil)
