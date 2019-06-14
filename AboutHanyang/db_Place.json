@@ -3,8 +3,8 @@
 		"p_name" : "Cafe Queue",
         "p_building" : "IT/BT관",
         "p_pos" : "IT/BT관 3층 로비",
-        "p_phone" : "123-4567-8910",
-		"p_email" : "02-2294-0222",
+        "p_phone" : "02-2294-0222",
+		"p_email" : "QueueCafe@naver.com",
         "p_description" : "가성비가 좋은 가게입니다.\n 잇빗 3층 로비에 있는 아담한 카페입니다.\n 쿠폰제를 운영합니다."
     },
     
