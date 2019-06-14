@@ -502,7 +502,6 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
 extension PlaceCommentViewController : CommentViewDelegate {
     
     func upSympathy(_uid: String, sym_list : [String]) {
-        var index = 0;
         for item in sym_list{
             if(item == self.uid){
                 
@@ -514,6 +513,14 @@ extension PlaceCommentViewController : CommentViewDelegate {
                         if var post = currentData.value as? [String : AnyObject]{
                             
                             var sympathy = post["sympathy"] as! [String]
+                            
+                            var index = 0;
+                            for i in sympathy{
+                                if(i == self.uid){
+                                    break;
+                                }
+                                index = index + 1
+                            }
                             
                             sympathy.remove(at: index)
                             
@@ -546,7 +553,6 @@ extension PlaceCommentViewController : CommentViewDelegate {
                 present(alert, animated: true, completion: nil)
                 return
                 }
-            index = index + 1;
         }
         let alert = UIAlertController(title: "공감 하기", message: "공감하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
         
