@@ -32,9 +32,9 @@ class PlaceDetailViewController: UIViewController {
             //page 구성
             place_name.text = placeShowed.p_name
             place_image.image = UIImage(named: placeShowed.p_name)
-            place_pos.text = placeShowed.p_pos
-            place_connect.text = placeShowed.p_email
-            place_time.text = "Open 09:00 am ~ 06:00 pm"
+            //place_pos.text = placeShowed.p_pos
+            //place_connect.text = placeShowed.p_email
+            //place_time.text = "Open 09:00 am ~ 06:00 pm"
             place_exp.text = placeShowed.p_description
             
             let encoder = JSONEncoder()
