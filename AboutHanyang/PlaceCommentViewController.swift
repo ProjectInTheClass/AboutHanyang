@@ -56,6 +56,20 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         return 2
     }
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        if(section == 0){
+            view.tintColor = UIColor(named: "Best")
+        }
+        else {
+            view.tintColor = UIColor(named: "normal")
+        }
+        
+        view.layer.cornerRadius = 10
+
+    }
+    
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if (section == 0) {
             if(comment_best.count > 0){
@@ -101,6 +115,8 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         let normal_button = UIImage(named: "Like2")
         let highlited_button = UIImage(named: "Like1")
         
+        cell.backgroundColor = UIColor(named: "comment")
+        
         cell.symButton.setImage(normal_button, for: .init())
         
         for item in dic.sympathy{
@@ -109,6 +125,11 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
                 break;
             }
         }
+        
+       // cell.layer.cornerRadius = 10
+        
+        cell.layer.borderWidth = 3.5
+        cell.layer.borderColor = tableView.backgroundColor?.cgColor
         
         cell.c_uid = dic.uid
         cell.delegate = self
@@ -506,7 +527,7 @@ extension PlaceCommentViewController : CommentViewDelegate {
                         return TransactionResult.success(withValue: currentData)
                     }) { (error, committed, snapshot) in
                         if let error = error {
-                            print(error.localizedDescription)
+                            print("sym error")
                         }
                         if committed {
                             self.getAllComment()
