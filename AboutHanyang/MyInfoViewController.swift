@@ -45,22 +45,6 @@ class MyInfoViewController: UIViewController, UITableViewDataSource, UITableView
         appInfoTable.layer.cornerRadius = 10.0
         appInfoTable.isScrollEnabled = false
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableView == infoSegueTable {
-            tableView.cellForRow(at: indexPath)!.isSelected = false
-            switch indexPath.row {
-            case 0:
-                performSegue(withIdentifier: "showMyComment", sender: nil)
-                break
-            case 1:
-                performSegue(withIdentifier: "showMyHistory", sender: nil)
-                break
-            default:
-                break
-            }
-        }
-    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == infoSegueTable { return 2 }
@@ -76,10 +60,10 @@ class MyInfoViewController: UIViewController, UITableViewDataSource, UITableView
             cell.layer.cornerRadius = 10.0
             switch indexPath.row {
             case 0:
-                cell.title.text = "내가 쓴 댓글 보기"
+                cell.title.text = "최근 검색 기록 보기"
                 break
             case 1:
-                cell.title.text = "최근 검색 기록 보기"
+                cell.title.text = "내가 쓴 댓글 보기"
                 break
             default:
                 break
@@ -129,4 +113,19 @@ class MyInfoViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == infoSegueTable {
+            tableView.cellForRow(at: indexPath)!.isSelected = false
+            switch indexPath.row {
+            case 0:
+                performSegue(withIdentifier: "showMyHistory", sender: nil)
+                break
+            case 1:
+                performSegue(withIdentifier: "showMyComment", sender: nil)
+                break
+            default:
+                break
+            }
+        }
+    }
 }

@@ -481,10 +481,13 @@
                             <outlet property="delegate" destination="3pD-oW-aeF" id="R5L-YN-LRb"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="qTm-cL-y31" kind="show" identifier="tapComment" id="gdt-sd-gzc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzg-DR-9hX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="2371"/>
+            <point key="canvasLocation" x="1458" y="2016"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="sc6-t1-NCI">
@@ -521,7 +524,7 @@
                                 <connections>
                                     <outlet property="name" destination="7ZX-gC-1Yn" id="sDA-3A-jTY"/>
                                     <outlet property="pos" destination="iDc-Lb-xdf" id="gqg-jt-2zR"/>
-                                    <segue destination="qTm-cL-y31" kind="show" id="sk7-RJ-RvZ"/>
+                                    <segue destination="qTm-cL-y31" kind="show" identifier="tapHistory" id="sk7-RJ-RvZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -533,7 +536,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akn-s5-bSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1208.6956521739132" y="1633.9285714285713"/>
+            <point key="canvasLocation" x="1458" y="1261"/>
         </scene>
         <!--Selected Table View Controller-->
         <scene sceneID="mAT-3w-mtz">
@@ -943,7 +946,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SLM-0u-kaV"/>
+        <segue reference="gdt-sd-gzc"/>
         <segue reference="k7m-yJ-QxF"/>
     </inferredMetricsTieBreakers>
 </document>
