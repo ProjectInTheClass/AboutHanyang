@@ -8,33 +8,46 @@
 
 import UIKit
 
-class PlaceDetailViewController: UIViewController {
+class DetailCell: UITableViewCell {
+    
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var content: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+}
+
+class PlaceDetailViewController: UIViewController, UITableViewDataSource{
     @IBOutlet weak var place_name : UILabel!
     @IBOutlet weak var place_image : UIImageView!
-    @IBOutlet weak var place_pos : UILabel!
-    @IBOutlet weak var place_time : UILabel!
-    @IBOutlet weak var place_connect : UILabel!
-    
-    
     @IBOutlet weak var place_exp : UITextView!
-    
+    @IBOutlet weak var place_oper_table: UITableView!
     
     @IBOutlet weak var menuButton : UIButton!
     
+    var iconArray = ["clock","phone", "email"]
+    var phone : String = ""
+    var email : String = ""
     var selectedPlace:String = ""
     var selectedBuilding:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = selectedPlace
+        self.place_oper_table.dataSource = self
         
         if let placeShowed = findPlace(place_name: selectedPlace) {
             //page 구성
+            phone = placeShowed.p_phone
+            email = placeShowed.p_email
             place_name.text = placeShowed.p_name
             place_image.image = UIImage(named: placeShowed.p_name)
-            place_pos.text = placeShowed.p_pos
-            place_connect.text = placeShowed.p_email
-            place_time.text = "Open 09:00 am ~ 06:00 pm"
             place_exp.text = placeShowed.p_description
             
             let encoder = JSONEncoder()
@@ -87,7 +100,6 @@ class PlaceDetailViewController: UIViewController {
             }
         }
         
-        //print(placeShowed.p_pos)
         menuButton.isHidden = false
         
         do {
@@ -103,6 +115,27 @@ class PlaceDetailViewController: UIViewController {
             menuButton.isHidden = true
         }
         catch _ { menuButton.isHidden = true }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return iconArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "oper", for: indexPath) as! DetailCell
+        
+        cell.icon.image = UIImage(named: iconArray[indexPath.row])
+        switch indexPath.row {
+        case 0:
+            cell.content.text = "Open 09:00 am ~ 06:00 pm" //임시
+        case 1:
+            cell.content.text = phone
+        case 2:
+            cell.content.text = email
+        default:
+            print("default")
+        }
+        return cell
     }
     
     @IBAction func tapComment(_ sender: UIButton) {

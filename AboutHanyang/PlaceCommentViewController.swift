@@ -56,6 +56,20 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         return 2
     }
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        if(section == 0){
+            view.tintColor = UIColor(named: "Best")
+        }
+        else {
+            view.tintColor = UIColor(named: "normal")
+        }
+        
+        view.layer.cornerRadius = 10
+
+    }
+    
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if (section == 0) {
             if(comment_best.count > 0){
@@ -101,6 +115,8 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         let normal_button = UIImage(named: "Like2")
         let highlited_button = UIImage(named: "Like1")
         
+        cell.backgroundColor = UIColor(named: "comment")
+        
         cell.symButton.setImage(normal_button, for: .init())
         
         for item in dic.sympathy{
@@ -109,6 +125,11 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
                 break;
             }
         }
+        
+       // cell.layer.cornerRadius = 10
+        
+        cell.layer.borderWidth = 3.5
+        cell.layer.borderColor = tableView.backgroundColor?.cgColor
         
         cell.c_uid = dic.uid
         cell.delegate = self
@@ -481,7 +502,6 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
 extension PlaceCommentViewController : CommentViewDelegate {
     
     func upSympathy(_uid: String, sym_list : [String]) {
-        var index = 0;
         for item in sym_list{
             if(item == self.uid){
                 
@@ -493,6 +513,14 @@ extension PlaceCommentViewController : CommentViewDelegate {
                         if var post = currentData.value as? [String : AnyObject]{
                             
                             var sympathy = post["sympathy"] as! [String]
+                            
+                            var index = 0;
+                            for i in sympathy{
+                                if(i == self.uid){
+                                    break;
+                                }
+                                index = index + 1
+                            }
                             
                             sympathy.remove(at: index)
                             
@@ -506,7 +534,7 @@ extension PlaceCommentViewController : CommentViewDelegate {
                         return TransactionResult.success(withValue: currentData)
                     }) { (error, committed, snapshot) in
                         if let error = error {
-                            print(error.localizedDescription)
+                            print("sym error")
                         }
                         if committed {
                             self.getAllComment()
@@ -525,7 +553,6 @@ extension PlaceCommentViewController : CommentViewDelegate {
                 present(alert, animated: true, completion: nil)
                 return
                 }
-            index = index + 1;
         }
         let alert = UIAlertController(title: "공감 하기", message: "공감하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
         

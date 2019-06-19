@@ -2,18 +2,17 @@
 //  MyCommentViewController.swift
 //  aboutHanyang
 //
-//  Created by jjy on 13/06/2019.
+//  Created by Team aboutHanyang on 13/06/2019.
 //  Copyright © 2019 aboutHanyang. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-struct myComment : Codable{
+struct myComment : Codable {
     var comment : String
     let place_name : String
     let date : String
-    
     
     init(_ comment : String, _ place_name : String, _ date : String) {
         self.comment = comment
@@ -22,12 +21,11 @@ struct myComment : Codable{
     }
 }
 
-class myCommentCell : UITableViewCell{
+class myCommentCell : UITableViewCell {
     @IBOutlet weak var comment : UILabel?
     @IBOutlet weak var date : UILabel?
     @IBOutlet weak var placeName : UILabel?
 }
-
 
 class MyCommentViewController: UITableViewController {
 
@@ -36,8 +34,11 @@ class MyCommentViewController: UITableViewController {
     var uid : String  = ""
     var fileUrl : URL!
     
+    var selectedRow:IndexPath? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "내 댓글"
 
         print(NSHomeDirectory())
         
@@ -49,9 +50,6 @@ class MyCommentViewController: UITableViewController {
         
         self.tableView.estimatedRowHeight = 70
         self.tableView.rowHeight = UITableView.automaticDimension
-        
-       
-        
     }
 
     // MARK: - Table view data source
@@ -65,14 +63,12 @@ class MyCommentViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return myComments.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myComment", for: indexPath) as! myCommentCell
 
         let count = indexPath.row
         let dic : myComment = myComments[count]
-
         
         cell.comment?.text = dic.comment
         cell.date?.text = dic.date
@@ -108,7 +104,6 @@ class MyCommentViewController: UITableViewController {
         return true
     }
     */
-
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -150,36 +145,16 @@ class MyCommentViewController: UITableViewController {
             alert.addAction(ok)
             alert.addAction(no)
             present(alert, animated: true, completion: nil)
-            
-
-            
         }
     }
     
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath
+        performSegue(withIdentifier: "tapComment", sender: nil)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let destVC = segue.destination as! PlaceDetailViewController
+        destVC.selectedPlace = myComments[selectedRow!.row].place_name
     }
-    */
-
 }

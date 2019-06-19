@@ -2,7 +2,7 @@
 //  HistoryViewController.swift
 //  aboutHanyang
 //
-//  Created by th on 08/06/2019.
+//  Created by Team aboutHanyang on 08/06/2019.
 //  Copyright © 2019 aboutHanyang. All rights reserved.
 //
 

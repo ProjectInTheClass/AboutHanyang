@@ -20,12 +20,6 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBOutlet weak var categoryView: UICollectionView!
     
-    var showCategoryAsMap:Bool = true // true일 때 카테고리 선택 시 지도 상에 결과 출력
-    @IBOutlet weak var categoryModeSwitch: UISwitch!
-    @IBAction func setCategoryShowMode(_ sender: UISwitch) {
-        showCategoryAsMap = sender.isOn
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
