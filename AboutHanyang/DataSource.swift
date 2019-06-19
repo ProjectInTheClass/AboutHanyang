@@ -78,26 +78,14 @@ class Place : Decodable & Encodable {
     
 }
 
-/// 크기에 제약이 없는 FIFO 큐
-/// 복잡도: push O(1), pop O(`count`)
-public struct Queue<T>: ExpressibleByArrayLiteral {
+struct TagUnit : Decodable{
+    var tagName:String
+    var priceUnits : [[String]]
     
-    /// 내부 배열 저장소
-    public private(set) var elements: Array<T> = []
+}
+struct MenuData:Decodable{
     
-    /// 새로운 엘리먼트 추가. 소요 시간 = O(1)
-    public mutating func push(value: T) { elements.append(value) }
-    
-    /// 가장 앞에 있는 엘리먼트를 꺼내오기. 소요시간 = O(`count`)
-    public mutating func pop() -> T { return elements.removeFirst() }
-    
-    /// 큐가 비었는지 검사
-    public var isEmpty: Bool { return elements.isEmpty }
-    
-    /// 큐의 크기, 연산 프로퍼티
-    public var count: Int { return elements.count }
-    
-    /// ArrayLiteralConvertible 지원
-    public init(arrayLiteral elements: T...) { self.elements = elements }
+    var placeName : String
+    var menu : Array<TagUnit>
     
 }

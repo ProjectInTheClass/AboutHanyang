@@ -8,26 +8,19 @@
 
 import UIKit
     
-    struct MenuData:Decodable{
-        
-        var placeName : String
-        var menu : [String:[String:String]]
-        
-    }
-    
-    class MenuTableCell : UITableViewCell{
+class MenuTableCell : UITableViewCell{
         @IBOutlet weak var name : UILabel!
         @IBOutlet weak var cost :UILabel!
-    }
+}
     
-    class PlaceMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PlaceMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         @IBOutlet weak var tableView: UITableView!
 
-        var menuData : [String:[String:String]] = ["":["":""]]
-        var currentMenu : [String:String] = ["":""]
-        var keys : [String] = [""]
-        var values : [String] = [""]
+        var menuData : Array<TagUnit> = []
+        var currentMenu : Array<[String]> = []
+        var keys : [String] = []
+        var values : [String] = []
         var selectedPlace : String = ""
         
         func numberOfSections(in tableView: UITableView) -> Int {
@@ -68,16 +61,24 @@ import UIKit
             catch _ { print("json error: failed to load menu info") }
             
             addControl()
-            let key = Array(menuData.keys)
-            currentMenu = menuData[key[0]]!
-            keys = Array(currentMenu.keys)
-            values = Array(currentMenu.values)
+            var key : [String] = []
+            for i in menuData{
+                key.append(i.tagName)
+            }
+            currentMenu = menuData[0].priceUnits
+            for i in currentMenu{
+                keys.append(i[0])
+                values.append(i[1])
+            }
             tableView.reloadData()
             self.tableView.reloadData()
         }
         
         func addControl()  {
-            let items = Array(menuData.keys)
+            var items : [String] = []
+            for i in menuData{
+                items.append(i.tagName)
+            }
             let segmentedControl = UISegmentedControl(items: items)
             segmentedControl.frame = CGRect(x: 25, y: 100, width: 350, height: 50)
             segmentedControl.addTarget(self, action: #selector(segmentAction(_:)), for: .valueChanged)
@@ -86,32 +87,35 @@ import UIKit
         }
         
         @objc func segmentAction(_ segmentedControl: UISegmentedControl) {
+            var items : [String] = [""]
+            for i in menuData{
+                items.append(i.tagName)
+            }
             switch (segmentedControl.selectedSegmentIndex) {
             case 0:
-                let key = Array(menuData.keys)
-                currentMenu = menuData[key[0]]!
+                currentMenu = menuData[0].priceUnits
                 break
             case 1:
-                let key = Array(menuData.keys)
-                currentMenu = menuData[key[1]]!
+                currentMenu = menuData[1].priceUnits
             break // Dos
             case 2:
-                let key = Array(menuData.keys)
-                currentMenu = menuData[key[2]]!
+                currentMenu = menuData[2].priceUnits
             break // Tres
             case 3:
-                let key = Array(menuData.keys)
-                currentMenu = menuData[key[3]]!
+                currentMenu = menuData[3].priceUnits
                 break
             case 4:
-                let key = Array(menuData.keys)
-                currentMenu = menuData[key[4]]!
+                currentMenu = menuData[4].priceUnits
                 break
             default:
                 return
             }
-            keys = Array(currentMenu.keys)
-            values = Array(currentMenu.values)
+            keys = []
+            values = []
+            for i in currentMenu{
+                keys.append(i[0])
+                values.append(i[1])
+            }
             tableView.reloadData()
         }
         

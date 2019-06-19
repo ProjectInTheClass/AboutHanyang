@@ -108,13 +108,16 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
             let data = try JSONDecoder().decode([MenuData].self, from: jsonData)
             
             for item in data {
+                print(item.placeName)
                 if(item.placeName == selectedPlace) {
                     return
                 }
             }
             menuButton.isHidden = true
         }
-        catch _ { menuButton.isHidden = true }
+        catch _ { menuButton.isHidden = true
+            print("db_Menu json parsing failed")
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
