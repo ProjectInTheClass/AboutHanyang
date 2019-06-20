@@ -38,7 +38,7 @@
         
         {
             "c_name" : "ATM",
-            "c_place_list" : ["제 2생활관 ATM","한양여대 ATM", "정보통신관 ATM", "행원파크 ATM", "경영관 ATM", "한양사이버대학교 ATM","생활과학관 ATM", "제 1공학관 ATM", "백남할술정보관 ATM", "신소재공학관 ATM", "국제관 ATM", "우체국 ATM", "한마당 ATM", "자연과학관 ATM", "부속병원동관 ATM", "부속병원본관 ATM", "부속병원서관 ATM"],
+            "c_place_list" : ["제 2생활관 ATM","한양여대 ATM", "정보통신관 ATM", "행원파크 ATM", "경영관 ATM", "한양사이버대학교 ATM","생활과학관 ATM", "제 1공학관 ATM", "백남학술정보관 ATM", "신소재공학관 ATM", "국제관 ATM", "우체국 ATM", "한마당 ATM", "자연과학대학 ATM", "병원동관 ATM", "병원본관 ATM", "병원서관 ATM"],
             "c_icon" : "atm.png"
         },
         
