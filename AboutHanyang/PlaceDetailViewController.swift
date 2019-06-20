@@ -49,7 +49,7 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
             phone = placeShowed.p_phone
             email = placeShowed.p_email
             place_name.text = placeShowed.p_name
-            
+           /*
             var urlList : [String] = []
             
             do {
@@ -77,6 +77,8 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
                 })
             }
             }
+ */
+            place_image.image = UIImage(named: "Cafe Queue2")
             place_exp.text = placeShowed.p_description
             
             let encoder = JSONEncoder()

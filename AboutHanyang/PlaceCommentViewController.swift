@@ -149,6 +149,7 @@ class PlaceCommentViewController: UIViewController, UITableViewDataSource, UITab
         comment_best.removeAll();
         comment_normal.removeAll();
         
+        print(selectedPlace!)
         ref.child("review").child(selectedPlace!).observeSingleEvent(of: .value, with: { (snapshot) in
             guard let dic = snapshot.value as? [String:[String:Any]]
                 else {
