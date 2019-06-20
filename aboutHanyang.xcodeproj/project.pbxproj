@@ -11,6 +11,7 @@
 		48612DF522B2454300DB6433 /* MyCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48612DF422B2454300DB6433 /* MyCommentViewController.swift */; };
 		48E506CE22A90D74002FF7B4 /* SelectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E506CD22A90D74002FF7B4 /* SelectedTableViewController.swift */; };
 		48E506D022A9170D002FF7B4 /* db_Menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 48E506CF22A9170D002FF7B4 /* db_Menu.json */; };
+		48EFE9AA22BB1DBD00BA54CF /* db_Image.json in Resources */ = {isa = PBXBuildFile; fileRef = 48EFE9A922BB1DBD00BA54CF /* db_Image.json */; };
 		5D01D49D22981FB900073C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D49C22981FB900073C27 /* AppDelegate.swift */; };
 		5D01D4A222981FB900073C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A022981FB900073C27 /* Main.storyboard */; };
 		5D01D4A422981FBB00073C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A322981FBB00073C27 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		48612DF422B2454300DB6433 /* MyCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCommentViewController.swift; path = AboutHanyang/MyCommentViewController.swift; sourceTree = SOURCE_ROOT; };
 		48E506CD22A90D74002FF7B4 /* SelectedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedTableViewController.swift; path = AboutHanyang/SelectedTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		48E506CF22A9170D002FF7B4 /* db_Menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Menu.json; sourceTree = "<group>"; };
+		48EFE9A922BB1DBD00BA54CF /* db_Image.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = db_Image.json; path = AboutHanyang/db_Image.json; sourceTree = SOURCE_ROOT; };
 		51C5C0C1FC2EF599B5319C63 /* Pods-aboutHanyang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyang.debug.xcconfig"; path = "Target Support Files/Pods-aboutHanyang/Pods-aboutHanyang.debug.xcconfig"; sourceTree = "<group>"; };
 		5D01D49922981FB900073C27 /* aboutHanyang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aboutHanyang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D01D49C22981FB900073C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				5D01D4A322981FBB00073C27 /* Assets.xcassets */,
 				5D01D4A022981FB900073C27 /* Main.storyboard */,
 				5D01D5062298255C00073C27 /* db_Category.json */,
+				48EFE9A922BB1DBD00BA54CF /* db_Image.json */,
 				5D01D5112298255C00073C27 /* db_Building.json */,
 				5D01D5072298255C00073C27 /* db_Place.json */,
 				48E506CF22A9170D002FF7B4 /* db_Menu.json */,
@@ -331,6 +334,7 @@
 				5D01D4A722981FBB00073C27 /* LaunchScreen.storyboard in Resources */,
 				5D01D4A422981FBB00073C27 /* Assets.xcassets in Resources */,
 				5D01D4A222981FB900073C27 /* Main.storyboard in Resources */,
+				48EFE9AA22BB1DBD00BA54CF /* db_Image.json in Resources */,
 				5D01D5202298255D00073C27 /* db_Building.json in Resources */,
 				5D01D51E2298255D00073C27 /* GoogleService-Info.plist in Resources */,
 				5D01D5152298255D00073C27 /* db_Category.json in Resources */,

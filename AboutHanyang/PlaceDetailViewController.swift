@@ -50,15 +50,33 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
             email = placeShowed.p_email
             place_name.text = placeShowed.p_name
             
+            var urlList : [String] = []
             
-            if let url = URL(string: "https://github.com/ProjectInTheClass/aboutHanyang/blob/master/image/%EA%BC%AC%EB%B6%80%EA%B8%B0.jpeg?raw=true") {
+            do {
+                let url = Bundle.main.url(forResource: "db_Image", withExtension: "json")
+                let jsonData = try Data(contentsOf: url!)
+                let dataList = try JSONDecoder().decode([String:[String]].self, from: jsonData)
+                for (key, value) in dataList{
+                    if (key == placeShowed.p_name)
+                    {
+                        for url in value{
+                            urlList.append(url)
+                        }
+                    }
+                }
+            }
+            catch _ { print("json error: failed to load image info") }
+            
+            if(urlList.count > 0){
+            if let url = URL(string: urlList[0]) {
                 self.downloadImage(from:url , success: { (image) in
-                    self.p_image = image
+                    self.place_image.image = image
+                    
                 }, failure: { (failureReason) in
                     print(failureReason)
                 })
             }
-            
+            }
             place_exp.text = placeShowed.p_description
             
             let encoder = JSONEncoder()
@@ -184,13 +202,13 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
             
             print(response?.suggestedFilename ?? url.lastPathComponent)
             print("Download Finished")
+            print(data)
             DispatchQueue.main.async() {
                 if let _img = UIImage(data: data){
-                    print("async")
-                    let imageView = UIImageView(image: _img)
-                    imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
-                    self.view.addSubview(imageView)
                     success(_img)
+                }
+                else {
+                    print("cant get image")
                 }
             }
         }
