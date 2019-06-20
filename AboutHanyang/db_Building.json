@@ -123,7 +123,7 @@
         "b_name" : "퓨전테크센터",
         "b_number" : 208,
         "b_description" : "퓨턴테크센터(FTC)입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["Blue Pot"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -155,7 +155,7 @@
         "b_name" : "제1공학관",
         "b_number" : 212,
         "b_description" : "제1공학관입니다",
-        "b_place_list" : ["제1공학관 ATM","사자가 군것질 할 때","제1공학관 인쇄실"],
+        "b_place_list" : ["제1공학관 ATM","사자가 군것질 할 때","제1공학관 인쇄실","Cafe Tiamo"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -308,7 +308,7 @@
         "b_name" : "인문관",
         "b_number" : 508,
         "b_description" : "인문관입니다",
-        "b_place_list" : ["인문관 인쇄실"],
+        "b_place_list" : ["인문관 인쇄실","팬도로시"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : ["국어국문학과", "영어영문학과", "독어독문학과", "중어중문학과", "사학과", "철학과"]
     },
@@ -396,7 +396,7 @@
         "b_name" : "한양사이버대학교 1관",
         "b_number" : 702,
         "b_description" : "",
-        "b_place_list" : ["한양사이버대학교 ATM"],
+        "b_place_list" : ["한양사이버대학교 ATM","카페베네"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -428,7 +428,7 @@
         "b_name" : "행원파크",
         "b_number" : 707,
         "b_description" : "행원파크 ATM",
-        "b_place_list" : [],
+        "b_place_list" : ["Cafe Uuni"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },

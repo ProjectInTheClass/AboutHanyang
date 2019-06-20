@@ -460,5 +460,45 @@
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "제2생활관 1층에 위치한 카페입니다."
+    },
+    {
+        "p_name" : "카페베네",
+        "p_building" : "한양사이버대학교 1관",
+        "p_pos" : "한양사이버대학교 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "한양사이버대학교 1층에 위치한 카페입니다."
+    },
+    {
+        "p_name" : "Cafe Uuni",
+        "p_building" : "행원파크",
+        "p_pos" : "행원파크 학생식당 반대편",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "행원파크에 위치한 카페입니다."
+    },
+    {
+        "p_name" : "Blue Pot",
+        "p_building" : "퓨전테크센터",
+        "p_pos" : "퓨전테크센터(FTC) 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "행원파크에 위치한 카페입니다."
+    },
+    {
+        "p_name" : "Cafe Tiamo",
+        "p_building" : "제1공학관",
+        "p_pos" : "제1공학관 3층 입구 옆",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "제1공학관 3층 앞에 위치한 카페입니다."
+    },
+    {
+        "p_name" : "팬도로시",
+        "p_building" : "인문관",
+        "p_pos" : "인문관 지하 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "인문관 지하 1층에 위치한 카페입니다."
     }
 ]

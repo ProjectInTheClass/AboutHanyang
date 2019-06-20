@@ -2,7 +2,7 @@
     
 		{
 			"c_name" : "카페",
-			"c_place_list" : ["Cafe Queue", "공차", "CoffeeA", "PRO COFFEE", "Book Cafe", "BROW NABI", "투썸플레이스"],
+			"c_place_list" : ["Cafe Queue", "공차", "CoffeeA", "PRO COFFEE", "Book Cafe", "BROW NABI", "투썸플레이스","Grazie","팬도로시", "카페베네","Cafe Uuni","Blue Pot","Cafe Tiamo"],
             "c_icon" : "cafe.png"
 		},
         
