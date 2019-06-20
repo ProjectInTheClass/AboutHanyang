@@ -11,6 +11,7 @@ import UIKit
 class categoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var icon: UIImageView!
+    
 }
 
 class CategoryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -40,6 +41,8 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! categoryCollectionViewCell
         cell.name.text = categoryList[indexPath.item].c_name
         cell.icon.image = UIImage(named: categoryList[indexPath.item].c_icon)
+        
+        cell.name.layer.cornerRadius = 5;
         return cell
     }
     
