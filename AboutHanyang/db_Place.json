@@ -106,6 +106,106 @@
         "p_email" : "123@gmail.com",
         "p_description" : "좁아요"
     },
+    
+    {
+        "p_name" : "Book Cafe",
+        "p_building" : "학생회관",
+        "p_pos" : "학생회관 2층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "가져다 읽을 수 있는 책들이 비치된 학생회관 내 카페입니다."
+    },
+    
+    {
+        "p_name" : "제3학생식당 (사랑방)",
+        "p_building" : "학생회관",
+        "p_pos" : "학생회관 3층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "싸고 괜찮게 먹을 수 있는, 많이들 가는 학생식당 중 하나입니다."
+    },
+    
+    {
+        "p_name" : "공차",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "프랜차이즈 공차의 한양대점으로, 공차 내에는 앉아서 먹을 공간이 별도로 없습니다. 카드 결제 시 무인결제기 앞에 줄이 다소 있는 편입니다."
+    },
+    
+    {
+        "p_name" : "CoffeeA",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "한양플라자 1층에 있는 카페입니다."
+    },
+    
+    {
+        "p_name" : "떡볶이 3991",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "한양플라자 1층에 있는 분식 가게입니다."
+    },
+    
+    {
+        "p_name" : "마라앤마라탕",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "한양대 내 유일 마라탕 가게입니다."
+    },
+    
+    {
+        "p_name" : "RICE & NOODLE",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "한양플라자 1층에 있는 밥 및 면류 음식점입니다."
+    },
+    
+    {
+        "p_name" : "PRO COFFEE",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "한양플라자 1층에 있는 카페입니다."
+    },
+    
+    {
+        "p_name" : "BROW NABI",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자 3층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "한양플라자 3층에 있는 카페입니다."
+    },
+    
+    {
+        "p_name" : "제1학생식당",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자 3층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "한양플라자 3층에 있는 저렴한 가격대의 학생식당입니다."
+    },
+    
+    {
+        "p_name" : "투썸플레이스",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "프랜차이즈 투썸플레이스의 한양대점으로, 별도 실내 공간이 마련되어 있습니다."
+    },
+    
     {
         "p_name" : "제 2생활관 ATM",
         "p_building" : "제 2생활관",

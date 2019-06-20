@@ -26,7 +26,6 @@ func initMarkers() {
     markerColor = .blue
     addMarker(37.556053, 127.044810, "역사관")              // 101
     addMarker(37.556706, 127.044445, "본관")               // 102
-    addMarker(37.556008, 127.043823, "애지문")              // 104
     addMarker(37.556565, 127.043904, "한양플라자")           // 105
     addMarker(37.557594, 127.044201, "학생회관")            // 107
     addMarker(37.555147, 127.044276, "국제관")              // 108
@@ -40,12 +39,11 @@ func initMarkers() {
     addMarker(37.554528, 127.045185, "신소재공학관")           // 204
     addMarker(37.554928, 127.046140, "공업센터 본관")          // 206
     addMarker(37.554732, 127.046537, "공업센터 별관")          // 207
-    addMarker(37.554634, 127.047152, "FTC")                // 208
+    addMarker(37.554634, 127.047152, "퓨전테크센터")           // 208
     addMarker(37.555517, 127.045250, "노천극장")              // 209
     addMarker(37.555396, 127.044885, "정몽구 미래자동차연구센터")  // 210
     addMarker(37.555655, 127.046237, "제2공학관")             // 211
     addMarker(37.556650, 127.045534, "제1공학관")             // 212
-    
     
     // [3] IT/BT관
     markerColor = .red
@@ -56,20 +54,30 @@ func initMarkers() {
     // [4] 법학관 및 금융대학
     markerColor = .purple
     addMarker(37.556723, 127.046728, "생활과학대학")  // 401
+    addMarker(37.556618, 127.047430, "제1음악관")    // 402
+    addMarker(37.556782, 127.047200, "제2음악관")    // 403
+    addMarker(37.556344, 127.047066, "백남음악관")    // 405
     addMarker(37.556635, 127.047838, "제1법학관")    // 407
     addMarker(37.556325, 127.047838, "제2법학관")    // 408
     addMarker(37.556314, 127.048436, "제3법학관")    // 409
     addMarker(37.556635, 127.048495, "경제금융대학")  // 410
     
-    
     // [5] 중앙도서관 및 자연과학대학
     markerColor = .init(red: 0.6, green: 0.0, blue: 0.0, alpha: 1.0)
-    addMarker(37.557439, 127.045674, "백남학술정보관")  // 501
-    
+    addMarker(37.557441, 127.045671, "백남학술정보관")      // 501
+    addMarker(37.556582, 127.045924, "사자가 군것질 할 때")  // 503
+    addMarker(37.557393, 127.044588, "사회과학관")         // 504
+    addMarker(37.558213, 127.045077, "사범대학 본관")      // 505
+    addMarker(37.558403, 127.044688, "사범대학 별관")      // 506
+    addMarker(37.558849, 127.044167, "자연과학대학")       // 507
+    addMarker(37.558432, 127.043435, "인문관")           // 508
     
     // [6] 의학관
     markerColor = .orange
-    
+    addMarker(37.558205, 127.042436, "제1의학관")     // 604
+    addMarker(37.559027, 127.042114, "제2의학관")     // 605
+    addMarker(37.558991, 127.042707, "의과대학 본관")  // 606
+    addMarker(37.559557, 127.041583, "동문회관")      // 607
     
     // [7] 행원파크 및 사이버대학교
     markerColor = .init(red: 0.0, green: 0.6, blue: 0.0, alpha: 1.0)
@@ -79,7 +87,11 @@ func initMarkers() {
     markerColor = .green
     
     
+    // 기타
+    markerColor = .black
+    addMarker(37.559725, 127.044107, "한양대학교병원")
 }
+
 
 func findPlace(place_name : String) -> Place? {
     var placeList : Array<Place> = []
@@ -147,8 +159,8 @@ func findBuilding(category:Category) -> Array<Building> {
         for p in placeList {
             if b.b_name == p.p_building {
                 filteredBuilding.append(b)
+                break
             }
-            break
         }
     }
     

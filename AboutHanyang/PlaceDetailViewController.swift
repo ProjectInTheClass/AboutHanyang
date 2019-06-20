@@ -41,7 +41,7 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Info"
+        self.title = "장소 정보"
         self.place_oper_table.dataSource = self
         
         if let placeShowed = findPlace(place_name: selectedPlace) {
