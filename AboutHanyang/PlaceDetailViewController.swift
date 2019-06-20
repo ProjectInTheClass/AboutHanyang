@@ -36,6 +36,8 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
     var email : String = ""
     var selectedPlace:String = ""
     var selectedBuilding:String = ""
+    var p_image : UIImage? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,16 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
             phone = placeShowed.p_phone
             email = placeShowed.p_email
             place_name.text = placeShowed.p_name
-            place_image.image = UIImage(named: placeShowed.p_name)
+            
+            
+            if let url = URL(string: "https://github.com/ProjectInTheClass/aboutHanyang/blob/master/image/%EA%BC%AC%EB%B6%80%EA%B8%B0.jpeg?raw=true") {
+                self.downloadImage(from:url , success: { (image) in
+                    self.p_image = image
+                }, failure: { (failureReason) in
+                    print(failureReason)
+                })
+            }
+            
             place_exp.text = placeShowed.p_description
             
             let encoder = JSONEncoder()
@@ -118,6 +129,7 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
         catch _ { menuButton.isHidden = true
             print("db_Menu json parsing failed")
         }
+        print("done")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -160,5 +172,33 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
             destVC.selectedPlace = self.selectedPlace
         }
     }
+    
+    
+    func downloadImage(from url: URL , success:@escaping((_ image:UIImage)->()),failure:@escaping ((_ msg:String)->())){
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else {
+                failure("Image cant download from G+ or fb server")
+                return
+            }
+            
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() {
+                if let _img = UIImage(data: data){
+                    print("async")
+                    let imageView = UIImageView(image: _img)
+                    imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+                    self.view.addSubview(imageView)
+                    success(_img)
+                }
+            }
+        }
+    }
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+
     
 }
