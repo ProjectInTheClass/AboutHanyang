@@ -1,5 +1,13 @@
 [
     {
+        "b_name" : "한마당",
+        "b_number" : 100,
+        "b_description" : "한마당입니다",
+        "b_place_list" : ["한마당 ATM"],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
         "b_name" : "역사관",
         "b_number" : 101,
         "b_description" : "역사관입니다",
@@ -35,7 +43,7 @@
         "b_name" : "우체국",
         "b_number" : 106,
         "b_description" : "우체국입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["우체국 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -51,7 +59,7 @@
         "b_name" : "국제관",
         "b_number" : 108,
         "b_description" : "국제관입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["국제관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -91,7 +99,7 @@
         "b_name" : "신소재공학관",
         "b_number" : 204,
         "b_description" : "신소재공학관입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["신소재공학관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -147,7 +155,7 @@
         "b_name" : "제 1공학관",
         "b_number" : 212,
         "b_description" : "제 1공학관입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["제 1공학관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -171,7 +179,7 @@
         "b_name" : "IT/BT관",
         "b_number" : 305,
         "b_description" : "IT/BT관입니다",
-        "b_place_list" : ["Cafe Queue", "IT/BT 인쇄실", "정보도서관"],
+        "b_place_list" : ["Cafe Queue", "IT/BT 인쇄실", "정보도서관", "정보통신관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : ["컴퓨터소프트웨어학부", "정보시스템학과"]
     },
@@ -188,7 +196,7 @@
         "b_name" : "생활과학관",
         "b_number" : 401,
         "b_description" : "생활과학대학입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["생활과학관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -260,7 +268,7 @@
         "b_name" : "백남학술정보관",
         "b_number" : 501,
         "b_description" : "백남학술정보관(중앙도서관)입니다",
-        "b_place_list" : ["이순규 라운지", "하브루타 존", "3 열람실"],
+        "b_place_list" : ["이순규 라운지", "하브루타 존", "3 열람실", "백남학술정보관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -300,7 +308,7 @@
         "b_name" : "자연과학대학",
         "b_number" : 507,
         "b_description" : "자연과학대학입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["자연과학대학 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -349,7 +357,7 @@
         "b_name" : "병원서관",
         "b_number" : 609,
         "b_description" : "",
-        "b_place_list" : [],
+        "b_place_list" : ["병원서관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -357,7 +365,7 @@
         "b_name" : "병원본관",
         "b_number" : 610,
         "b_description" : "",
-        "b_place_list" : [],
+        "b_place_list" : ["병원본관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -373,7 +381,7 @@
         "b_name" : "병원동관",
         "b_number" : 614,
         "b_description" : "",
-        "b_place_list" : [],
+        "b_place_list" : ["병원동관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -397,7 +405,7 @@
         "b_name" : "한양사이버대학교 1관",
         "b_number" : 702,
         "b_description" : "",
-        "b_place_list" : [],
+        "b_place_list" : ["한양사이버대학교 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -419,8 +427,16 @@
     },
     {
         "b_name" : "경영관",
-        "b_number" : 707,
+        "b_number" : 706,
         "b_description" : "",
+        "b_place_list" : ["경영관 ATM"],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "행원파크",
+        "b_number" : 707,
+        "b_description" : "행원파크 ATM",
         "b_place_list" : [],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
@@ -453,7 +469,7 @@
         "b_name" : "제 2생활관",
         "b_number" : 804,
         "b_description" : "",
-        "b_place_list" : [],
+        "b_place_list" : ["제 2생활관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -485,7 +501,7 @@
         "b_name" : "한양여대 본관",
         "b_number" : 901,
         "b_description" : "",
-        "b_place_list" : [],
+        "b_place_list" : ["한양여대 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },

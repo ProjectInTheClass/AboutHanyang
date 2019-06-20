@@ -38,7 +38,7 @@
     {
         "p_name" : "올림픽체육관 헬스장",
         "p_building" : "올림픽체육관",
-        "p_pos" : "올림픽체육관 ?",
+        "p_pos" : "올림픽체육관",
         "p_phone" : "123-4567-8910",
         "p_email" : "",
         "p_description" : "헬스장입니다"
@@ -204,8 +204,8 @@
         "p_description" : "신한은행 / 국민은행 ATM"
     },
     {
-        "p_name" : "자연과학관 ATM",
-        "p_building" : "자연과학관",
+        "p_name" : "자연과학대학 ATM",
+        "p_building" : "자연과학대학",
         "p_pos" : "자연과학관 1층",
         "p_phone" : "",
         "p_email" : "",
@@ -234,5 +234,13 @@
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "신한은행 / 국민은행 / 하나은행 ATM"
+    },
+    {
+        "p_name" : "부속병원본관 ATM",
+        "p_building" : "병원본관",
+        "p_pos" : "병원본관 1층, 3층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
     }
 ]
