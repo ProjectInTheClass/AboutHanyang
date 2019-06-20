@@ -105,6 +105,134 @@
         "p_phone" : "333-333-3333",
         "p_email" : "123@gmail.com",
         "p_description" : "좁아요"
-    }
+    },
+    {
+        "p_name" : "제 2생활관 ATM",
+        "p_building" : "제 2생활관",
+        "p_pos" : "제 2생활관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "한양여대 ATM",
+        "p_building" : "한양여대",
+        "p_pos" : "한양여대 지하 1층",
+        "p_phone" : "333-333-3333",
+        "p_email" : "123@gmail.com",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "행원파크 ATM",
+        "p_building" : "행원파크",
+        "p_pos" : "행원파크 지하 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "경영관 ATM",
+        "p_building" : "경영관",
+        "p_pos" : "경영관 2층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "한양사이버대학교 ATM",
+        "p_building" : "한양사이버대학교",
+        "p_pos" : "한양사이버대학교 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "생활과학관 ATM",
+        "p_building" : "생활과학관",
+        "p_pos" : "생활과학관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "제 1공학관 ATM",
+        "p_building" : "제 1공학관",
+        "p_pos" : "제 1공학관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "백남학술정보관 ATM",
+        "p_building" : "백남학술정보관",
+        "p_pos" : "백남학술정보관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "신소재공학관 ATM",
+        "p_building" : "신소재공학관",
+        "p_pos" : "신소재공학관 지하 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "국제관 ATM",
+        "p_building" : "국제관",
+        "p_pos" : "국제관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "우체국 ATM",
+        "p_building" : "우체국",
+        "p_pos" : "우체국 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "기업은행 ATM"
+    },
     
+    {
+        "p_name" : "한마당 ATM",
+        "p_building" : "한마당",
+        "p_pos" : "한마당 은행부스",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 / 국민은행 ATM"
+    },
+    {
+        "p_name" : "자연과학관 ATM",
+        "p_building" : "자연과학관",
+        "p_pos" : "자연과학관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "부속병원동관 ATM",
+        "p_building" : "부속병원동관",
+        "p_pos" : "부속병원동관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "부속병원본관 ATM",
+        "p_building" : "부속병원본관",
+        "p_pos" : "부속병원본관 1층, 3층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
+        "p_name" : "부속병원서관 ATM",
+        "p_building" : "부속병원서관",
+        "p_pos" : "부속병원서관 6층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 / 국민은행 / 하나은행 ATM"
+    }
 ]

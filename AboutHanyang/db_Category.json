@@ -8,8 +8,14 @@
         
         {
             "c_name" : "식당",
-            "c_place_list" : ["김밥나라", "청년떡볶이", "신의주 찹쌀순대국", "플라잉보울"],
+            "c_place_list" : ["김밥나라", "청년떡볶이", "신의주 찹쌀순대국", "플라잉보울", "마앤라마라탕", "라이스앤누들"],
             "c_icon" : "restaurant.png"
+        },
+        
+        {
+            "c_name" : "매점",
+            "c_place_list" : ["사자가군것질할때", "올림픽체육관 매점", "1생활관 편의점", "2생활관 편의점", "신소재 편의점", "인문관 편의점", "나래길 쉼터"],
+            "c_icon" : "store.png"
         },
         
         {
@@ -20,7 +26,7 @@
         
 		{
 			"c_name" : "인쇄실",
-            "c_place_list" : ["1공학관 인쇄실", "한양플라자 인쇄실", "중앙도서관 인쇄실", "IT/BT 인쇄실"],
+            "c_place_list" : ["1공학관 인쇄실", "학생복지관 인쇄실", "중앙도서관 인쇄실", "정보통신관 인쇄실","인문관 인쇄실", "공업센터 인쇄실", "신소재 인쇄실","계단강의실 인쇄실"],
             "c_icon" : "printer.png"
 		},
         
@@ -28,6 +34,30 @@
             "c_name" : "PC실",
             "c_place_list" : ["이순규 라운지", "I-cafe"],
             "c_icon" : "laptop.png"
+        },
+        
+        {
+            "c_name" : "ATM",
+            "c_place_list" : ["제 2생활관 ATM","한양여대 ATM", "정보통신관 ATM", "행원파크 ATM", "경영관 ATM", "한양사이버대학교 ATM","생활과학관 ATM", "제 1공학관 ATM", "백남할술정보관 ATM", "신소재공학관 ATM", "국제관 ATM", "우체국 ATM", "한마당 ATM", "자연과학관 ATM", "부속병원동관 ATM", "부속병원본관 ATM", "부속병원서관 ATM"],
+            "c_icon" : "atm.png"
+        },
+        
+        {
+            "c_name" : "GYM",
+            "c_place_list" : [],
+            "c_icon" : "gym.png"
+        },
+        
+        {
+            "c_name" : "스터디룸",
+            "c_place_list" : [],
+            "c_icon" : "meetingRoom.png"
+        },
+        
+        {
+            "c_name" : "행정실",
+            "c_place_list" : [],
+            "c_icon" : "office.png"
         },
         
         {
