@@ -24,6 +24,7 @@ class BuildingMapViewController: UIViewController, GMSMapViewDelegate, CLLocatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "지도"
         
         // self.tappedMarker = GMSMarker()
         // self.customInfoWindow = CustomInfoWindow().loadView()

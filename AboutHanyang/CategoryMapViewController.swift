@@ -48,6 +48,10 @@ class CategoryMapViewController: UIViewController, GMSMapViewDelegate, CLLocatio
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     override func loadView() {
         
     }

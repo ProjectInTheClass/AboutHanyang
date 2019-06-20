@@ -154,8 +154,8 @@
     {
         "b_name" : "제1공학관",
         "b_number" : 212,
-        "b_description" : "제 1공학관입니다",
-        "b_place_list" : ["제 1공학관 ATM","사자가 군것질 할 때","제 1공학관 인쇄실"],
+        "b_description" : "제1공학관입니다",
+        "b_place_list" : ["제1공학관 ATM","사자가 군것질 할 때","제1공학관 인쇄실"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -202,7 +202,7 @@
     {
         "b_name" : "제1음악관",
         "b_number" : 402,
-        "b_description" : "제 1음악관입니다",
+        "b_description" : "제1음악관입니다",
         "b_place_list" : [],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
@@ -210,7 +210,7 @@
     {
         "b_name" : "제2음악관",
         "b_number" : 403,
-        "b_description" : "제 2음악관입니다",
+        "b_description" : "제2음악관입니다",
         "b_place_list" : [],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
@@ -234,7 +234,7 @@
     {
         "b_name" : "제1법학관",
         "b_number" : 407,
-        "b_description" : "제 1법학관입니다",
+        "b_description" : "제1법학관입니다",
         "b_place_list" : [],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
@@ -242,7 +242,7 @@
     {
         "b_name" : "제2법학관",
         "b_number" : 408,
-        "b_description" : "제 2법학관입니다",
+        "b_description" : "제2법학관입니다",
         "b_place_list" : [],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
@@ -250,7 +250,7 @@
     {
         "b_name" : "제3법학관",
         "b_number" : 409,
-        "b_description" : "제 3 법학관입니다",
+        "b_description" : "제3 법학관입니다",
         "b_place_list" : [],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
@@ -313,7 +313,7 @@
         "b_majorInBuilding" : ["국어국문학과", "영어영문학과", "독어독문학과", "중어중문학과", "사학과", "철학과"]
     },
     {
-        "b_name" : "제 1의학관",
+        "b_name" : "제1의학관",
         "b_number" : 604,
         "b_description" : "",
         "b_place_list" : [],
@@ -321,7 +321,7 @@
         "b_majorInBuilding" : []
     },
     {
-        "b_name" : "제 2의학관",
+        "b_name" : "제2의학관",
         "b_number" : 605,
         "b_description" : "",
         "b_place_list" : [],
@@ -433,15 +433,15 @@
         "b_majorInBuilding" : []
     },
     {
-        "b_name" : "제 1생활관",
+        "b_name" : "제1생활관",
         "b_number" : 801,
         "b_description" : "",
-        "b_place_list" : ["제 1생활관 편의점"],
+        "b_place_list" : ["제1생활관 편의점"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
     {
-        "b_name" : "제 3생활관",
+        "b_name" : "제3생활관",
         "b_number" : 802,
         "b_description" : "",
         "b_place_list" : [],
@@ -449,7 +449,7 @@
         "b_majorInBuilding" : []
     },
     {
-        "b_name" : "제 5생활관",
+        "b_name" : "제5생활관",
         "b_number" : 803,
         "b_description" : "",
         "b_place_list" : [],
@@ -457,10 +457,10 @@
         "b_majorInBuilding" : []
     },
     {
-        "b_name" : "제 2생활관",
+        "b_name" : "제2생활관",
         "b_number" : 804,
         "b_description" : "",
-        "b_place_list" : ["제 2생활관 ATM"],
+        "b_place_list" : ["제2생활관 ATM", "Grazie"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },

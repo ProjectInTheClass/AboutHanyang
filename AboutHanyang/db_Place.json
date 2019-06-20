@@ -189,9 +189,9 @@
     },
     
     {
-        "p_name" : "제 2생활관 ATM",
-        "p_building" : "제 2생활관",
-        "p_pos" : "제 2생활관 1층",
+        "p_name" : "제2생활관 ATM",
+        "p_building" : "제2생활관",
+        "p_pos" : "제2생활관 1층",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "신한은행 ATM"
@@ -230,8 +230,8 @@
     },
     {
         "p_name" : "한양사이버대학교 ATM",
-        "p_building" : "한양사이버대학교",
-        "p_pos" : "한양사이버대학교 1층",
+        "p_building" : "한양사이버대학교 1관",
+        "p_pos" : "한양사이버대학교 1관 1층",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "신한은행 ATM"
@@ -245,9 +245,9 @@
         "p_description" : "신한은행 ATM"
     },
     {
-        "p_name" : "제 1공학관 ATM",
-        "p_building" : "제 1공학관",
-        "p_pos" : "제 1공학관 1층",
+        "p_name" : "제1공학관 ATM",
+        "p_building" : "제1공학관",
+        "p_pos" : "제1공학관 1층",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "신한은행 ATM"
@@ -311,8 +311,8 @@
     },
     {
         "p_name" : "사자가 군것질 할 때",
-        "p_building" : "제 1공학관",
-        "p_pos" : "제 1공학관 3층 앞",
+        "p_building" : "제1공학관",
+        "p_pos" : "제1공학관 3층 앞",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "신한은행 ATM"
@@ -326,17 +326,17 @@
         "p_description" : "매점입니다"
     },
     {
-        "p_name" : "제 1생활관 편의점",
-        "p_building" : "제 1생활관",
-        "p_pos" : "제 1생활관 1층",
+        "p_name" : "제1생활관 편의점",
+        "p_building" : "제1생활관",
+        "p_pos" : "제1생활관 1층",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "CU입니다"
     },
     {
-        "p_name" : "제 2생활관 편의점",
-        "p_building" : "제 2생활관",
-        "p_pos" : "제 2생활관 1층",
+        "p_name" : "제2생활관 편의점",
+        "p_building" : "제2생활관",
+        "p_pos" : "제2생활관 1층",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "CU입니다"
@@ -382,9 +382,9 @@
         "p_description" : "CU 편의점입니다"
     },
     {
-        "p_name" : "제 1공학관 인쇄실",
-        "p_building" : "제 1공학관",
-        "p_pos" : "제 1공학관 1층",
+        "p_name" : "제1공학관 인쇄실",
+        "p_building" : "제1공학관",
+        "p_pos" : "제1공학관 1층",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "인쇄실입니다"
@@ -452,5 +452,13 @@
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "인쇄실입니다"
+    },
+    {
+        "p_name" : "Grazie",
+        "p_building" : "제2생활관",
+        "p_pos" : "제2생활관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "제2생활관 1층에 위치한 카페입니다."
     }
 ]

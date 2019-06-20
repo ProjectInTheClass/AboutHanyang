@@ -33,6 +33,10 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         catch _ { print("json error: failed to load category info") }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryList.count
     }
