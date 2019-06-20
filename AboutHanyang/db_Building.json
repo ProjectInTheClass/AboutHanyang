@@ -312,6 +312,245 @@
         "b_place_list" : [],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : ["국어국문학과", "영어영문학과", "독어독문학과", "중어중문학과", "사학과", "철학과"]
+    },
+    {
+        "b_name" : "제 1의학관",
+        "b_number" : 604,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "제 2의학관",
+        "b_number" : 605,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "의과대학 본관",
+        "b_number" : 606,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "동문회관",
+        "b_number" : 607,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "병원서관",
+        "b_number" : 609,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "병원본관",
+        "b_number" : 610,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "권역응급의료센터",
+        "b_number" : 611,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "병원동관",
+        "b_number" : 614,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "의대계단강의동",
+        "b_number" : 618,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "HIT",
+        "b_number" : 701,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양사이버대학교 1관",
+        "b_number" : 702,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양사이버대학교 2관",
+        "b_number" : 703,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "융합교육관",
+        "b_number" : 705,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "경영관",
+        "b_number" : 707,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "제 1생활관",
+        "b_number" : 801,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "제 3생활관",
+        "b_number" : 802,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "제 5생활관",
+        "b_number" : 803,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "제 2생활관",
+        "b_number" : 804,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "개누리관",
+        "b_number" : 805,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한누리관",
+        "b_number" : 806,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "게스트하우스",
+        "b_number" : 807,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양여대 본관",
+        "b_number" : 901,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양여대 디자인관",
+        "b_number" : 902,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양여대 도서관",
+        "b_number" : 903,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "행원스퀘어",
+        "b_number" : 904,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양초등학교",
+        "b_number" : 905,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양여대 교수회관",
+        "b_number" : 906,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양여대 정보문화관",
+        "b_number" : 907,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양여대 식품영양관",
+        "b_number" : 908,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
+    },
+    {
+        "b_name" : "한양여대 유아교육관",
+        "b_number" : 909,
+        "b_description" : "",
+        "b_place_list" : [],
+        "b_outsidePicture" : "",
+        "b_majorInBuilding" : []
     }
-    
 ]

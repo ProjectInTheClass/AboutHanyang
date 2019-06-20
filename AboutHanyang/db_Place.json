@@ -213,24 +213,24 @@
     },
     {
         "p_name" : "부속병원동관 ATM",
-        "p_building" : "부속병원동관",
-        "p_pos" : "부속병원동관 1층",
+        "p_building" : "병원동관",
+        "p_pos" : "병원동관 1층",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "신한은행 ATM"
     },
     {
         "p_name" : "부속병원본관 ATM",
-        "p_building" : "부속병원본관",
-        "p_pos" : "부속병원본관 1층, 3층",
+        "p_building" : "병원본관",
+        "p_pos" : "병원본관 1층, 3층",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "신한은행 ATM"
     },
     {
         "p_name" : "부속병원서관 ATM",
-        "p_building" : "부속병원서관",
-        "p_pos" : "부속병원서관 6층",
+        "p_building" : "병원서관",
+        "p_pos" : "병원서관 6층",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "신한은행 / 국민은행 / 하나은행 ATM"
