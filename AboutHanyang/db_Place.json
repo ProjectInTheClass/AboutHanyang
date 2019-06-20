@@ -9,30 +9,12 @@
     },
     
     {
-        "p_name" : "IT/BT 인쇄실",
-        "p_building" : "IT/BT관",
-        "p_pos" : "IT/BT관 1층",
-        "p_phone" : "123-4567-8910",
-        "p_email" : "",
-        "p_description" : "흑백 1장 당 50원"
-    },
-    
-    {
         "p_name" : "정보도서관",
         "p_building" : "IT/BT관",
         "p_pos" : "IT/BT관 4층",
         "p_phone" : "123-4567-8910",
         "p_email" : "",
         "p_description" : "정보통신관 열람실입니다"
-    },
-    
-    {
-        "p_name" : "올림픽체육관 매점",
-        "p_building" : "올림픽체육관",
-        "p_pos" : "올림픽체육관 1층",
-        "p_phone" : "123-4567-8910",
-        "p_email" : "",
-        "p_description" : "매점입니다"
     },
     
     {
@@ -231,6 +213,14 @@
         "p_description" : "신한은행 ATM"
     },
     {
+        "p_name" : "정보통신관 ATM",
+        "p_building" : "IT/BT관",
+        "p_pos" : "IT/BT관 3층 로비",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "신한은행 ATM"
+    },
+    {
         "p_name" : "경영관 ATM",
         "p_building" : "경영관",
         "p_pos" : "경영관 2층",
@@ -320,27 +310,147 @@
         "p_description" : "신한은행 ATM"
     },
     {
-        "p_name" : "부속병원본관 ATM",
-        "p_building" : "병원본관",
-        "p_pos" : "병원본관 1층, 3층",
+        "p_name" : "사자가 군것질 할 때",
+        "p_building" : "제 1공학관",
+        "p_pos" : "제 1공학관 3층 앞",
         "p_phone" : "",
         "p_email" : "",
         "p_description" : "신한은행 ATM"
     },
     {
-        "p_name" : "부속병원서관 ATM",
-        "p_building" : "병원서관",
-        "p_pos" : "병원서관 6층",
+        "p_name" : "올림픽체육관 매점",
+        "p_building" : "올림픽체육관",
+        "p_pos" : "올림픽체육관 1층",
         "p_phone" : "",
         "p_email" : "",
-        "p_description" : "신한은행 / 국민은행 / 하나은행 ATM"
+        "p_description" : "매점입니다"
     },
     {
-        "p_name" : "부속병원본관 ATM",
-        "p_building" : "병원본관",
-        "p_pos" : "병원본관 1층, 3층",
+        "p_name" : "제 1생활관 편의점",
+        "p_building" : "제 1생활관",
+        "p_pos" : "제 1생활관 1층",
         "p_phone" : "",
         "p_email" : "",
-        "p_description" : "신한은행 ATM"
+        "p_description" : "CU입니다"
+    },
+    {
+        "p_name" : "제 2생활관 편의점",
+        "p_building" : "제 2생활관",
+        "p_pos" : "제 2생활관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "CU입니다"
+    },
+    {
+        "p_name" : "신소재 편의점",
+        "p_building" : "신소재공학관",
+        "p_pos" : "신소재공학관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "CU입니다"
+    },
+    {
+        "p_name" : "인문관 편의점",
+        "p_building" : "인문관",
+        "p_pos" : "인문관 지하 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "emart24 편의점입니다"
+    },
+    {
+        "p_name" : "노천극장 편의점",
+        "p_building" : "노천극장",
+        "p_pos" : "노천극장 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "emart24 편의점입니다"
+    },
+    {
+        "p_name" : "아이카페 편의점",
+        "p_building" : "한양사이버대학교 1관",
+        "p_pos" : "한양사이버대학교 1관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "세븐일레븐 편의점입니다"
+    },
+    {
+        "p_name" : "행원파크 편의점",
+        "p_building" : "행원파크",
+        "p_pos" : "행원파크 학생식당 반대편",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "CU 편의점입니다"
+    },
+    {
+        "p_name" : "제 1공학관 인쇄실",
+        "p_building" : "제 1공학관",
+        "p_pos" : "제 1공학관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "인쇄실입니다"
+    },
+    {
+        "p_name" : "한양플라자 인쇄실",
+        "p_building" : "한양플라자",
+        "p_pos" : "한양플라자(학생복지관) 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "인쇄실입니다"
+    },
+    {
+        "p_name" : "중앙도서관 인쇄실",
+        "p_building" : "백남학술정보관",
+        "p_pos" : "백남학술정보관 지하 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "인쇄실입니다"
+    },
+    {
+        "p_name" : "IT/BT관 인쇄실",
+        "p_building" : "IT/BT관",
+        "p_pos" : "IT/BT관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "흑백 1장 50원 칼라 1장 400원"
+    },
+    {
+        "p_name" : "인문관 인쇄실",
+        "p_building" : "인문관",
+        "p_pos" : "인문관 지하 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "인쇄실입니다"
+    },
+    {
+        "p_name" : "공업센터 인쇄실",
+        "p_building" : "공업센터본관",
+        "p_pos" : "공업센터본관 4층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "인쇄실입니다"
+    },
+    {
+        "p_name" : "신소재공학관 인쇄실",
+        "p_building" : "신소재공학관",
+        "p_pos" : "신조새공학관 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "인쇄실입니다"
+    },
+    {
+        "p_name" : "계단강의실 인쇄실",
+        "p_building" : "경영관",
+        "p_pos" : "경영관 지하 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "인쇄실입니다"
+    },
+    {
+        "p_name" : "경제금융관 인쇄실",
+        "p_building" : "경제금융대학",
+        "p_pos" : "경제금융대학 지하 1층",
+        "p_phone" : "",
+        "p_email" : "",
+        "p_description" : "인쇄실입니다"
     }
 ]

@@ -1,7 +1,7 @@
 [
     {
         "b_name" : "한마당",
-        "b_number" : 100,
+        "b_number" : 1,
         "b_description" : "한마당입니다",
         "b_place_list" : ["한마당 ATM"],
         "b_outsidePicture" : "",
@@ -35,7 +35,7 @@
         "b_name" : "한양플라자",
         "b_number" : 105,
         "b_description" : "한양플라자(학생복지관)입니다",
-        "b_place_list" : ["김밥나라", "청년떡볶이", "신의주 찹쌀순대국", "플라잉보울", "투썸플레이스", "공차", "CoffeeA", "PRO COFFEE", "BROW NABI"],
+        "b_place_list" : ["김밥나라", "청년떡볶이", "신의주 찹쌀순대국", "플라잉보울", "투썸플레이스", "공차", "CoffeeA", "PRO COFFEE", "BROW NABI","한양플라자 인쇄실"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -99,7 +99,7 @@
         "b_name" : "신소재공학관",
         "b_number" : 204,
         "b_description" : "신소재공학관입니다",
-        "b_place_list" : ["신소재공학관 ATM"],
+        "b_place_list" : ["신소재공학관 ATM","신소재공학관 인쇄실"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -107,7 +107,7 @@
         "b_name" : "공업센터 본관",
         "b_number" : 206,
         "b_description" : "공업센터 본관입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["공업센터 인쇄실"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -131,7 +131,7 @@
         "b_name" : "노천극장",
         "b_number" : 209,
         "b_description" : "노천극장입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["노천극장 편의점"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -155,7 +155,7 @@
         "b_name" : "제1공학관",
         "b_number" : 212,
         "b_description" : "제 1공학관입니다",
-        "b_place_list" : ["제 1공학관 ATM"],
+        "b_place_list" : ["제 1공학관 ATM","사자가 군것질 할 때","제 1공학관 인쇄실"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -179,7 +179,7 @@
         "b_name" : "IT/BT관",
         "b_number" : 305,
         "b_description" : "IT/BT관입니다",
-        "b_place_list" : ["Cafe Queue", "IT/BT 인쇄실", "정보도서관", "정보통신관 ATM"],
+        "b_place_list" : ["Cafe Queue", "IT/BT관 인쇄실", "정보도서관", "정보통신관 ATM"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : ["컴퓨터소프트웨어학부", "정보시스템학과"]
     },
@@ -259,7 +259,7 @@
         "b_name" : "경제금융대학",
         "b_number" : 410,
         "b_description" : "경제금융대학, 법학학술정보관입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["경제금융관 인쇄실"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -267,15 +267,7 @@
         "b_name" : "백남학술정보관",
         "b_number" : 501,
         "b_description" : "백남학술정보관(중앙도서관)입니다",
-        "b_place_list" : ["이순규 라운지", "하브루타 존", "3 열람실", "백남학술정보관 ATM"],
-        "b_outsidePicture" : "",
-        "b_majorInBuilding" : []
-    },
-    {
-        "b_name" : "사자가 군것질 할 때",
-        "b_number" : 503,
-        "b_description" : "사군(CU편의점)입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["이순규 라운지", "하브루타 존", "3 열람실", "백남학술정보관 ATM", "중앙도서관 인쇄실"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -316,7 +308,7 @@
         "b_name" : "인문관",
         "b_number" : 508,
         "b_description" : "인문관입니다",
-        "b_place_list" : [],
+        "b_place_list" : ["인문관 인쇄실"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : ["국어국문학과", "영어영문학과", "독어독문학과", "중어중문학과", "사학과", "철학과"]
     },
@@ -428,7 +420,7 @@
         "b_name" : "경영관",
         "b_number" : 706,
         "b_description" : "",
-        "b_place_list" : ["경영관 ATM"],
+        "b_place_list" : ["경영관 ATM","계단강의실 인쇄실"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },
@@ -444,7 +436,7 @@
         "b_name" : "제 1생활관",
         "b_number" : 801,
         "b_description" : "",
-        "b_place_list" : [],
+        "b_place_list" : ["제 1생활관 편의점"],
         "b_outsidePicture" : "",
         "b_majorInBuilding" : []
     },

@@ -70,6 +70,7 @@ class CategoryMapViewController: UIViewController, GMSMapViewDelegate, CLLocatio
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentPos = manager.location?.coordinate
+        print(currentPos)
     }
     
     func isCurrentPosInSchool() -> Bool {
