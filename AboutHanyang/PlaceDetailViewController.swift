@@ -78,7 +78,7 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
             }
             }
  */
-            place_image.image = UIImage(named: "Cafe Queue2")
+            place_image.image = UIImage(named: placeShowed.p_name)
             place_exp.text = placeShowed.p_description
             
             let encoder = JSONEncoder()
