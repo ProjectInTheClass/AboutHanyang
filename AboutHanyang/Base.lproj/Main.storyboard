@@ -728,7 +728,7 @@
                                 <rect key="frame" x="314" y="1.5" width="80" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="현 위치"/>
+                                <state key="normal" title="돌아가기"/>
                                 <connections>
                                     <action selector="tapRestore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiL-Mp-9fZ"/>
                                 </connections>
@@ -1215,6 +1215,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SLM-0u-kaV"/>
-        <segue reference="bHM-xC-tTX"/>
+        <segue reference="swk-nU-629"/>
     </inferredMetricsTieBreakers>
 </document>

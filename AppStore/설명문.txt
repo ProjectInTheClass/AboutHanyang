@@ -1,0 +1,8 @@
+설명문: 
+한양대생을 위한 한양대 소개 어플입니다. 한양대 시설들에 대해 정보를 얻고 의견을 공유하세요!
+This is an application for Hanyang University for Hanyang University students. Get information about Hanyang University facilities and share your opinions!
+=============================================
+키워드 
+정보, 소개, 공감, 한양대
+
+This application introduces Hanyang University for Hanyang University students. Get information about Hanyang University facilities and share your opinions!

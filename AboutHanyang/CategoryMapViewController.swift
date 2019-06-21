@@ -67,22 +67,24 @@ class CategoryMapViewController: UIViewController, GMSMapViewDelegate, CLLocatio
             mapView!.camera = originCamera!
         }
         else {
-            mapView!.camera = GMSCameraPosition(
-                latitude: currentPos!.latitude, longitude: currentPos!.longitude, zoom: currentZoom)
+            if let long:Double = currentPos?.longitude, let lat:Double = currentPos?.latitude{
+                mapView!.camera = GMSCameraPosition(
+                    latitude: lat, longitude: long, zoom: currentZoom)
+            }
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentPos = manager.location?.coordinate
-        print(currentPos)
+        //print(currentPos)
     }
     
     func isCurrentPosInSchool() -> Bool {
-        let long:Double = currentPos!.longitude
-        let lat:Double = currentPos!.latitude
-        
-        if long < 37.55451165 || long > 37.56000071 { return false }
-        if lat < 127.04073015 || lat > 127.05096311 { return false }
+        if let long:Double = currentPos?.longitude, let lat:Double = currentPos?.latitude{
+            if long < 37.55451165 || long > 37.56000071 { return false }
+            if lat < 127.04073015 || lat > 127.05096311 { return false }
+            return true
+        }
         return true
     }
     
