@@ -128,6 +128,8 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
                     // print(myString)
                 }
                 catch _ { print("history.json file write failed") }
+            
+            
             }
         }
         
@@ -162,7 +164,7 @@ class PlaceDetailViewController: UIViewController, UITableViewDataSource{
         cell.icon.image = UIImage(named: iconArray[indexPath.row])
         switch indexPath.row {
         case 0:
-            cell.content.text = "Open 09:00 am ~ 06:00 pm" //임시
+            cell.content.text = "Open 09:00 am ~ 06:00 pm" //임시, 데이터 부족함..., DataSource 변경 필요
         case 1:
             cell.content.text = phone
         case 2:

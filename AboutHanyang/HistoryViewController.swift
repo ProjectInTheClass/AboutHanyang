@@ -25,10 +25,7 @@ class HistoryViewCell: UITableViewCell {
 
 class HistoryViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "검색 기록"
-        
+    override func viewWillAppear(_ animated: Bool) {
         //recentQueue init
         let doc = NSHomeDirectory() + "/Documents"
         let filepath = doc + "/history.json"
@@ -45,6 +42,13 @@ class HistoryViewController: UITableViewController {
         else {
             print("recent history doesn't exists")
         }
+        self.tableView.reloadData()
+        print("view will appear")
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "검색 기록"
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -117,7 +121,6 @@ class HistoryViewController: UITableViewController {
         guard let destVC = segue.destination as? PlaceDetailViewController,
             let selectedIndex = self.tableView.indexPathForSelectedRow?.row
             else { return }
-        
         destVC.selectedPlace = recentQueue[selectedIndex].p_name
     }
 
