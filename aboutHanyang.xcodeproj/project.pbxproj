@@ -14,7 +14,6 @@
 		48EFE9AA22BB1DBD00BA54CF /* db_Image.json in Resources */ = {isa = PBXBuildFile; fileRef = 48EFE9A922BB1DBD00BA54CF /* db_Image.json */; };
 		5D01D49D22981FB900073C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D49C22981FB900073C27 /* AppDelegate.swift */; };
 		5D01D4A222981FB900073C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A022981FB900073C27 /* Main.storyboard */; };
-		5D01D4A422981FBB00073C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A322981FBB00073C27 /* Assets.xcassets */; };
 		5D01D4A722981FBB00073C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D4A522981FBB00073C27 /* LaunchScreen.storyboard */; };
 		5D01D4B222981FBB00073C27 /* aboutHanyangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D4B122981FBB00073C27 /* aboutHanyangTests.swift */; };
 		5D01D4BD22981FBB00073C27 /* aboutHanyangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D4BC22981FBB00073C27 /* aboutHanyangUITests.swift */; };
@@ -30,6 +29,7 @@
 		5D01D51E2298255D00073C27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D50F2298255C00073C27 /* GoogleService-Info.plist */; };
 		5D01D5202298255D00073C27 /* db_Building.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D01D5112298255C00073C27 /* db_Building.json */; };
 		5D01D5212298255D00073C27 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01D5122298255D00073C27 /* SearchViewController.swift */; };
+		5DA390A522C48A1100A68D6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA390A422C48A1100A68D6D /* Assets.xcassets */; };
 		5DE5F0CE22AFF2C9005C185F /* DataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5F0CD22AFF2C9005C185F /* DataFunction.swift */; };
 		6490926FE1A370D9F9841882 /* Pods_aboutHanyang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B231FB4429F0F20BD9C14EB8 /* Pods_aboutHanyang.framework */; };
 		DB586189F4BBD2A28ED6335D /* Pods_aboutHanyangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A44FD9D8CD240BE0D6E6576 /* Pods_aboutHanyangUITests.framework */; };
@@ -69,7 +69,6 @@
 		5D01D49922981FB900073C27 /* aboutHanyang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aboutHanyang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D01D49C22981FB900073C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D01D4A122981FB900073C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5D01D4A322981FBB00073C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D01D4A622981FBB00073C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D01D4A822981FBB00073C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D01D4AD22981FBB00073C27 /* aboutHanyangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aboutHanyangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +89,7 @@
 		5D01D50F2298255C00073C27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D01D5112298255C00073C27 /* db_Building.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db_Building.json; sourceTree = "<group>"; };
 		5D01D5122298255D00073C27 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5DA390A422C48A1100A68D6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AboutHanyang/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		5DE5F0CD22AFF2C9005C185F /* DataFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataFunction.swift; path = AboutHanyang/DataFunction.swift; sourceTree = SOURCE_ROOT; };
 		8371E596802A6C472FA5AF66 /* Pods-aboutHanyangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboutHanyangTests.debug.xcconfig"; path = "Target Support Files/Pods-aboutHanyangTests/Pods-aboutHanyangTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B231FB4429F0F20BD9C14EB8 /* Pods_aboutHanyang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aboutHanyang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +165,7 @@
 		5D01D49B22981FB900073C27 /* aboutHanyang */ = {
 			isa = PBXGroup;
 			children = (
-				5D01D4A322981FBB00073C27 /* Assets.xcassets */,
+				5DA390A422C48A1100A68D6D /* Assets.xcassets */,
 				5D01D4A022981FB900073C27 /* Main.storyboard */,
 				5D01D5062298255C00073C27 /* db_Category.json */,
 				48EFE9A922BB1DBD00BA54CF /* db_Image.json */,
@@ -332,13 +332,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D01D4A722981FBB00073C27 /* LaunchScreen.storyboard in Resources */,
-				5D01D4A422981FBB00073C27 /* Assets.xcassets in Resources */,
 				5D01D4A222981FB900073C27 /* Main.storyboard in Resources */,
 				48EFE9AA22BB1DBD00BA54CF /* db_Image.json in Resources */,
 				5D01D5202298255D00073C27 /* db_Building.json in Resources */,
 				5D01D51E2298255D00073C27 /* GoogleService-Info.plist in Resources */,
 				5D01D5152298255D00073C27 /* db_Category.json in Resources */,
 				48E506D022A9170D002FF7B4 /* db_Menu.json in Resources */,
+				5DA390A522C48A1100A68D6D /* Assets.xcassets in Resources */,
 				5D01D5162298255D00073C27 /* db_Place.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = aboutHanyang;
 				INFOPLIST_FILE = aboutHanyang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -692,6 +693,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = aboutHanyang;
 				INFOPLIST_FILE = aboutHanyang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
